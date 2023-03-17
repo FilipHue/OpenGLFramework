@@ -23,7 +23,7 @@ void World::Run()
 
 void World::Exit()
 {
-	Engine::Exit();
+	glfwSetWindowShouldClose(window->nativeWindow, 1);
 }
 
 double World::GetDeltaTime()

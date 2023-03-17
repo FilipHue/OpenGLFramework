@@ -17,7 +17,8 @@ int main() {
 
 	test->Init();
 	test->Run();
-	test->Exit();
+	
+	Engine::Exit();
 
 	return 0;
 }

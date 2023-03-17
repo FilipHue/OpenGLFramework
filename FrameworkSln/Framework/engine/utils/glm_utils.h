@@ -1,5 +1,9 @@
 #pragma once
 
+/**
+  * Overrides for the stdout method for vectors 
+  */
+
 #include <ostream>
 #include <glm.hpp>
 #include <gtc/type_ptr.hpp>

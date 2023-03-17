@@ -10,30 +10,6 @@ Test::~Test()
 
 void Test::Init()
 {
-	std::vector<VertexFormat> vertices1 = {
-		VertexFormat(glm::vec3(-0.5f, -0.5f, 0.0f)),
-		VertexFormat(glm::vec3(0.5f, -0.5f, 0.0f)),
-		VertexFormat(glm::vec3(0.0f, 0.f, 0.0f))
-	};
-
-	std::vector<unsigned int> indices1 = {
-		0, 1, 2
-	};
-
-	CreateMesh("Triangle1", vertices1, indices1);
-
-	std::vector<VertexFormat> vertices2 = {
-		VertexFormat(glm::vec3(0.0f, 1.0f, 0.0f)),
-		VertexFormat(glm::vec3(1.0f, 0.0f, 0.0f)),
-		VertexFormat(glm::vec3(1.0f, 1.0f, 0.0f))
-	};
-
-	std::vector<unsigned int> indices2 = {
-		0, 1, 2
-	};
-
-	CreateMesh("Triangle2", vertices2, indices2);
-
 	std::vector<VertexFormat> vertices3 = {
 		VertexFormat(glm::vec3(0, 0, 0)),
 		VertexFormat(glm::vec3(10, 0, 0), glm::vec3(0, 1, 0), GREEN, glm::vec2(1, 0)),
@@ -90,13 +66,11 @@ void Test::Init()
 
 	CreateMesh("Square2", vertices5, indices5);
 
+	CreateRectangleY("Square3", 10, 10);
+
 	textureManager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\texture\\textures\\crate.jpg", "crate");
 	textureManager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\texture\\textures\\default.png", "grid");
-
-	/*std::map<std::string, Mesh*>::iterator it;
-	for (it = meshes.begin(); it != meshes.end(); it++) {
-		std::cout << it->second->GetMeshId() << std::endl;
-	}*/
+	textureManager->LoadGridTexture();
 }
 
 void Test::StartFrame()
@@ -109,14 +83,13 @@ void Test::StartFrame()
 
 void Test::Update(double delta_time)
 {
-	/*RenderMesh(meshes["Triangle1"], shaders["SimpleShader"], glm::vec3(0, 0, 0));
-	RenderMesh(meshes["Triangle2"], shaders["SimpleShader"], glm::vec3(10, 0, 0))*/
-
 	/*glm::mat4 modelCube = glm::mat4(1);
 	RenderMesh(meshes["Cube1"], shaders["SimpleShader"], modelCube);*/
 
-	RenderMesh(meshes["Square1"], shaders["TextureShader"], glm::mat4(1), "crate");
-	RenderMesh(meshes["Square2"], shaders["SimpleShader"], glm::vec3(10, 0, 0));
+	/*RenderMesh(meshes["Square1"], shaders["TextureShader"], glm::mat4(1), "crate");
+	RenderMesh(meshes["Square2"], shaders["SimpleShader"], glm::vec3(10, 0, 0));*/
+
+	RenderMesh(meshes["Square3"], shaders["TextureShader"], glm::vec3(0), "gridTexture");
 }
 
 void Test::EndFrame()

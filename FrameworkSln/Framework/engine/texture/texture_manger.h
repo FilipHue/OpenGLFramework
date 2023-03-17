@@ -10,11 +10,33 @@ public:
 	TextureManger();
 	~TextureManger();
 
+	/**
+	  * Loads a 2D texture from a file
+	  */
 	void LoadTexture2D(const char* filePath, const char* name);
+	/**
+	  * Returns the 2D texture with the given name
+	  * @param name The name of the texture
+	  * @return the texture with the given name
+	  */
 	Texture2D* GetTexture2D(const char* name);
 
+	void LoadGridTexture();
+
 private:
+	/**
+	  * Returns the respective pixel format depending on the number of channels
+	  * Check - https://registry.khronos.org/OpenGL-Refpages/gl4/html/glTexParameter.xhtml - for more information
+	  * @param channels The number of colour channels
+	  * @return the pixel format
+	  */
 	static GLuint GetPixelFormat(unsigned int channels);
+	/**
+	  * Returns the respective internal format depending on the number of channels
+	  * Check - https://registry.khronos.org/OpenGL-Refpages/gl4/html/glTexParameter.xhtml - for more information
+	  * @param channels The number of colour channels
+	  * @return the internal format
+	  */
 	static GLuint GetInternalFormat(unsigned int channels);
 
 private:

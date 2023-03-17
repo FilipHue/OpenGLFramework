@@ -42,6 +42,26 @@ void Texture2D::Init(const char* filePath)
 	stbi_image_free(imageData);
 }
 
+void Texture2D::Init(int width, int height, int channels, unsigned char* imageData)
+{
+	this->width = width;
+	this->height = height;
+	this->channels = channels;
+	
+	glGenTextures(1, &textureID);
+	glBindTexture(GL_TEXTURE_2D, textureID);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+	glTexImage2D(GL_TEXTURE_2D, 0, TextureManger::GetInternalFormat(channels), width, height, 0, TextureManger::GetPixelFormat(channels), GL_UNSIGNED_BYTE, imageData);
+	glGenerateMipmap(GL_TEXTURE_2D);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+}
+
 unsigned int Texture2D::GetTextureID()
 {
 	return textureID;

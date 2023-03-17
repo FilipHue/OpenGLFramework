@@ -9,6 +9,40 @@ Scene::~Scene()
 {
 }
 
+void Scene::CreateRectangleZ(const char* name, int width, int height)
+{
+	std::vector<VertexFormat> verticies{
+		VertexFormat(glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(0, 0)),
+		VertexFormat(glm::vec3(width, 0, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(1, 0)),
+		VertexFormat(glm::vec3(width, 0, height), glm::vec3(0, 1, 0), WHITE, glm::vec2(1, 1)),
+		VertexFormat(glm::vec3(0, 0, height), glm::vec3(0, 1, 0), WHITE, glm::vec2(0, 1))
+	};
+
+	std::vector<unsigned int> indices{
+		0, 1, 2,
+		0, 2, 3
+	};
+
+	CreateMesh(name, verticies, indices);
+}
+
+void Scene::CreateRectangleY(const char* name, int width, int height)
+{
+	std::vector<VertexFormat> verticies{
+		VertexFormat(glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(0, 0)),
+		VertexFormat(glm::vec3(width, 0, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(1, 0)),
+		VertexFormat(glm::vec3(width, height, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(1, 1)),
+		VertexFormat(glm::vec3(0, height, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(0, 1))
+	};
+
+	std::vector<unsigned int> indices{
+		0, 1, 2,
+		0, 2, 3
+	};
+
+	CreateMesh(name, verticies, indices);
+}
+
 void Scene::CreateMesh(const char* name, std::vector<VertexFormat>& vertices, std::vector<unsigned int>& indices)
 {
 	unsigned int VAO;
@@ -37,7 +71,7 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position)
 
 void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* textureName)
 {
-	if (!mesh || !shader || !textureName) {
+	if (!mesh || !shader || !textureManager->GetTexture2D(textureName)) {
 		std::cout << "Render error!" << std::endl;
 		return;
 	}
@@ -70,7 +104,7 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix)
 
 void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix, const char* textureName)
 {
-	if (!mesh || !shader || !textureName) {
+	if (!mesh || !shader || !textureManager->GetTexture2D(textureName)) {
 		std::cout << "Render error!" << std::endl;
 		return;
 	}

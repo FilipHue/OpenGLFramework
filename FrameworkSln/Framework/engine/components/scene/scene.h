@@ -28,6 +28,21 @@ public:
 	Scene();
 	~Scene();
 
+	/**
+	  * Creates a rectangle on the XOZ plane
+	  * @param name The name of the rectangle object
+	  * @param width The width of the rectangle
+	  * @param height The height of the ractangle
+	  */
+	void CreateRectangleZ(const char* name, int width, int height);
+	/**
+	  * Creates a rectangle on the XOY plane
+	  * @param name The name of the rectangle object
+	  * @param width The width of the rectangle
+	  * @param height The height of the ractangle
+	  */
+	void CreateRectangleY(const char* name, int width, int height);
+
 public:
 	Camera* sceneCamera;
 	CameraInput* cameraInput;
