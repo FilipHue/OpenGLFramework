@@ -1,4 +1,18 @@
-﻿  engine.cpp
+﻿  Test.cpp
+  camera_input.cpp
+  scene.cpp
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(36,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(54,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(69,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(85,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  scene_input.cpp
+  shape_manager.cpp
+  engine.cpp
+  input_controller.cpp
+  window.cpp
+  window_callbacks.cpp
   world.cpp
+  main.cpp
   Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   Framework.vcxproj -> D:\Diverse\OpenGLFramework\FrameworkSln\Framework\bin\x64-Debug\Framework\Framework.exe

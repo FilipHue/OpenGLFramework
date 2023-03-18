@@ -1,5 +1,7 @@
 #include "scene.h"
 
+#include "../shapes/shape_manager.h"
+
 Scene::Scene()
 {
 	InitScene();
@@ -7,40 +9,6 @@ Scene::Scene()
 
 Scene::~Scene()
 {
-}
-
-void Scene::CreateRectangleZ(const char* name, int width, int height)
-{
-	std::vector<VertexFormat> verticies{
-		VertexFormat(glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(0, 0)),
-		VertexFormat(glm::vec3(width, 0, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(1, 0)),
-		VertexFormat(glm::vec3(width, 0, height), glm::vec3(0, 1, 0), WHITE, glm::vec2(1, 1)),
-		VertexFormat(glm::vec3(0, 0, height), glm::vec3(0, 1, 0), WHITE, glm::vec2(0, 1))
-	};
-
-	std::vector<unsigned int> indices{
-		0, 1, 2,
-		0, 2, 3
-	};
-
-	CreateMesh(name, verticies, indices);
-}
-
-void Scene::CreateRectangleY(const char* name, int width, int height)
-{
-	std::vector<VertexFormat> verticies{
-		VertexFormat(glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(0, 0)),
-		VertexFormat(glm::vec3(width, 0, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(1, 0)),
-		VertexFormat(glm::vec3(width, height, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(1, 1)),
-		VertexFormat(glm::vec3(0, height, 0), glm::vec3(0, 1, 0), WHITE, glm::vec2(0, 1))
-	};
-
-	std::vector<unsigned int> indices{
-		0, 1, 2,
-		0, 2, 3
-	};
-
-	CreateMesh(name, verticies, indices);
 }
 
 void Scene::CreateMesh(const char* name, std::vector<VertexFormat>& vertices, std::vector<unsigned int>& indices)
@@ -123,12 +91,14 @@ void Scene::InitScene()
 	window = Engine::GetWindow();
 
 	sceneCamera = new Camera();
-	sceneCamera->projectionMatrix = glm::perspective(glm::radians(sceneCamera->zoom), (float)window->resolution.x / (float)window->resolution.y, 0.1f, 200.0f);
+	//sceneCamera->SetOrtho(0.0f, (float)window->resolution.x, 0.0f, (float)window->resolution.y, 0.01f, 400.0f);
+	sceneCamera->SetPerspective(sceneCamera->GetCameraZoom(), (float)window->resolution.x / window->resolution.y, 0.1f, 200.0f);
 
 	cameraInput = new CameraInput(sceneCamera);
 	sceneInput = new SceneInput(this);
 
 	textureManager = new TextureManger();
+	shapeManager = new ShapeManager(this);
 
 	Shader* simpleShader = new Shader(
 		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\shaders\\shader_programms\\simple\\simple_vertex_shader.glsl",
@@ -192,11 +162,14 @@ unsigned int Scene::InitFromData(std::vector<VertexFormat>& vertices, std::vecto
 
 void Scene::SendToShader(Shader* shader, glm::mat4 modelMatrix)
 {
-	sceneCamera->viewMatrix = glm::lookAt(sceneCamera->position, sceneCamera->position + sceneCamera->forward, sceneCamera->up);
+	sceneCamera->SetViewMatrix(glm::lookAt(sceneCamera->GetCameraPosition(), sceneCamera->GetCameraPosition() + sceneCamera->GetCameraForward(), sceneCamera->GetCameraUp()));
 
 	shader->Use();
 
-	shader->SetMat4("projectionMatrix", sceneCamera->projectionMatrix);
-	shader->SetMat4("viewMatrix", sceneCamera->viewMatrix);
+	glm::mat4 projection = sceneCamera->GetProjection();
+	glm::mat4 view = sceneCamera->GetView();
+
+	shader->SetMat4("projectionMatrix", projection);
+	shader->SetMat4("viewMatrix", view);
 	shader->SetMat4("modelMatrix", modelMatrix);
 }

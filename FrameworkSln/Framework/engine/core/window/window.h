@@ -126,10 +126,15 @@ private:
 	  */
 	void SetCallbacks();
 	/**
-	  * Gets the input controller used
+	  * Binds an input controller to the window
 	  * Necessar for callbacks - see window_callbacks.h and input_controller.h
 	  */
 	void SubscribeToEvents(InputController* ic);
+	/**
+	  * Unbinds an input controller from the window
+	  * Necessar for callbacks - see window_callbacks.h and input_controller.h
+	  */
+	void UnsubscribeFromEvents(InputController* ic);
 
 private:
 	bool keyStates[GLFW_KEY_LAST] = {};
@@ -147,6 +152,6 @@ private:
 
 	int keyMods;
 
-	std::vector<InputController*> inputControllers;
+	std::list<InputController*> inputControllers;
 };
 

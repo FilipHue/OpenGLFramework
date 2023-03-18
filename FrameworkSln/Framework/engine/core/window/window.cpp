@@ -177,3 +177,8 @@ void Window::SubscribeToEvents(InputController* ic)
 {
 	inputControllers.push_back(ic);
 }
+
+void Window::UnsubscribeFromEvents(InputController* ic)
+{
+	inputControllers.remove(ic);
+}

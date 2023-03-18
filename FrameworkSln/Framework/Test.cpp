@@ -66,7 +66,7 @@ void Test::Init()
 
 	CreateMesh("Square2", vertices5, indices5);
 
-	CreateRectangleY("Square3", 10, 10);
+	shapeManager->CreateRectangleY("Square3", 10, 10);
 
 	textureManager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\texture\\textures\\crate.jpg", "crate");
 	textureManager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\texture\\textures\\default.png", "grid");
@@ -89,7 +89,8 @@ void Test::Update(double delta_time)
 	/*RenderMesh(meshes["Square1"], shaders["TextureShader"], glm::mat4(1), "crate");
 	RenderMesh(meshes["Square2"], shaders["SimpleShader"], glm::vec3(10, 0, 0));*/
 
-	RenderMesh(meshes["Square3"], shaders["TextureShader"], glm::vec3(0), "gridTexture");
+	//RenderMesh(meshes["Square2"], shaders["TextureShader"], glm::vec3(0), "crate");
+	RenderMesh(meshes["Cube1"], shaders["SimpleShader"], glm::vec3(0));
 }
 
 void Test::EndFrame()

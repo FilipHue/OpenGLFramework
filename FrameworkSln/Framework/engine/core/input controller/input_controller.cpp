@@ -10,3 +10,13 @@ InputController::InputController()
 InputController::~InputController()
 {
 }
+
+void InputController::SetOn()
+{
+	window->SubscribeToEvents(this);
+}
+
+void InputController::SetOff()
+{
+	window->UnsubscribeFromEvents(this);
+}

@@ -47,8 +47,8 @@ void CameraInput::OnKeyRelease(int key, int mods)
 
 void CameraInput::OnMouseMove(double mouseX, double mouseY, double deltaX, double deltaY)
 {
-	camera->RotateOX(-deltaY * camera->mouseSensitivity);
-	camera->RotateOY(-deltaX * camera->mouseSensitivity);
+	camera->RotateOX(-deltaY * camera->GetCameraSensitivity());
+	camera->RotateOY(-deltaX * camera->GetCameraSensitivity());
 }
 
 void CameraInput::OnMouseButtonPress(double mouseX, double mouseY, int button, int mods)

@@ -63,7 +63,42 @@ public:
 	  */
 	void RotateOZ(double angle);
 
-public:
+	/**
+	  * Sets the camera perspectives 
+	  */
+
+	void SetPerspective(float fov, float aspect, float zNear, float zFar);
+	void SetOrtho(float left, float right, float bottom, float up);
+	void SetOrtho(float left, float right, float bottom, float up, float zNear, float zFar);
+
+	/**
+	  * Sets camera attributes 
+	  */
+
+	void SetProjectionMatrix(glm::mat4 projectionMatrix);
+	void SetViewMatrix(glm::mat4 viewMatrix);
+
+	void SetPosition(glm::vec3 position);
+	void SetMovementSpeed(float movementSpeed);
+	void SetMouseSensitivity(float mouseSensitivity);
+	void SetZoom(float zoom);
+
+	/**
+	  * Gets camera attributes 
+	  */
+
+	glm::mat4 GetProjection();
+	glm::mat4 GetView();
+
+	glm::vec3 GetCameraPosition();
+	glm::vec3 GetCameraForward();
+	glm::vec3 GetCameraRight();
+	glm::vec3 GetCameraUp();
+	float GetCameraSpeed();
+	float GetCameraSensitivity();
+	float GetCameraZoom();
+
+private:
 	glm::vec3 position;
 	glm::vec3 forward;
 	glm::vec3 right;

@@ -164,6 +164,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="engine\components\scene\scene.cpp" />
     <ClCompile Include="engine\components\scene\scene_input.cpp" />
+    <ClCompile Include="engine\components\shapes\shape_manager.cpp" />
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="engine\texture\texture_manger.cpp" />
     <ClCompile Include="engine\texture\texture2D.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="engine\shaders\shader.h" />
     <ClInclude Include="engine\components\scene\scene.h" />
     <ClInclude Include="engine\components\scene\scene_input.h" />
+    <ClInclude Include="engine\components\shapes\shape_manager.h" />
     <ClInclude Include="Test.h" />
     <ClInclude Include="engine\texture\texture_manger.h" />
     <ClInclude Include="engine\texture\texture2D.h" />

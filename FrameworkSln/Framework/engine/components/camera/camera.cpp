@@ -2,7 +2,7 @@
 
 Camera::Camera()
 {
-	position = glm::vec3(0.0f, 2.0f, 15.0f);
+	position = glm::vec3(0.0f, 0.0f, 5.0f);
 	forward = glm::vec3(0.0f, 0.0f, -1.0f);
 	right = glm::vec3(1.0f, 0.0f, 0.0f);
 	up = glm::vec3(0.0f, 1.0f, 0.0f);
@@ -81,4 +81,95 @@ void Camera::RotateOZ(double angle)
 	forward = glm::normalize(glm::vec3(aux));
 
 	up = glm::cross(right, forward);
+}
+
+void Camera::SetPerspective(float fov, float aspect, float zNear, float zFar)
+{
+	projectionMatrix = glm::perspective(glm::radians(fov), aspect, zNear, zFar);
+}
+
+void Camera::SetOrtho(float left, float right, float bottom, float up)
+{
+	projectionMatrix = glm::ortho(left, right, bottom, up);
+}
+
+void Camera::SetOrtho(float left, float right, float bottom, float up, float zNear, float zFar)
+{
+	projectionMatrix = glm::ortho(left, right, bottom, up, zNear, zFar);
+
+}
+
+void Camera::SetProjectionMatrix(glm::mat4 projectionMatrix)
+{
+	this->projectionMatrix = projectionMatrix;
+}
+
+void Camera::SetViewMatrix(glm::mat4 viewMatrix)
+{
+	this->viewMatrix = viewMatrix;
+}
+
+void Camera::SetPosition(glm::vec3 position)
+{
+	this->position = position;
+}
+
+void Camera::SetMovementSpeed(float movementSpeed)
+{
+	this->movementSpeed = movementSpeed;
+}
+
+void Camera::SetMouseSensitivity(float mouseSensitivity)
+{
+	this->mouseSensitivity = mouseSensitivity;
+}
+
+void Camera::SetZoom(float zoom)
+{
+	this->zoom = zoom;
+}
+
+glm::mat4 Camera::GetProjection()
+{
+	return projectionMatrix;
+}
+
+glm::mat4 Camera::GetView()
+{
+	return viewMatrix;
+}
+
+glm::vec3 Camera::GetCameraPosition()
+{
+	return this->position;
+}
+
+glm::vec3 Camera::GetCameraForward()
+{
+	return forward;
+}
+
+glm::vec3 Camera::GetCameraRight()
+{
+	return right;
+}
+
+glm::vec3 Camera::GetCameraUp()
+{
+	return up;
+}
+
+float Camera::GetCameraSpeed()
+{
+	return this->movementSpeed;
+}
+
+float Camera::GetCameraSensitivity()
+{
+	return mouseSensitivity;
+}
+
+float Camera::GetCameraZoom()
+{
+	return this->zoom;
 }

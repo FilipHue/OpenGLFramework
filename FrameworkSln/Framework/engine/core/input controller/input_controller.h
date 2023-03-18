@@ -14,6 +14,14 @@ public:
 	InputController();
 	~InputController();
 
+	/**
+	  * Methods for switching the input controller on and off
+	  * See window.cpp for more information
+	  */
+
+	void SetOn();
+	void SetOff();
+
 protected:
 	Window* window;
 
