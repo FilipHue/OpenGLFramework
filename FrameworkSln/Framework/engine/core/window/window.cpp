@@ -2,6 +2,9 @@
 
 Window::Window(WindowProperties wp)
 {
+	logger = new Logger();
+	logger->Init();
+
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -11,7 +14,7 @@ Window::Window(WindowProperties wp)
 	resolution = glm::ivec2(wp.width, wp.height);
 
 	if (nativeWindow == NULL) {
-		std::cout << "Failed to create GLFW window!" << std::endl;
+		ENGINE_ERROR("Failed to create GLFW window");
 		glfwTerminate();
 		return;
 	}
@@ -20,9 +23,11 @@ Window::Window(WindowProperties wp)
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
-		std::cout << "Failed to initialize GLAD" << std::endl;
+		ENGINE_ERROR("Failed to initialize GLAD");
 		return;
 	}
+
+	ENGINE_INFO("Initialized window");
 
 	SetCallbacks();
 
@@ -171,6 +176,8 @@ void Window::SetCallbacks()
 	glfwSetMouseButtonCallback(nativeWindow, WindowCallbacks::MouseClick);
 	glfwSetCursorPosCallback(nativeWindow, WindowCallbacks::CursorMove);
 	glfwSetScrollCallback(nativeWindow, WindowCallbacks::ScrollMove);
+
+	ENGINE_INFO("Set callbacks");
 }
 
 void Window::SubscribeToEvents(InputController* ic)

@@ -1,18 +1,4 @@
-﻿  Test.cpp
-  camera_input.cpp
-  scene.cpp
-D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(36,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(54,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(69,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(85,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-  scene_input.cpp
-  shape_manager.cpp
-  engine.cpp
-  input_controller.cpp
-  window.cpp
-  window_callbacks.cpp
-  world.cpp
-  main.cpp
-  Generating Code...
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+﻿  shader.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\dependencies\GLAD\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
   Framework.vcxproj -> D:\Diverse\OpenGLFramework\FrameworkSln\Framework\bin\x64-Debug\Framework\Framework.exe

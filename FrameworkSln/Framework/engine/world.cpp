@@ -4,6 +4,7 @@ World::World()
 {
 	window = Engine::GetWindow();
 	deltaTime = previousTime = elapsedTime = 0.0f;
+	ENGINE_INFO("Created world");
 }
 
 World::~World()
@@ -23,7 +24,8 @@ void World::Run()
 
 void World::Exit()
 {
-	glfwSetWindowShouldClose(window->nativeWindow, 1);
+	ENGINE_INFO("Exiting...");
+;	glfwSetWindowShouldClose(window->nativeWindow, 1);
 }
 
 double World::GetDeltaTime()

@@ -23,7 +23,7 @@ void Scene::CreateMesh(const char* name, std::vector<VertexFormat>& vertices, st
 void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position)
 {
 	if (!mesh || !shader) {
-		std::cout << "Render error!" << std::endl;
+		RENDER_ERROR("Render error! - mesh or shader missing");
 		return;
 	}
 
@@ -40,7 +40,8 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position)
 void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* textureName)
 {
 	if (!mesh || !shader || !textureManager->GetTexture2D(textureName)) {
-		std::cout << "Render error!" << std::endl;
+		RENDER_ERROR("Render error! - mesh, shader or texture missing");
+
 		return;
 	}
 
@@ -58,7 +59,7 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const cha
 void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix)
 {
 	if (!mesh || !shader) {
-		std::cout << "Render error!" << std::endl;
+		RENDER_ERROR("Render error! - mesh or shader missing");
 		return;
 	}
 
@@ -73,7 +74,7 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix)
 void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix, const char* textureName)
 {
 	if (!mesh || !shader || !textureManager->GetTexture2D(textureName)) {
-		std::cout << "Render error!" << std::endl;
+		RENDER_ERROR("Render error! - mesh, shader or texture missing");
 		return;
 	}
 
@@ -100,6 +101,8 @@ void Scene::InitScene()
 	textureManager = new TextureManger();
 	shapeManager = new ShapeManager(this);
 
+	RENDER_INFO("Initialized scene");
+
 	Shader* simpleShader = new Shader(
 		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\shaders\\shader_programms\\simple\\simple_vertex_shader.glsl",
 		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\shaders\\shader_programms\\simple\\simple_fragment_shader.glsl"
@@ -117,6 +120,8 @@ void Scene::InitScene()
 		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\shaders\\shader_programms\\texture\\texture_fragment_shader.glsl"
 	);
 	shaders["TextureShader"] = textureShader;
+
+	RENDER_INFO("Loaded base shaders");
 
 	glDepthMask(GL_TRUE);
 	glEnable(GL_DEPTH_TEST);

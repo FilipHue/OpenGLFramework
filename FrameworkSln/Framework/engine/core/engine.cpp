@@ -10,6 +10,8 @@ Window* Engine::Init(WindowProperties wp)
 
     gameWindow = new Window(wp);
 
+    ENGINE_INFO("Initalized engine");
+
     return gameWindow;
 }
 
@@ -24,5 +26,6 @@ double Engine::GetElapsedTime()
 
 void Engine::Exit()
 {
+    ENGINE_INFO("Stoping engine");
     glfwTerminate();
 }

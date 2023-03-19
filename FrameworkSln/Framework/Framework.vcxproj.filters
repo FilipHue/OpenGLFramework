@@ -66,6 +66,9 @@
     <ClCompile Include="engine\components\shapes\shape_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="engine\logger\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine\core\input controller\input_controller.h">
@@ -165,6 +168,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="engine\components\shapes\shape_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\logger\logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

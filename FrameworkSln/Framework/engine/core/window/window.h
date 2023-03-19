@@ -119,6 +119,8 @@ public:
 	GLFWmonitor* nativeMonitor;
 
 	glm::ivec2 resolution;
+	
+	Logger* logger;
 
 private:
 	/**
