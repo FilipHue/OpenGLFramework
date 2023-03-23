@@ -22,3 +22,4 @@ const Colour GREEN = Colour{ 0, 255, 0 };
 const Colour BLUE = Colour{0, 0, 255};
 const Colour WHITE = Colour{255, 255, 255};
 const Colour BLACK = Colour{ 0, 0, 0 };
+const Colour GREY = Colour{ 128, 128, 128 };

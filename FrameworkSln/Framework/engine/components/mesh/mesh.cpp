@@ -4,14 +4,9 @@ Mesh::Mesh(
 	std::string mesh_id,
 	unsigned int VAO,
 	std::vector<VertexFormat>& vertices,
-	std::vector<unsigned int>& indices
-)
-{
-	this->mesh_id = mesh_id;
-	this->VAO = VAO;
-	this->vertices = vertices;
-	this->indices = indices;
-}
+	std::vector<unsigned int>& indices,
+	Material* material
+) : mesh_id(mesh_id), VAO(VAO), vertices(vertices), indices(indices), material(material) {}
 
 Mesh::~Mesh()
 {
@@ -35,4 +30,9 @@ const std::vector<VertexFormat> Mesh::GetVertices() const
 const std::vector<unsigned int> Mesh::GetIndices() const
 {
 	return indices;
+}
+
+const Material* Mesh::GetMaterial() const
+{
+	return material;
 }

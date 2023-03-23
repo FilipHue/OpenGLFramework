@@ -19,7 +19,8 @@ public:
 		std::string mesh_id,
 		unsigned int VAO,
 		std::vector<VertexFormat> &vertices,
-		std::vector<unsigned int> &indices
+		std::vector<unsigned int> &indices,
+		Material* material = nullptr
 	);
 	~Mesh();
 
@@ -39,6 +40,10 @@ public:
 	  * Returns the indices of the mesh 
 	  */
 	const std::vector<unsigned int> GetIndices() const;
+	/**
+	  * Returns the material of the mesh 
+	  */
+	const Material* GetMaterial() const;
 
 private:
 	std::string mesh_id;
@@ -46,5 +51,7 @@ private:
 	unsigned int VAO;
 	std::vector<VertexFormat> vertices;
 	std::vector<unsigned int> indices;
+
+	Material* material;
 };
 

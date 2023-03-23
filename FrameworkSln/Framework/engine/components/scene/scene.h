@@ -62,6 +62,14 @@ protected:
 	  */
 	void RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* textureName);
 	/**
+	  * Renders the mesh object on the screen using its position when there is a light in the scene
+	  * @param mesh The mesh object which is going to be rendered
+	  * @param shader The shader used to render the mesh object
+	  * @param position The position of the mesh object
+	  * @param lightPosition The position of the light
+	  */
+	void RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, glm::vec3 lightPosition);
+	/**
 	  * Renders the mesh object on the screen using its model matrix
 	  * @param mesh The mesh object which is going to be rendered
 	  * @param shader The shader used to render the mesh object
@@ -99,10 +107,12 @@ private:
 	unsigned int InitFromData(std::vector<VertexFormat>& vertices, std::vector<unsigned int>& indices);
 	/**
 	  * Sends to the shader used the projection, view and model matrix
+	  * Can send to the shader the material properties, if needed
+	  * @param mesh The mesh from which we take the material
 	  * @param shader The shader program used
 	  * @param modelMatrix The model matrix of the mesh object
 	  */
-	void SendToShader(Shader* shader, glm::mat4 modelMatrix);
+	void SendToShader(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix);
 
 private:
 	std::vector<Mesh*> axes;

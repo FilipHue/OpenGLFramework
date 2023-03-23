@@ -209,6 +209,8 @@
   <ItemGroup>
     <None Include="engine\shaders\shader_programms\grid\grid_fragment_shader.glsl" />
     <None Include="engine\shaders\shader_programms\grid\grid_vertex_shader.glsl" />
+    <None Include="engine\shaders\shader_programms\lighting\phong_fragment_shader.glsl" />
+    <None Include="engine\shaders\shader_programms\lighting\phong_vertex_shader.glsl" />
     <None Include="engine\shaders\shader_programms\simple\simple_fragment_shader.glsl" />
     <None Include="engine\shaders\shader_programms\simple\simple_vertex_shader.glsl" />
   </ItemGroup>

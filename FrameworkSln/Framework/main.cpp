@@ -8,8 +8,15 @@
 
 #include "Test.h"
 
-int main() {
-	WindowProperties wp = WindowProperties{1280, 720, true, "Test Window"};
+
+
+int main(int argc, char** argv) {
+	std::string directoryName;
+
+	directoryName = argv[0];
+	directoryName.erase(directoryName.begin() + directoryName.find("bin"), directoryName.end());
+
+	WindowProperties wp = WindowProperties{1280, 720, true, "Test Window", directoryName};
 
 	Window* window = Engine::Init(wp);
 

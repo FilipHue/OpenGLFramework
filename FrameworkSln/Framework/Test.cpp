@@ -10,67 +10,23 @@ Test::~Test()
 
 void Test::Init()
 {
-	std::vector<VertexFormat> vertices3 = {
-		VertexFormat(glm::vec3(0, 0, 0)),
-		VertexFormat(glm::vec3(10, 0, 0), glm::vec3(0, 1, 0), GREEN, glm::vec2(1, 0)),
-		VertexFormat(glm::vec3(10, 10 ,0), glm::vec3(0, 1, 0), RED, glm::vec2(1, 1)),
-		VertexFormat(glm::vec3(0, 10, 0), glm::vec3(0, 1, 0), BLUE, glm::vec2(0, 1)),
-		VertexFormat(glm::vec3(0, 0, 10)),
-		VertexFormat(glm::vec3(10, 0, 10), glm::vec3(0, 1, 0), GREEN, glm::vec2(1, 0)),
-		VertexFormat(glm::vec3(10, 10 ,10), glm::vec3(0, 1, 0), RED, glm::vec2(1, 1)),
-		VertexFormat(glm::vec3(0, 10, 10), glm::vec3(0, 1, 0), BLUE, glm::vec2(0, 1)),
-	};
+	shapeManager->CreateRectangleX("Square1", 10, 10);
+	shapeManager->CreateRectangleY("Square2", 10, 10);
+	shapeManager->CreateRectangleZ("Square3", 50, 50);
 
-	std::vector<unsigned int> indices3 = {
-		0, 1, 2,
-		0, 2, 3,
-		1, 5, 6,
-		1, 6, 2,
-		4, 5, 6,
-		4, 6, 7,
-		0, 4, 7,
-		0, 7, 3,
-		0, 1, 5,
-		0, 5, 4,
-		3, 2, 6,
-		3, 6, 7
-	};
-
-	CreateMesh("Cube1", vertices3, indices3);
-
-	std::vector<VertexFormat> vertices4 = {
-		VertexFormat(glm::vec3(0, 0, 0)),
-		VertexFormat(glm::vec3(10, 0, 0), glm::vec3(0, 1, 0), RED, glm::vec2(1, 0)),
-		VertexFormat(glm::vec3(10, 10, 0), glm::vec3(0, 1, 0), GREEN, glm::vec2(1, 1)),
-		VertexFormat(glm::vec3(0, 10, 0), glm::vec3(0, 1, 0), BLUE, glm::vec2(0, 1))
-	};
-
-	std::vector<unsigned int> indices4 = {
-		0, 1, 2,
-		0, 2, 3
-	};
-
-	CreateMesh("Square1", vertices4, indices4);
-
-	std::vector<VertexFormat> vertices5 = {
-		VertexFormat(glm::vec3(0, 0, 0)),
-		VertexFormat(glm::vec3(20, 0, 0), glm::vec3(0, 1, 0), RED, glm::vec2(1, 0)),
-		VertexFormat(glm::vec3(20, 20, 0), glm::vec3(0, 1, 0), GREEN, glm::vec2(1, 1)),
-		VertexFormat(glm::vec3(0, 20, 0), glm::vec3(0, 1, 0), BLUE, glm::vec2(0, 1))
-	};
-
-	std::vector<unsigned int> indices5 = {
-		0, 1, 2,
-		0, 2, 3
-	};
-
-	CreateMesh("Square2", vertices5, indices5);
-
-	shapeManager->CreateRectangleY("Square3", 10, 10);
+	shapeManager->CreateCube("Cube1", 1, 1, 1);
+	shapeManager->CreateCube("Cube2", 1, 1, 1);
+	shapeManager->CreateCube("Cube3", 10, 1, 10);
+	shapeManager->CreateCube("Cube4", 1, 1, 1);
+	shapeManager->CreateCube("Cube5", 0.1, 0.1, 0.1);
 
 	textureManager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\texture\\textures\\crate.jpg", "crate");
 	textureManager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\texture\\textures\\default.png", "grid");
-	textureManager->LoadGridTexture();
+
+	lightMoveSpeed = 2.0f;
+	lightX = 0.0f;
+	lightY = 0.5f;
+	lightZ = 0.0f;
 }
 
 void Test::StartFrame()
@@ -81,16 +37,13 @@ void Test::StartFrame()
 	glViewport(0, 0, window->resolution.x, window->resolution.y);
 }
 
-void Test::Update(double delta_time)
+void Test::Update(double deltaTime)
 {
-	/*glm::mat4 modelCube = glm::mat4(1);
-	RenderMesh(meshes["Cube1"], shaders["SimpleShader"], modelCube);*/
-
-	/*RenderMesh(meshes["Square1"], shaders["TextureShader"], glm::mat4(1), "crate");
-	RenderMesh(meshes["Square2"], shaders["SimpleShader"], glm::vec3(10, 0, 0));*/
-
-	//RenderMesh(meshes["Square2"], shaders["TextureShader"], glm::vec3(0), "crate");
-	RenderMesh(meshes["Cube1"], shaders["SimpleShader"], glm::vec3(0));
+	RenderMesh(meshes["Cube1"], shaders["PhongShader"], glm::vec3(-3.5, 0, -0.5), glm::vec3(lightX, lightY, lightZ));
+	RenderMesh(meshes["Cube2"], shaders["PhongShader"], glm::vec3(2.5, 0, -0.5), glm::vec3(lightX, lightY, lightZ));
+	RenderMesh(meshes["Cube3"], shaders["PhongShader"], glm::vec3(-5, -3.0, -5), glm::vec3(lightX, lightY, lightZ));
+	RenderMesh(meshes["Cube4"], shaders["PhongShader"], glm::vec3(-0.5, 2.5, -0.5), glm::vec3(lightX, lightY, lightZ));
+	RenderMesh(meshes["Cube5"], shaders["SimpleShader"], glm::vec3(lightX, lightY, lightZ));
 }
 
 void Test::EndFrame()
@@ -99,10 +52,41 @@ void Test::EndFrame()
 
 void Test::OnInputUpdate(double deltaTime, int mods)
 {
+	if (window->GetKeyState(GLFW_KEY_UP) && mods != GLFW_MOD_SHIFT) {
+		lightZ += deltaTime * lightMoveSpeed;
+	}
+
+	if (window->GetKeyState(GLFW_KEY_DOWN) && mods != GLFW_MOD_SHIFT) {
+		lightZ -= deltaTime * lightMoveSpeed;
+	}
+
+	if (window->GetKeyState(GLFW_KEY_LEFT)) {
+		lightX += deltaTime * lightMoveSpeed;
+	}
+
+	if (window->GetKeyState(GLFW_KEY_RIGHT)) {
+		lightX -= deltaTime * lightMoveSpeed;
+	}
+
+	if (window->GetKeyState(GLFW_KEY_UP) && mods == GLFW_MOD_SHIFT) {
+		lightY += deltaTime * lightMoveSpeed;
+	}
+
+	if (window->GetKeyState(GLFW_KEY_DOWN) && mods == GLFW_MOD_SHIFT) {
+		lightY -= deltaTime * lightMoveSpeed;
+	}
+
+	/*lightX += cos(Engine::GetElapsedTime()) / 10;
+	lightZ += sin(Engine::GetElapsedTime()) / 10;*/
 }
 
 void Test::OnKeyPress(int key, int mods)
 {	
+	if (key == GLFW_KEY_R) {
+		lightX = 0.0f;
+		lightY = 0.5f;
+		lightZ = 0.0f;
+	}
 }
 
 void Test::OnKeyRelease(int key, int mods)

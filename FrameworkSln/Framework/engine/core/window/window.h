@@ -122,6 +122,8 @@ public:
 	
 	Logger* logger;
 
+	std::string directoryName;
+
 private:
 	/**
 	  * Sets the callback functions 

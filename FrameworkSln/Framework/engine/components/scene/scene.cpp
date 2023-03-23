@@ -29,7 +29,7 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position)
 
 	glm::mat4 modelMatrix(1);
 	modelMatrix = glm::translate(modelMatrix, position);
-	SendToShader(shader, modelMatrix);
+	SendToShader(mesh, shader, modelMatrix);
 
 	glBindVertexArray(mesh->GetVAO());
 	glDrawElementsBaseVertex(GL_TRIANGLES, mesh->GetIndices().size(),
@@ -41,16 +41,44 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const cha
 {
 	if (!mesh || !shader || !textureManager->GetTexture2D(textureName)) {
 		RENDER_ERROR("Render error! - mesh, shader or texture missing");
+		return;
+	}
 
+	if (shader != shaders["TextureShader"]) {
+		RENDER_WARN("Wrong texture for using shaders. You might want to use TextureShader");
+	}
+
+	glm::mat4 modelMatrix(1);
+	modelMatrix = glm::translate(modelMatrix, position);
+	SendToShader(mesh, shader, modelMatrix);
+
+	glBindVertexArray(mesh->GetVAO());
+	glBindTexture(GL_TEXTURE_2D, textureManager->GetTexture2D(textureName)->GetTextureID());
+	glDrawElementsBaseVertex(GL_TRIANGLES, mesh->GetIndices().size(),
+		GL_UNSIGNED_INT, (const void*)(sizeof(unsigned int) * mesh->GetIndices()[0]), 0);
+	glBindVertexArray(0);
+}
+
+void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, glm::vec3 lightPosition)
+{
+	if (!mesh || !shader) {
+		RENDER_ERROR("Render error! - mesh or shader missing");
 		return;
 	}
 
 	glm::mat4 modelMatrix(1);
 	modelMatrix = glm::translate(modelMatrix, position);
-	SendToShader(shader, modelMatrix);
+	SendToShader(mesh, shader, modelMatrix);
+
+	glm::vec3 lightColour = glm::vec3(1.0f, 1.0f, 0.8f);
+	glm::vec3 objectColour = glm::vec3(GREY.red, GREY.green, GREY.blue);
+	glm::vec3 viewPosition = sceneCamera->GetCameraPosition();
+	shaders["PhongShader"]->SetVec3("lightPosition", lightPosition);
+	shaders["PhongShader"]->SetVec3("lightColour", lightColour);
+	shaders["PhongShader"]->SetVec3("objectColour", objectColour);
+	shaders["PhongShader"]->SetVec3("viewPosition", viewPosition);
 
 	glBindVertexArray(mesh->GetVAO());
-	glBindTexture(GL_TEXTURE_2D, textureManager->GetTexture2D(textureName)->GetTextureID());
 	glDrawElementsBaseVertex(GL_TRIANGLES, mesh->GetIndices().size(),
 		GL_UNSIGNED_INT, (const void*)(sizeof(unsigned int) * mesh->GetIndices()[0]), 0);
 	glBindVertexArray(0);
@@ -63,7 +91,7 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix)
 		return;
 	}
 
-	SendToShader(shader, modelMatrix);
+	SendToShader(mesh, shader, modelMatrix);
 
 	glBindVertexArray(mesh->GetVAO());
 	glDrawElementsBaseVertex(GL_TRIANGLES, mesh->GetIndices().size(),
@@ -78,7 +106,11 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix, const 
 		return;
 	}
 
-	SendToShader(shader, modelMatrix);
+	if (shader != shaders["TextureShader"]) {
+		RENDER_WARN("Wrong texture for using shaders. You might want to use TextureShader");
+	}
+
+	SendToShader(mesh, shader, modelMatrix);
 
 	glBindVertexArray(mesh->GetVAO());
 	glBindTexture(GL_TEXTURE_2D, textureManager->GetTexture2D(textureName)->GetTextureID());
@@ -120,6 +152,12 @@ void Scene::InitScene()
 		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\shaders\\shader_programms\\texture\\texture_fragment_shader.glsl"
 	);
 	shaders["TextureShader"] = textureShader;
+
+	Shader* gourandShader = new Shader(
+		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\shaders\\shader_programms\\lighting\\phong_vertex_shader.glsl",
+		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\engine\\shaders\\shader_programms\\lighting\\phong_fragment_shader.glsl"
+	);
+	shaders["PhongShader"] = gourandShader;
 
 	RENDER_INFO("Loaded base shaders");
 
@@ -165,7 +203,7 @@ unsigned int Scene::InitFromData(std::vector<VertexFormat>& vertices, std::vecto
 	return VAO;
 }
 
-void Scene::SendToShader(Shader* shader, glm::mat4 modelMatrix)
+void Scene::SendToShader(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix)
 {
 	sceneCamera->SetViewMatrix(glm::lookAt(sceneCamera->GetCameraPosition(), sceneCamera->GetCameraPosition() + sceneCamera->GetCameraForward(), sceneCamera->GetCameraUp()));
 

@@ -1,4 +1,9 @@
-﻿  shader.cpp
+﻿  scene.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
 D:\Diverse\OpenGLFramework\FrameworkSln\Framework\dependencies\GLAD\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(36,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(58,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(83,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(98,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+D:\Diverse\OpenGLFramework\FrameworkSln\Framework\engine\components\scene\scene.cpp(118,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
   Framework.vcxproj -> D:\Diverse\OpenGLFramework\FrameworkSln\Framework\bin\x64-Debug\Framework\Framework.exe

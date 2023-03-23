@@ -12,6 +12,8 @@ public:
 
 	/**
 	  * Loads a 2D texture from a file
+	  * @param filePath The path to the texture path
+	  * @param name The name of the texture with which is identified (given by the caller: crate.jpg -> crate)
 	  */
 	void LoadTexture2D(const char* filePath, const char* name);
 	/**

@@ -12,9 +12,10 @@ struct win_prop {
 		int height,
 		bool vsync,
 		const char* windowTitle,
+		std::string directoryName,
 		glm::ivec2 position = glm::ivec2(0),
 		glm::ivec2 cursorPosition = glm::ivec2(0)
-	) : width(width), height(height), vsync(vsync), windowTitle(windowTitle), position(position), cursorPosition(cursorPosition) {}
+	) : width(width), height(height), vsync(vsync), windowTitle(windowTitle), directoryName(directoryName), position(position), cursorPosition(cursorPosition) {}
 
 	int width;
 	int height;
@@ -22,6 +23,7 @@ struct win_prop {
 	bool vsync;
 
 	const char* windowTitle;
+	std::string directoryName;
 
 	glm::ivec2 position;
 	glm::ivec2 cursorPosition;

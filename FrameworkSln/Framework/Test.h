@@ -8,6 +8,10 @@ public:
 	Test();
 	~Test();
 
+public:
+	float lightX, lightY, lightZ;
+	float lightMoveSpeed;
+
 private:
 	void Init() override;
 
