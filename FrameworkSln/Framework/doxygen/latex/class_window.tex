@@ -1,0 +1,408 @@
+\hypertarget{class_window}{}\doxysection{Window Class Reference}
+\label{class_window}\index{Window@{Window}}
+
+
+{\ttfamily \#include $<$window.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_window_aeb0aac2cdf44390e4b9f1a7f8fb93de5}{Init}} (\mbox{\hyperlink{structwindow__properties}{window\+\_\+properties}} $\ast$wp)
+\begin{DoxyCompactList}\small\item\em Method for initializing the glfw and glad library, setting window hints and creating the window context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_a89c434ec340b4594c6c8af3f0bf58c9b}{Shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Method for terminating the window context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_a5773af5bbba89347336d9a8793340184}{Poll\+Events}} ()
+\item 
+void \mbox{\hyperlink{class_window_abe1b83eda6980f2b9964aab08b5310ed}{Swap\+Buffers}} ()
+\item 
+int \mbox{\hyperlink{class_window_a6aa86d4800090cfeb56c52f63383c179}{Should\+Close}} ()
+\item 
+GLFWwindow $\ast$ \mbox{\hyperlink{class_window_a682df3064b8c04aee17f6c159829a764}{Get\+Native\+Window}} ()
+\item 
+void \mbox{\hyperlink{class_window_a822c4b9c7a8ebd77fa853f6443cae790}{Set\+Window\+Hints}} ()
+\item 
+void \mbox{\hyperlink{class_window_a03541a688392c47a9606147c9941f0b9}{Set\+Window\+Callbacks}} ()
+\item 
+void \mbox{\hyperlink{class_window_a4b30df6e4bd8704065b014bd12817c12}{Set\+Cursor}} (int x\+\_\+pos, int y\+\_\+pos)
+\item 
+void \mbox{\hyperlink{class_window_ad26ca8fe4b6a3c549e1d44a7941ae2e7}{Center\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{class_window_a3db46803e892142874ad9e39bce2004c}{Show\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{class_window_a4017aa91ea5bd5f59f1bc43c77415ce0}{Hide\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{class_window_ae79b44d204313d7c4be587f894c33557}{Disable\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{class_window_aee3c5794cfecf72f78ed2a0af2ef6acc}{Set\+Window}} (int x\+\_\+pos, int y\+\_\+pos)
+\item 
+void \mbox{\hyperlink{class_window_ab3ef86066c7f15caaee92f25fca6e389}{Center\+Window}} ()
+\item 
+bool \mbox{\hyperlink{class_window_a012b72d666865ee42bf51ba8eff35eb1}{Get\+Continous\+Press}} (int key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_window_a5873f04865a181dbf7dfbefc33fc5704}{Key\+Callbacks}} (int key, int scancode, int action, int mods)
+\begin{DoxyCompactList}\small\item\em Method for handling keyboard input. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_window_aaead0b344c438ab4a8d6556cadfc2977}{Mouse\+Button\+Callbacks}} (int button, int action, int mods)
+\begin{DoxyCompactList}\small\item\em Method for handling mouse button input. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_window_a0c2dcc34465f43dee3eaec3f30b3ce60}{Mouse\+Move\+Callbacks}} (double x\+\_\+pos, double y\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Method for handling mouse movement. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_window_a5d495d5437cc87885b68ee0fcb886039}{Mouse\+Scroll\+Callbacks}} (double x\+\_\+offset, double y\+\_\+offset)
+\begin{DoxyCompactList}\small\item\em Method for handling mouse scroll. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_window_a068d24ef772bf4be412269b7818f0a80}{Continous\+Events}} (double delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Method for handling continous events (continous key press, for example) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_window_a6ca97820bbc4ae116168d7241ae737e6}{Subscribe\+To\+Events}} (\mbox{\hyperlink{class_input_controller}{Input\+Controller}} $\ast$ic)
+\begin{DoxyCompactList}\small\item\em Method for connecting an input controller to the current window (for \char`\"{}listening\char`\"{} to events) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_window_aebd62a7ffa92777ebf4ec5bc6b1068fc}{Unsubscribe\+From\+Events}} (\mbox{\hyperlink{class_input_controller}{Input\+Controller}} $\ast$ic)
+\begin{DoxyCompactList}\small\item\em Method for disconnecting an input controller from the current window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::ivec2 \mbox{\hyperlink{class_window_a232a8164adde7ff4f2dd69bc46819dc3}{resolution}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_window_adb814fa90d9b6dfb6aaacf436d3b6ee0}{Window\+Callbacks}}
+\item 
+class \mbox{\hyperlink{class_window_a083d5a8d8c2dd3a28d1f55d2965db0ab}{Input\+Controller}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{window_8h_source_l00015}{15}} of file \mbox{\hyperlink{window_8h_source}{window.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_window_ad26ca8fe4b6a3c549e1d44a7941ae2e7}\label{class_window_ad26ca8fe4b6a3c549e1d44a7941ae2e7}} 
+\index{Window@{Window}!CenterCursor@{CenterCursor}}
+\index{CenterCursor@{CenterCursor}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{CenterCursor()}{CenterCursor()}}
+{\footnotesize\ttfamily void Window\+::\+Center\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00167}{167}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_ab3ef86066c7f15caaee92f25fca6e389}\label{class_window_ab3ef86066c7f15caaee92f25fca6e389}} 
+\index{Window@{Window}!CenterWindow@{CenterWindow}}
+\index{CenterWindow@{CenterWindow}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{CenterWindow()}{CenterWindow()}}
+{\footnotesize\ttfamily void Window\+::\+Center\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00194}{194}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a068d24ef772bf4be412269b7818f0a80}\label{class_window_a068d24ef772bf4be412269b7818f0a80}} 
+\index{Window@{Window}!ContinousEvents@{ContinousEvents}}
+\index{ContinousEvents@{ContinousEvents}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{ContinousEvents()}{ContinousEvents()}}
+{\footnotesize\ttfamily void Window\+::\+Continous\+Events (\begin{DoxyParamCaption}\item[{double}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method for handling continous events (continous key press, for example) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & The time between the last frame and the current frame \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00133}{133}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_ae79b44d204313d7c4be587f894c33557}\label{class_window_ae79b44d204313d7c4be587f894c33557}} 
+\index{Window@{Window}!DisableCursor@{DisableCursor}}
+\index{DisableCursor@{DisableCursor}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{DisableCursor()}{DisableCursor()}}
+{\footnotesize\ttfamily void Window\+::\+Disable\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00184}{184}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a012b72d666865ee42bf51ba8eff35eb1}\label{class_window_a012b72d666865ee42bf51ba8eff35eb1}} 
+\index{Window@{Window}!GetContinousPress@{GetContinousPress}}
+\index{GetContinousPress@{GetContinousPress}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{GetContinousPress()}{GetContinousPress()}}
+{\footnotesize\ttfamily bool Window\+::\+Get\+Continous\+Press (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a682df3064b8c04aee17f6c159829a764}\label{class_window_a682df3064b8c04aee17f6c159829a764}} 
+\index{Window@{Window}!GetNativeWindow@{GetNativeWindow}}
+\index{GetNativeWindow@{GetNativeWindow}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{GetNativeWindow()}{GetNativeWindow()}}
+{\footnotesize\ttfamily GLFWwindow $\ast$ Window\+::\+Get\+Native\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a4017aa91ea5bd5f59f1bc43c77415ce0}\label{class_window_a4017aa91ea5bd5f59f1bc43c77415ce0}} 
+\index{Window@{Window}!HideCursor@{HideCursor}}
+\index{HideCursor@{HideCursor}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{HideCursor()}{HideCursor()}}
+{\footnotesize\ttfamily void Window\+::\+Hide\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00179}{179}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_aeb0aac2cdf44390e4b9f1a7f8fb93de5}\label{class_window_aeb0aac2cdf44390e4b9f1a7f8fb93de5}} 
+\index{Window@{Window}!Init@{Init}}
+\index{Init@{Init}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Window\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__properties}{window\+\_\+properties}} $\ast$}]{wp }\end{DoxyParamCaption})}
+
+
+
+Method for initializing the glfw and glad library, setting window hints and creating the window context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wp} & Structure for window properties \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a5873f04865a181dbf7dfbefc33fc5704}\label{class_window_a5873f04865a181dbf7dfbefc33fc5704}} 
+\index{Window@{Window}!KeyCallbacks@{KeyCallbacks}}
+\index{KeyCallbacks@{KeyCallbacks}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{KeyCallbacks()}{KeyCallbacks()}}
+{\footnotesize\ttfamily void Window\+::\+Key\+Callbacks (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method for handling keyboard input. 
+
+See window\+\_\+callbacks for more information 
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_aaead0b344c438ab4a8d6556cadfc2977}\label{class_window_aaead0b344c438ab4a8d6556cadfc2977}} 
+\index{Window@{Window}!MouseButtonCallbacks@{MouseButtonCallbacks}}
+\index{MouseButtonCallbacks@{MouseButtonCallbacks}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{MouseButtonCallbacks()}{MouseButtonCallbacks()}}
+{\footnotesize\ttfamily void Window\+::\+Mouse\+Button\+Callbacks (\begin{DoxyParamCaption}\item[{int}]{button,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method for handling mouse button input. 
+
+See window\+\_\+callbacks for more information 
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a0c2dcc34465f43dee3eaec3f30b3ce60}\label{class_window_a0c2dcc34465f43dee3eaec3f30b3ce60}} 
+\index{Window@{Window}!MouseMoveCallbacks@{MouseMoveCallbacks}}
+\index{MouseMoveCallbacks@{MouseMoveCallbacks}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{MouseMoveCallbacks()}{MouseMoveCallbacks()}}
+{\footnotesize\ttfamily void Window\+::\+Mouse\+Move\+Callbacks (\begin{DoxyParamCaption}\item[{double}]{x\+\_\+pos,  }\item[{double}]{y\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method for handling mouse movement. 
+
+See window\+\_\+callbacks for more information 
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a5d495d5437cc87885b68ee0fcb886039}\label{class_window_a5d495d5437cc87885b68ee0fcb886039}} 
+\index{Window@{Window}!MouseScrollCallbacks@{MouseScrollCallbacks}}
+\index{MouseScrollCallbacks@{MouseScrollCallbacks}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{MouseScrollCallbacks()}{MouseScrollCallbacks()}}
+{\footnotesize\ttfamily void Window\+::\+Mouse\+Scroll\+Callbacks (\begin{DoxyParamCaption}\item[{double}]{x\+\_\+offset,  }\item[{double}]{y\+\_\+offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method for handling mouse scroll. 
+
+See window\+\_\+callbacks for more information 
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00126}{126}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a5773af5bbba89347336d9a8793340184}\label{class_window_a5773af5bbba89347336d9a8793340184}} 
+\index{Window@{Window}!PollEvents@{PollEvents}}
+\index{PollEvents@{PollEvents}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{PollEvents()}{PollEvents()}}
+{\footnotesize\ttfamily void Window\+::\+Poll\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a4b30df6e4bd8704065b014bd12817c12}\label{class_window_a4b30df6e4bd8704065b014bd12817c12}} 
+\index{Window@{Window}!SetCursor@{SetCursor}}
+\index{SetCursor@{SetCursor}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{SetCursor()}{SetCursor()}}
+{\footnotesize\ttfamily void Window\+::\+Set\+Cursor (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+pos,  }\item[{int}]{y\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00162}{162}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_aee3c5794cfecf72f78ed2a0af2ef6acc}\label{class_window_aee3c5794cfecf72f78ed2a0af2ef6acc}} 
+\index{Window@{Window}!SetWindow@{SetWindow}}
+\index{SetWindow@{SetWindow}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{SetWindow()}{SetWindow()}}
+{\footnotesize\ttfamily void Window\+::\+Set\+Window (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+pos,  }\item[{int}]{y\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00189}{189}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a03541a688392c47a9606147c9941f0b9}\label{class_window_a03541a688392c47a9606147c9941f0b9}} 
+\index{Window@{Window}!SetWindowCallbacks@{SetWindowCallbacks}}
+\index{SetWindowCallbacks@{SetWindowCallbacks}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{SetWindowCallbacks()}{SetWindowCallbacks()}}
+{\footnotesize\ttfamily void Window\+::\+Set\+Window\+Callbacks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00154}{154}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a822c4b9c7a8ebd77fa853f6443cae790}\label{class_window_a822c4b9c7a8ebd77fa853f6443cae790}} 
+\index{Window@{Window}!SetWindowHints@{SetWindowHints}}
+\index{SetWindowHints@{SetWindowHints}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{SetWindowHints()}{SetWindowHints()}}
+{\footnotesize\ttfamily void Window\+::\+Set\+Window\+Hints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00140}{140}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a6aa86d4800090cfeb56c52f63383c179}\label{class_window_a6aa86d4800090cfeb56c52f63383c179}} 
+\index{Window@{Window}!ShouldClose@{ShouldClose}}
+\index{ShouldClose@{ShouldClose}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{ShouldClose()}{ShouldClose()}}
+{\footnotesize\ttfamily int Window\+::\+Should\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a3db46803e892142874ad9e39bce2004c}\label{class_window_a3db46803e892142874ad9e39bce2004c}} 
+\index{Window@{Window}!ShowCursor@{ShowCursor}}
+\index{ShowCursor@{ShowCursor}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{ShowCursor()}{ShowCursor()}}
+{\footnotesize\ttfamily void Window\+::\+Show\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00174}{174}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a89c434ec340b4594c6c8af3f0bf58c9b}\label{class_window_a89c434ec340b4594c6c8af3f0bf58c9b}} 
+\index{Window@{Window}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Window\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method for terminating the window context. 
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_a6ca97820bbc4ae116168d7241ae737e6}\label{class_window_a6ca97820bbc4ae116168d7241ae737e6}} 
+\index{Window@{Window}!SubscribeToEvents@{SubscribeToEvents}}
+\index{SubscribeToEvents@{SubscribeToEvents}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{SubscribeToEvents()}{SubscribeToEvents()}}
+{\footnotesize\ttfamily void Window\+::\+Subscribe\+To\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_input_controller}{Input\+Controller}} $\ast$}]{ic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method for connecting an input controller to the current window (for \char`\"{}listening\char`\"{} to events) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ic} & The input controller that is being connected \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00204}{204}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_abe1b83eda6980f2b9964aab08b5310ed}\label{class_window_abe1b83eda6980f2b9964aab08b5310ed}} 
+\index{Window@{Window}!SwapBuffers@{SwapBuffers}}
+\index{SwapBuffers@{SwapBuffers}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{SwapBuffers()}{SwapBuffers()}}
+{\footnotesize\ttfamily void Window\+::\+Swap\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+\mbox{\Hypertarget{class_window_aebd62a7ffa92777ebf4ec5bc6b1068fc}\label{class_window_aebd62a7ffa92777ebf4ec5bc6b1068fc}} 
+\index{Window@{Window}!UnsubscribeFromEvents@{UnsubscribeFromEvents}}
+\index{UnsubscribeFromEvents@{UnsubscribeFromEvents}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{UnsubscribeFromEvents()}{UnsubscribeFromEvents()}}
+{\footnotesize\ttfamily void Window\+::\+Unsubscribe\+From\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_input_controller}{Input\+Controller}} $\ast$}]{ic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method for disconnecting an input controller from the current window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ic} & The input controller that is being disconnected \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{window_8cpp_source_l00209}{209}} of file \mbox{\hyperlink{window_8cpp_source}{window.\+cpp}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_window_a083d5a8d8c2dd3a28d1f55d2965db0ab}\label{class_window_a083d5a8d8c2dd3a28d1f55d2965db0ab}} 
+\index{Window@{Window}!InputController@{InputController}}
+\index{InputController@{InputController}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{InputController}{InputController}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_input_controller}{Input\+Controller}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{window_8h_source_l00018}{18}} of file \mbox{\hyperlink{window_8h_source}{window.\+h}}.
+
+\mbox{\Hypertarget{class_window_adb814fa90d9b6dfb6aaacf436d3b6ee0}\label{class_window_adb814fa90d9b6dfb6aaacf436d3b6ee0}} 
+\index{Window@{Window}!WindowCallbacks@{WindowCallbacks}}
+\index{WindowCallbacks@{WindowCallbacks}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{WindowCallbacks}{WindowCallbacks}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_window_callbacks}{Window\+Callbacks}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{window_8h_source_l00017}{17}} of file \mbox{\hyperlink{window_8h_source}{window.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_window_a232a8164adde7ff4f2dd69bc46819dc3}\label{class_window_a232a8164adde7ff4f2dd69bc46819dc3}} 
+\index{Window@{Window}!resolution@{resolution}}
+\index{resolution@{resolution}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{resolution}{resolution}}
+{\footnotesize\ttfamily glm\+::ivec2 Window\+::resolution}
+
+
+
+Definition at line \mbox{\hyperlink{window_8h_source_l00090}{90}} of file \mbox{\hyperlink{window_8h_source}{window.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/engine/core/window/\mbox{\hyperlink{window_8h}{window.\+h}}\item 
+src/engine/core/window/\mbox{\hyperlink{window_8cpp}{window.\+cpp}}\end{DoxyCompactItemize}

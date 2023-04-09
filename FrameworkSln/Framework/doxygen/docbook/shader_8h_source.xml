@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_shader_8h_source" xml:lang="en-US">
+<title>shader.h</title>
+<indexterm><primary>src/managers/shader/shader.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_shader_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_shader_8h_source_1l00002"/>00002 
+<anchor xml:id="_shader_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;core.h&gt;</emphasis>
+<anchor xml:id="_shader_8h_source_1l00004"/>00004 
+<anchor xml:id="_shader_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;glad/glad.h&gt;</emphasis>
+<anchor xml:id="_shader_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;glfw3.h&gt;</emphasis>
+<anchor xml:id="_shader_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&lt;glm.hpp&gt;</emphasis>
+<anchor xml:id="_shader_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&lt;gtc/type_ptr.hpp&gt;</emphasis>
+<anchor xml:id="_shader_8h_source_1l00009"/>00009 
+<anchor xml:id="_shader_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_shader_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+<anchor xml:id="_shader_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&lt;sstream&gt;</emphasis>
+<anchor xml:id="_shader_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_shader_8h_source_1l00014"/>00014 
+<anchor xml:id="_shader_8h_source_1l00015"/>00015 
+<anchor xml:id="_shader_8h_source_1l00016"/>00016 
+<anchor xml:id="_shader_8h_source_1l00017"/>00017 
+<anchor xml:id="_shader_8h_source_1l00018"/><link linkend="_class_shader">00018</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_shader">Shader</link>
+<anchor xml:id="_shader_8h_source_1l00019"/>00019 {
+<anchor xml:id="_shader_8h_source_1l00020"/>00020 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_shader_8h_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<link linkend="_class_shader">Shader</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;vertex_shader_path,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;fragment_shader_path);
+<anchor xml:id="_shader_8h_source_1l00027"/>00027 
+<anchor xml:id="_shader_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1a6b11327cff651ffdb22988b6917b1650">Use</link>();
+<anchor xml:id="_shader_8h_source_1l00032"/>00032 
+<anchor xml:id="_shader_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1a70cd07acf03715e4e927df1be5c5b5a0">SetBool</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;value)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shader_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1a645ef3753b1fc09a30dbb26f817d88e5">SetInt</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;<emphasis role="keywordtype">int</emphasis>&#32;value)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shader_8h_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1ac20ee02a436e4baeb63dde08a0364574">SetFloat</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;<emphasis role="keywordtype">float</emphasis>&#32;value)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shader_8h_source_1l00036"/>00036 
+<anchor xml:id="_shader_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1a3a6e99e301ccecf029b1848d0ae9cfa9">SetVec2</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;glm::vec2&amp;&#32;value)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shader_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1acddd2cf07b0b37f0cdfbb44074863c91">SetVec3</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;glm::vec3&amp;&#32;value)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shader_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1abb9700672c86727c5b895a74f361fa2d">SetVec4</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;glm::vec4&amp;&#32;value)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shader_8h_source_1l00040"/>00040 
+<anchor xml:id="_shader_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1af7a3746572efb2b89fed45bc52c3f7d5">SetMat2</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;glm::mat2&amp;&#32;value)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shader_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1ad58277efb139b843f9f0b3d5576c4f73">SetMat3</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;glm::mat3&amp;&#32;value)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shader_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shader_1a250ff0e81a022d4ab8ab1f8206e8c91b">SetMat4</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;glm::mat4&amp;&#32;value)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shader_8h_source_1l00044"/>00044 
+<anchor xml:id="_shader_8h_source_1l00045"/>00045 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_shader_8h_source_1l00046"/><link linkend="_class_shader_1acca962099a3587a3d6b5c8e8e54049f8">00046</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_shader_1acca962099a3587a3d6b5c8e8e54049f8">shaderID</link>;
+<anchor xml:id="_shader_8h_source_1l00047"/>00047 
+<anchor xml:id="_shader_8h_source_1l00048"/>00048 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_shader_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;vertex_code;
+<anchor xml:id="_shader_8h_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;fragment_code;
+<anchor xml:id="_shader_8h_source_1l00051"/>00051 };
+</programlisting></section>

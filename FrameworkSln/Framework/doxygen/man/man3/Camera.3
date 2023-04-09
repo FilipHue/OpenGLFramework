@@ -1,0 +1,221 @@
+.TH "Camera" 3 "Sun Apr 9 2023" "OpenGL Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Camera
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <camera\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBMoveForward\fP (double delta_time)"
+.br
+.ti -1c
+.RI "void \fBMoveBackwards\fP (double delta_time)"
+.br
+.ti -1c
+.RI "void \fBMoveLeft\fP (double delta_time)"
+.br
+.ti -1c
+.RI "void \fBMoveRight\fP (double delta_time)"
+.br
+.ti -1c
+.RI "void \fBMoveUp\fP (double delta_time)"
+.br
+.ti -1c
+.RI "void \fBMoveDown\fP (double delta_time)"
+.br
+.ti -1c
+.RI "void \fBRotateOX\fP (double angle)"
+.br
+.ti -1c
+.RI "void \fBRotateOY\fP (double angle)"
+.br
+.ti -1c
+.RI "void \fBRotateOZ\fP (double angle)"
+.br
+.ti -1c
+.RI "void \fBSetPerspective\fP (float fov, float aspect, float zNear, float zFar)"
+.br
+.ti -1c
+.RI "void \fBSetOrtho\fP (float left, float right, float bottom, float up)"
+.br
+.ti -1c
+.RI "void \fBSetOrtho\fP (float left, float right, float bottom, float up, float zNear, float zFar)"
+.br
+.ti -1c
+.RI "void \fBSetProjectionMatrix\fP (glm::mat4 projection_matrix)"
+.br
+.ti -1c
+.RI "void \fBSetViewMatrix\fP (glm::mat4 view_matrix)"
+.br
+.ti -1c
+.RI "void \fBSetPosition\fP (glm::vec3 position)"
+.br
+.ti -1c
+.RI "void \fBSetMovementSpeed\fP (float movement_speed)"
+.br
+.ti -1c
+.RI "void \fBSetMouseSensitivity\fP (float mouse_sensitivity)"
+.br
+.ti -1c
+.RI "void \fBSetZoom\fP (float zoom)"
+.br
+.ti -1c
+.RI "glm::mat4 \fBGetProjection\fP ()"
+.br
+.ti -1c
+.RI "glm::mat4 \fBGetView\fP ()"
+.br
+.ti -1c
+.RI "glm::vec3 \fBGetCameraPosition\fP ()"
+.br
+.ti -1c
+.RI "glm::vec3 \fBGetCameraForward\fP ()"
+.br
+.ti -1c
+.RI "glm::vec3 \fBGetCameraRight\fP ()"
+.br
+.ti -1c
+.RI "glm::vec3 \fBGetCameraUp\fP ()"
+.br
+.ti -1c
+.RI "float \fBGetCameraSpeed\fP ()"
+.br
+.ti -1c
+.RI "float \fBGetCameraSensitivity\fP ()"
+.br
+.ti -1c
+.RI "float \fBGetCameraZoom\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB6\fP of file \fBcamera\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Camera::Camera ()"
+
+.PP
+Definition at line \fB3\fP of file \fBcamera\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "glm::vec3 Camera::GetCameraForward ()"
+
+.PP
+Definition at line \fB143\fP of file \fBcamera\&.cpp\fP\&.
+.SS "glm::vec3 Camera::GetCameraPosition ()"
+
+.PP
+Definition at line \fB138\fP of file \fBcamera\&.cpp\fP\&.
+.SS "glm::vec3 Camera::GetCameraRight ()"
+
+.PP
+Definition at line \fB148\fP of file \fBcamera\&.cpp\fP\&.
+.SS "float Camera::GetCameraSensitivity ()"
+
+.PP
+Definition at line \fB163\fP of file \fBcamera\&.cpp\fP\&.
+.SS "float Camera::GetCameraSpeed ()"
+
+.PP
+Definition at line \fB158\fP of file \fBcamera\&.cpp\fP\&.
+.SS "glm::vec3 Camera::GetCameraUp ()"
+
+.PP
+Definition at line \fB153\fP of file \fBcamera\&.cpp\fP\&.
+.SS "float Camera::GetCameraZoom ()"
+
+.PP
+Definition at line \fB168\fP of file \fBcamera\&.cpp\fP\&.
+.SS "glm::mat4 Camera::GetProjection ()"
+
+.PP
+Definition at line \fB128\fP of file \fBcamera\&.cpp\fP\&.
+.SS "glm::mat4 Camera::GetView ()"
+
+.PP
+Definition at line \fB133\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::MoveBackwards (double delta_time)"
+
+.PP
+Definition at line \fB28\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::MoveDown (double delta_time)"
+
+.PP
+Definition at line \fB48\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::MoveForward (double delta_time)"
+
+.PP
+Definition at line \fB23\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::MoveLeft (double delta_time)"
+
+.PP
+Definition at line \fB33\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::MoveRight (double delta_time)"
+
+.PP
+Definition at line \fB38\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::MoveUp (double delta_time)"
+
+.PP
+Definition at line \fB43\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::RotateOX (double angle)"
+
+.PP
+Definition at line \fB53\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::RotateOY (double angle)"
+
+.PP
+Definition at line \fB60\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::RotateOZ (double angle)"
+
+.PP
+Definition at line \fB71\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::SetMouseSensitivity (float mouse_sensitivity)"
+
+.PP
+Definition at line \fB118\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::SetMovementSpeed (float movement_speed)"
+
+.PP
+Definition at line \fB113\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::SetOrtho (float left, float right, float bottom, float up)"
+
+.PP
+Definition at line \fB87\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::SetOrtho (float left, float right, float bottom, float up, float zNear, float zFar)"
+
+.PP
+Definition at line \fB92\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::SetPerspective (float fov, float aspect, float zNear, float zFar)"
+
+.PP
+Definition at line \fB82\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::SetPosition (glm::vec3 position)"
+
+.PP
+Definition at line \fB108\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::SetProjectionMatrix (glm::mat4 projection_matrix)"
+
+.PP
+Definition at line \fB98\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::SetViewMatrix (glm::mat4 view_matrix)"
+
+.PP
+Definition at line \fB103\fP of file \fBcamera\&.cpp\fP\&.
+.SS "void Camera::SetZoom (float zoom)"
+
+.PP
+Definition at line \fB123\fP of file \fBcamera\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenGL Framework from the source code\&.

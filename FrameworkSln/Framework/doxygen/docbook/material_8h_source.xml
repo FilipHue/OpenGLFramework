@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_material_8h_source" xml:lang="en-US">
+<title>material.h</title>
+<indexterm><primary>src/utils/material.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_material_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_material_8h_source_1l00002"/>00002 
+<anchor xml:id="_material_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_material_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;glm.hpp&gt;</emphasis>
+<anchor xml:id="_material_8h_source_1l00005"/>00005 
+<anchor xml:id="_material_8h_source_1l00006"/><link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">00006</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structmaterial">material</link>&#32;<link linkend="_structmaterial">Material</link>;
+<anchor xml:id="_material_8h_source_1l00007"/><link linkend="_structmaterial">00007</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structmaterial">material</link>&#32;{
+<anchor xml:id="_material_8h_source_1l00008"/><link linkend="_structmaterial_1a6c9702db8ba10025c20efb81a96ce976">00008</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_structmaterial_1a6c9702db8ba10025c20efb81a96ce976">name</link>;
+<anchor xml:id="_material_8h_source_1l00009"/>00009 
+<anchor xml:id="_material_8h_source_1l00010"/><link linkend="_structmaterial_1af632818ebb9719ee9a6bb9c2b5122504">00010</link> &#32;&#32;&#32;&#32;glm::vec3&#32;<link linkend="_structmaterial_1af632818ebb9719ee9a6bb9c2b5122504">Ka</link>;
+<anchor xml:id="_material_8h_source_1l00011"/><link linkend="_structmaterial_1a665292640cc52bde33c2bf9dd8b93551">00011</link> &#32;&#32;&#32;&#32;glm::vec3&#32;<link linkend="_structmaterial_1a665292640cc52bde33c2bf9dd8b93551">Kd</link>;
+<anchor xml:id="_material_8h_source_1l00012"/><link linkend="_structmaterial_1a95ce8a36cb532bd25a2a97b83fe7de36">00012</link> &#32;&#32;&#32;&#32;glm::vec3&#32;<link linkend="_structmaterial_1a95ce8a36cb532bd25a2a97b83fe7de36">Ksp</link>;
+<anchor xml:id="_material_8h_source_1l00013"/><link linkend="_structmaterial_1a75a7b1f8b3d8820a2a5a0ec976e8bc84">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_structmaterial_1a75a7b1f8b3d8820a2a5a0ec976e8bc84">Ksh</link>;
+<anchor xml:id="_material_8h_source_1l00014"/>00014 
+<anchor xml:id="_material_8h_source_1l00015"/><link linkend="_structmaterial_1ad117ab5a6c13364caccc28997d11abf4">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_structmaterial_1ad117ab5a6c13364caccc28997d11abf4">operator&lt;&lt;</link>(std::ostream&amp;&#32;os,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structmaterial">Material</link>&amp;&#32;m)&#32;{
+<anchor xml:id="_material_8h_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;os&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Name:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;m.<link linkend="_structmaterial_1a6c9702db8ba10025c20efb81a96ce976">name</link>&#32;&lt;&lt;&#32;std::endl&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Ambient:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;m.<link linkend="_structmaterial_1af632818ebb9719ee9a6bb9c2b5122504">Ka</link>&#32;&lt;&lt;&#32;std::endl&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Diffuse:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;m.<link linkend="_structmaterial_1a665292640cc52bde33c2bf9dd8b93551">Kd</link>&#32;&lt;&lt;&#32;std::endl&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Specular:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;m.<link linkend="_structmaterial_1a95ce8a36cb532bd25a2a97b83fe7de36">Ksp</link>&#32;&lt;&lt;&#32;std::endl&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Shininess:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;m.<link linkend="_structmaterial_1a75a7b1f8b3d8820a2a5a0ec976e8bc84">Ksh</link>;
+<anchor xml:id="_material_8h_source_1l00017"/>00017 
+<anchor xml:id="_material_8h_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;os;
+<anchor xml:id="_material_8h_source_1l00019"/>00019 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_material_8h_source_1l00020"/>00020 };
+</programlisting></section>

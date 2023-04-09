@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_window_8h_source" xml:lang="en-US">
+<title>window.h</title>
+<indexterm><primary>src/engine/core/window/window.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_window_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_window_8h_source_1l00002"/>00002 
+<anchor xml:id="_window_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;memory&gt;</emphasis>
+<anchor xml:id="_window_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;list&gt;</emphasis>
+<anchor xml:id="_window_8h_source_1l00005"/>00005 
+<anchor xml:id="_window_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;core.h&quot;</emphasis>
+<anchor xml:id="_window_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;glad/glad.h&quot;</emphasis>
+<anchor xml:id="_window_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&quot;glfw3.h&quot;</emphasis>
+<anchor xml:id="_window_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&quot;glm.hpp&quot;</emphasis>
+<anchor xml:id="_window_8h_source_1l00010"/>00010 
+<anchor xml:id="_window_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_window__properties_8h">window_properties.h</link>&quot;</emphasis>
+<anchor xml:id="_window_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_window__callbacks_8h">window_callbacks.h</link>&quot;</emphasis>
+<anchor xml:id="_window_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;../input_controller/input_controller.h&quot;</emphasis>
+<anchor xml:id="_window_8h_source_1l00014"/>00014 
+<anchor xml:id="_window_8h_source_1l00015"/><link linkend="_class_window">00015</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_window">Window</link>
+<anchor xml:id="_window_8h_source_1l00016"/>00016 {
+<anchor xml:id="_window_8h_source_1l00017"/><link linkend="_class_window_1adb814fa90d9b6dfb6aaacf436d3b6ee0">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_window_callbacks">WindowCallbacks</link>;
+<anchor xml:id="_window_8h_source_1l00018"/><link linkend="_class_window_1a083d5a8d8c2dd3a28d1f55d2965db0ab">00018</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_input_controller">InputController</link>;
+<anchor xml:id="_window_8h_source_1l00019"/>00019 
+<anchor xml:id="_window_8h_source_1l00020"/>00020 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_window_8h_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1aeb0aac2cdf44390e4b9f1a7f8fb93de5">Init</link>(<link linkend="_structwindow__properties">window_properties</link>*&#32;wp);
+<anchor xml:id="_window_8h_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a89c434ec340b4594c6c8af3f0bf58c9b">Shutdown</link>();
+<anchor xml:id="_window_8h_source_1l00030"/>00030 
+<anchor xml:id="_window_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a5773af5bbba89347336d9a8793340184">PollEvents</link>();
+<anchor xml:id="_window_8h_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1abe1b83eda6980f2b9964aab08b5310ed">SwapBuffers</link>();
+<anchor xml:id="_window_8h_source_1l00033"/>00033 
+<anchor xml:id="_window_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_window_1a6aa86d4800090cfeb56c52f63383c179">ShouldClose</link>();
+<anchor xml:id="_window_8h_source_1l00035"/>00035 
+<anchor xml:id="_window_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;GLFWwindow*&#32;<link linkend="_class_window_1a682df3064b8c04aee17f6c159829a764">GetNativeWindow</link>();
+<anchor xml:id="_window_8h_source_1l00037"/>00037 
+<anchor xml:id="_window_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a5873f04865a181dbf7dfbefc33fc5704">KeyCallbacks</link>(<emphasis role="keywordtype">int</emphasis>&#32;key,&#32;<emphasis role="keywordtype">int</emphasis>&#32;scancode,&#32;<emphasis role="keywordtype">int</emphasis>&#32;action,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mods);
+<anchor xml:id="_window_8h_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1aaead0b344c438ab4a8d6556cadfc2977">MouseButtonCallbacks</link>(<emphasis role="keywordtype">int</emphasis>&#32;button,&#32;<emphasis role="keywordtype">int</emphasis>&#32;action,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mods);
+<anchor xml:id="_window_8h_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a0c2dcc34465f43dee3eaec3f30b3ce60">MouseMoveCallbacks</link>(<emphasis role="keywordtype">double</emphasis>&#32;x_pos,&#32;<emphasis role="keywordtype">double</emphasis>&#32;y_pos);
+<anchor xml:id="_window_8h_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a5d495d5437cc87885b68ee0fcb886039">MouseScrollCallbacks</link>(<emphasis role="keywordtype">double</emphasis>&#32;x_offset,&#32;<emphasis role="keywordtype">double</emphasis>&#32;y_offset);
+<anchor xml:id="_window_8h_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a068d24ef772bf4be412269b7818f0a80">ContinousEvents</link>(<emphasis role="keywordtype">double</emphasis>&#32;delta_time);
+<anchor xml:id="_window_8h_source_1l00063"/>00063 
+<anchor xml:id="_window_8h_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a822c4b9c7a8ebd77fa853f6443cae790">SetWindowHints</link>();
+<anchor xml:id="_window_8h_source_1l00065"/>00065 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a03541a688392c47a9606147c9941f0b9">SetWindowCallbacks</link>();
+<anchor xml:id="_window_8h_source_1l00066"/>00066 
+<anchor xml:id="_window_8h_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a4b30df6e4bd8704065b014bd12817c12">SetCursor</link>(<emphasis role="keywordtype">int</emphasis>&#32;x_pos,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y_pos);
+<anchor xml:id="_window_8h_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1ad26ca8fe4b6a3c549e1d44a7941ae2e7">CenterCursor</link>();
+<anchor xml:id="_window_8h_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a3db46803e892142874ad9e39bce2004c">ShowCursor</link>();
+<anchor xml:id="_window_8h_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a4017aa91ea5bd5f59f1bc43c77415ce0">HideCursor</link>();
+<anchor xml:id="_window_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1ae79b44d204313d7c4be587f894c33557">DisableCursor</link>();
+<anchor xml:id="_window_8h_source_1l00072"/>00072 
+<anchor xml:id="_window_8h_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1aee3c5794cfecf72f78ed2a0af2ef6acc">SetWindow</link>(<emphasis role="keywordtype">int</emphasis>&#32;x_pos,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y_pos);
+<anchor xml:id="_window_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1ab3ef86066c7f15caaee92f25fca6e389">CenterWindow</link>();
+<anchor xml:id="_window_8h_source_1l00075"/>00075 
+<anchor xml:id="_window_8h_source_1l00076"/>00076 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_window_1a012b72d666865ee42bf51ba8eff35eb1">GetContinousPress</link>(<emphasis role="keywordtype">int</emphasis>&#32;key);
+<anchor xml:id="_window_8h_source_1l00077"/>00077 
+<anchor xml:id="_window_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1a6ca97820bbc4ae116168d7241ae737e6">SubscribeToEvents</link>(<link linkend="_class_input_controller">InputController</link>*&#32;ic);
+<anchor xml:id="_window_8h_source_1l00087"/>00087 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_window_1aebd62a7ffa92777ebf4ec5bc6b1068fc">UnsubscribeFromEvents</link>(<link linkend="_class_input_controller">InputController</link>*&#32;ic);
+<anchor xml:id="_window_8h_source_1l00088"/>00088 
+<anchor xml:id="_window_8h_source_1l00089"/>00089 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_window_8h_source_1l00090"/><link linkend="_class_window_1a232a8164adde7ff4f2dd69bc46819dc3">00090</link> &#32;&#32;&#32;&#32;glm::ivec2&#32;<link linkend="_class_window_1a232a8164adde7ff4f2dd69bc46819dc3">resolution</link>;
+<anchor xml:id="_window_8h_source_1l00091"/>00091 
+<anchor xml:id="_window_8h_source_1l00092"/>00092 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_window_8h_source_1l00093"/>00093 &#32;&#32;&#32;&#32;<link linkend="_structwindow__properties">window_properties</link>*&#32;p_properties;
+<anchor xml:id="_window_8h_source_1l00094"/>00094 
+<anchor xml:id="_window_8h_source_1l00095"/>00095 &#32;&#32;&#32;&#32;GLFWwindow*&#32;p_native_window;
+<anchor xml:id="_window_8h_source_1l00096"/>00096 &#32;&#32;&#32;&#32;GLFWmonitor*&#32;p_native_monitor;
+<anchor xml:id="_window_8h_source_1l00097"/>00097 
+<anchor xml:id="_window_8h_source_1l00098"/>00098 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;GLFWvidmode*&#32;p_video_mode;
+<anchor xml:id="_window_8h_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;b_should_close;
+<anchor xml:id="_window_8h_source_1l00100"/>00100 
+<anchor xml:id="_window_8h_source_1l00101"/>00101 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;key_states[GLFW_KEY_LAST];
+<anchor xml:id="_window_8h_source_1l00102"/>00102 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;continous_key_events[GLFW_KEY_LAST];
+<anchor xml:id="_window_8h_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;key_mods;
+<anchor xml:id="_window_8h_source_1l00104"/>00104 
+<anchor xml:id="_window_8h_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;std::list&lt;InputController*&gt;&#32;input_controllers;
+<anchor xml:id="_window_8h_source_1l00106"/>00106 
+<anchor xml:id="_window_8h_source_1l00107"/>00107 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;mouse_x;
+<anchor xml:id="_window_8h_source_1l00108"/>00108 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;mouse_y;
+<anchor xml:id="_window_8h_source_1l00109"/>00109 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;mouse_delta_x;
+<anchor xml:id="_window_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;mouse_delta_y;
+<anchor xml:id="_window_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;previous_mouse_x;
+<anchor xml:id="_window_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;previous_mouse_y;
+<anchor xml:id="_window_8h_source_1l00113"/>00113 
+<anchor xml:id="_window_8h_source_1l00114"/>00114 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;first_mouse_event;
+<anchor xml:id="_window_8h_source_1l00115"/>00115 };
+<anchor xml:id="_window_8h_source_1l00116"/>00116 
+</programlisting></section>

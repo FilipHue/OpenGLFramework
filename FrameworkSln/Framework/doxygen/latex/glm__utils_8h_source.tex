@@ -1,0 +1,48 @@
+\hypertarget{glm__utils_8h_source}{}\doxysection{glm\+\_\+utils.\+h}
+\label{glm__utils_8h_source}\index{src/utils/glm\_utils.h@{src/utils/glm\_utils.h}}
+\mbox{\hyperlink{glm__utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <ostream>}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <glm.hpp>}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <gtc/quaternion.hpp>}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00009}\mbox{\hyperlink{glm__utils_8h_a9cb9e704b009dbda0914de6b8e2935c2}{00009}}\ \textcolor{keyword}{inline}\ std::ostream\&\ \mbox{\hyperlink{glm__utils_8h_a9cb9e704b009dbda0914de6b8e2935c2}{operator<<\ }}(std::ostream\&\ out,\ \textcolor{keyword}{const}\ glm::ivec2\&\ vec)\ \{}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00010}00010\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ vec.x\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.y\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00014}\mbox{\hyperlink{glm__utils_8h_ad60f50e61628c9acc765899c058c8bac}{00014}}\ \textcolor{keyword}{inline}\ std::ostream\&\ \mbox{\hyperlink{glm__utils_8h_a9cb9e704b009dbda0914de6b8e2935c2}{operator<<\ }}(std::ostream\&\ out,\ \textcolor{keyword}{const}\ glm::vec2\&\ vec)\ \{}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00015}00015\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ vec.x\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.y\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00019}\mbox{\hyperlink{glm__utils_8h_a0201b2cb58d9b8f3a93781b596d149ba}{00019}}\ \textcolor{keyword}{inline}\ std::ostream\&\ \mbox{\hyperlink{glm__utils_8h_a9cb9e704b009dbda0914de6b8e2935c2}{operator<<\ }}(std::ostream\&\ out,\ \textcolor{keyword}{const}\ glm::ivec3\&\ vec)\ \{}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00020}00020\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ vec.x\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.y\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.z\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00024}\mbox{\hyperlink{glm__utils_8h_ae2fa9fa89bc03b53544c3eeb6d781bd8}{00024}}\ \textcolor{keyword}{inline}\ std::ostream\&\ \mbox{\hyperlink{glm__utils_8h_a9cb9e704b009dbda0914de6b8e2935c2}{operator<<\ }}(std::ostream\&\ out,\ \textcolor{keyword}{const}\ glm::vec3\&\ vec)\ \{}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00025}00025\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ vec.x\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.y\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.z\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00029}\mbox{\hyperlink{glm__utils_8h_a76785ed06f6be69d7e12eb78eb28d7e3}{00029}}\ \textcolor{keyword}{inline}\ std::ostream\&\ \mbox{\hyperlink{glm__utils_8h_a9cb9e704b009dbda0914de6b8e2935c2}{operator<<\ }}(std::ostream\&\ out,\ \textcolor{keyword}{const}\ glm::ivec4\&\ vec)\ \{}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00030}00030\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ vec.x\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.y\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.z\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.w\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00034}\mbox{\hyperlink{glm__utils_8h_a24e5905179736dc71e25b66691d634a3}{00034}}\ \textcolor{keyword}{inline}\ std::ostream\&\ \mbox{\hyperlink{glm__utils_8h_a9cb9e704b009dbda0914de6b8e2935c2}{operator<<\ }}(std::ostream\&\ out,\ \textcolor{keyword}{const}\ glm::vec4\&\ vec)\ \{}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00035}00035\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ vec.x\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.y\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.z\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ vec.w\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00039}\mbox{\hyperlink{glm__utils_8h_a5d083d38b569ca70c445e4352ec08b1a}{00039}}\ \textcolor{keyword}{inline}\ std::ostream\&\ \mbox{\hyperlink{glm__utils_8h_a9cb9e704b009dbda0914de6b8e2935c2}{operator<<\ }}(std::ostream\&\ out,\ \textcolor{keyword}{const}\ glm::quat\&\ rot)\ \{}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00040}00040\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ rot.x\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ rot.y\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ rot.z\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ rot.w\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{\Hypertarget{glm__utils_8h_source_l00042}00042\ \}}
+
+\end{DoxyCode}

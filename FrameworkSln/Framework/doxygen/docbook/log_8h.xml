@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log_8h" xml:lang="en-US">
+<title>src/managers/logger/log.h File Reference</title>
+<indexterm><primary>src/managers/logger/log.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;spdlog/spdlog.h&quot;<?linebreak?></programlisting>Include dependency graph for log.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>&#160;&#160;&#160;&quot;CORE&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>&#160;&#160;&#160;&quot;ENGINE&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>&#160;&#160;&#160;&quot;SHADER&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>&#160;&#160;&#160;&quot;RENDER&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>&#160;&#160;&#160;&quot;TEXTURE&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a2268dc3e0b682fbc5b8c0ddf171118d7">CORE_TRACE</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1aced0ec7e6a01cdc1124f36f5ef258ab1">CORE_DEBUG</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a82c828c66413a7e4c6eb2d2b71a95afb">CORE_INFO</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a439cb81baedfd982f9bc7912673eb544">CORE_WARN</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1aeef16bfed25ac0d43a06c024849c44d2">CORE_ERROR</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a54410afad38fb137e8e34b8b472d32a6">CORE_CRITICAL</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a92736f453b785356ff5e9177c319845e">ENGINE_TRACE</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1ace4d1b98556ba69c45836206427c9732">ENGINE_DEBUG</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a6404e6cf7c01e67c7a2f0b07803b0647">ENGINE_INFO</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a23a05fa4aef92c5babd058c9c36c4e2a">ENGINE_WARN</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1ac4a9b857cb8a7445bcac07f99736eee8">ENGINE_ERROR</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a8710a739db954acf3e71cd5476eca47f">ENGINE_CRITICAL</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a144c4c4fdab0eda547803251a9b8b484">SHADER_TRACE</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1ad74d0ba1508c428d12e6547e6b147736">SHADER_DEBUG</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a84ec8db8b16c3dc75d4333d027933307">SHADER_INFO</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a0b7ccd3a5f8e659c900a2fa8bc6a54c6">SHADER_WARN</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1aee23df25d91dd3dc395dbe9f228d0dc5">SHADER_ERROR</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1ab2d905cc348709f40b7a708520a3b20d">SHADER_CRITICAL</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a3cbe870633a47da7ef373a7b8d2bfc91">RENDER_TRACE</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1ae8aa6401e259fb81f8981146e69d26ba">RENDER_DEBUG</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1afa25df545e39125e7444efb7e12de987">RENDER_INFO</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a486cb435761adba8a3b3cf162859f0e3">RENDER_WARN</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a23eae89d1d25833e2343b5cfd4022063">RENDER_ERROR</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a46556c7b1549706b12ca4e768fb6baa3">RENDER_CRITICAL</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a4cbfbda981f7aed603465c0ddcd70b78">TEXTURE_TRACE</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1aaa165da0c7e884c82e82719e94fe7796">TEXTURE_DEBUG</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a0318e3f8b9a66d16d5ad13c38aee5f23">TEXTURE_INFO</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a98dc18b24c06df031f1fdba4771d682b">TEXTURE_WARN</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a33777c718d2cf6c465890e91c9c1125a">TEXTURE_ERROR</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log_8h_1a73c574e339fedaa4f4d6e0daaccae75c">TEXTURE_CRITICAL</link>(...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_log_8h_1a54410afad38fb137e8e34b8b472d32a6"/><section>
+    <title>CORE_CRITICAL</title>
+<indexterm><primary>CORE_CRITICAL</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>CORE_CRITICAL</secondary></indexterm>
+<para><computeroutput>#define CORE_CRITICAL( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00016">16</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1aced0ec7e6a01cdc1124f36f5ef258ab1"/><section>
+    <title>CORE_DEBUG</title>
+<indexterm><primary>CORE_DEBUG</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>CORE_DEBUG</secondary></indexterm>
+<para><computeroutput>#define CORE_DEBUG( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00012">12</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1aeef16bfed25ac0d43a06c024849c44d2"/><section>
+    <title>CORE_ERROR</title>
+<indexterm><primary>CORE_ERROR</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>CORE_ERROR</secondary></indexterm>
+<para><computeroutput>#define CORE_ERROR( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00015">15</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a82c828c66413a7e4c6eb2d2b71a95afb"/><section>
+    <title>CORE_INFO</title>
+<indexterm><primary>CORE_INFO</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>CORE_INFO</secondary></indexterm>
+<para><computeroutput>#define CORE_INFO( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00013">13</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a2268dc3e0b682fbc5b8c0ddf171118d7"/><section>
+    <title>CORE_TRACE</title>
+<indexterm><primary>CORE_TRACE</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>CORE_TRACE</secondary></indexterm>
+<para><computeroutput>#define CORE_TRACE( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00011">11</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a439cb81baedfd982f9bc7912673eb544"/><section>
+    <title>CORE_WARN</title>
+<indexterm><primary>CORE_WARN</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>CORE_WARN</secondary></indexterm>
+<para><computeroutput>#define CORE_WARN( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6">FRAMEWORK_CORE_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00014">14</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a8710a739db954acf3e71cd5476eca47f"/><section>
+    <title>ENGINE_CRITICAL</title>
+<indexterm><primary>ENGINE_CRITICAL</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>ENGINE_CRITICAL</secondary></indexterm>
+<para><computeroutput>#define ENGINE_CRITICAL( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00023">23</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1ace4d1b98556ba69c45836206427c9732"/><section>
+    <title>ENGINE_DEBUG</title>
+<indexterm><primary>ENGINE_DEBUG</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>ENGINE_DEBUG</secondary></indexterm>
+<para><computeroutput>#define ENGINE_DEBUG( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00019">19</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1ac4a9b857cb8a7445bcac07f99736eee8"/><section>
+    <title>ENGINE_ERROR</title>
+<indexterm><primary>ENGINE_ERROR</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>ENGINE_ERROR</secondary></indexterm>
+<para><computeroutput>#define ENGINE_ERROR( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00022">22</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a6404e6cf7c01e67c7a2f0b07803b0647"/><section>
+    <title>ENGINE_INFO</title>
+<indexterm><primary>ENGINE_INFO</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>ENGINE_INFO</secondary></indexterm>
+<para><computeroutput>#define ENGINE_INFO( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00020">20</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a92736f453b785356ff5e9177c319845e"/><section>
+    <title>ENGINE_TRACE</title>
+<indexterm><primary>ENGINE_TRACE</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>ENGINE_TRACE</secondary></indexterm>
+<para><computeroutput>#define ENGINE_TRACE( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00018">18</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a23a05fa4aef92c5babd058c9c36c4e2a"/><section>
+    <title>ENGINE_WARN</title>
+<indexterm><primary>ENGINE_WARN</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>ENGINE_WARN</secondary></indexterm>
+<para><computeroutput>#define ENGINE_WARN( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a52426ef65dd886ac472ab5eaf8396245">FRAMEWORK_ENGINE_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00021">21</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1aebac4307cdb57f4153c9d1d24247edf6"/><section>
+    <title>FRAMEWORK_CORE_LOGGER_NAME</title>
+<indexterm><primary>FRAMEWORK_CORE_LOGGER_NAME</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>FRAMEWORK_CORE_LOGGER_NAME</secondary></indexterm>
+<para><computeroutput>#define FRAMEWORK_CORE_LOGGER_NAME&#160;&#160;&#160;&quot;CORE&quot;</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00005">5</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a52426ef65dd886ac472ab5eaf8396245"/><section>
+    <title>FRAMEWORK_ENGINE_LOGGER_NAME</title>
+<indexterm><primary>FRAMEWORK_ENGINE_LOGGER_NAME</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>FRAMEWORK_ENGINE_LOGGER_NAME</secondary></indexterm>
+<para><computeroutput>#define FRAMEWORK_ENGINE_LOGGER_NAME&#160;&#160;&#160;&quot;ENGINE&quot;</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00006">6</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378"/><section>
+    <title>FRAMEWORK_RENDER_LOGGER_NAME</title>
+<indexterm><primary>FRAMEWORK_RENDER_LOGGER_NAME</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>FRAMEWORK_RENDER_LOGGER_NAME</secondary></indexterm>
+<para><computeroutput>#define FRAMEWORK_RENDER_LOGGER_NAME&#160;&#160;&#160;&quot;RENDER&quot;</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00008">8</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752"/><section>
+    <title>FRAMEWORK_SHADER_LOGGER_NAME</title>
+<indexterm><primary>FRAMEWORK_SHADER_LOGGER_NAME</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>FRAMEWORK_SHADER_LOGGER_NAME</secondary></indexterm>
+<para><computeroutput>#define FRAMEWORK_SHADER_LOGGER_NAME&#160;&#160;&#160;&quot;SHADER&quot;</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00007">7</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6"/><section>
+    <title>FRAMEWORK_TEXTURE_LOGGER_NAME</title>
+<indexterm><primary>FRAMEWORK_TEXTURE_LOGGER_NAME</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>FRAMEWORK_TEXTURE_LOGGER_NAME</secondary></indexterm>
+<para><computeroutput>#define FRAMEWORK_TEXTURE_LOGGER_NAME&#160;&#160;&#160;&quot;TEXTURE&quot;</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00009">9</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a46556c7b1549706b12ca4e768fb6baa3"/><section>
+    <title>RENDER_CRITICAL</title>
+<indexterm><primary>RENDER_CRITICAL</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>RENDER_CRITICAL</secondary></indexterm>
+<para><computeroutput>#define RENDER_CRITICAL( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00037">37</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1ae8aa6401e259fb81f8981146e69d26ba"/><section>
+    <title>RENDER_DEBUG</title>
+<indexterm><primary>RENDER_DEBUG</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>RENDER_DEBUG</secondary></indexterm>
+<para><computeroutput>#define RENDER_DEBUG( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00033">33</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a23eae89d1d25833e2343b5cfd4022063"/><section>
+    <title>RENDER_ERROR</title>
+<indexterm><primary>RENDER_ERROR</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>RENDER_ERROR</secondary></indexterm>
+<para><computeroutput>#define RENDER_ERROR( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00036">36</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1afa25df545e39125e7444efb7e12de987"/><section>
+    <title>RENDER_INFO</title>
+<indexterm><primary>RENDER_INFO</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>RENDER_INFO</secondary></indexterm>
+<para><computeroutput>#define RENDER_INFO( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00034">34</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a3cbe870633a47da7ef373a7b8d2bfc91"/><section>
+    <title>RENDER_TRACE</title>
+<indexterm><primary>RENDER_TRACE</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>RENDER_TRACE</secondary></indexterm>
+<para><computeroutput>#define RENDER_TRACE( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00032">32</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a486cb435761adba8a3b3cf162859f0e3"/><section>
+    <title>RENDER_WARN</title>
+<indexterm><primary>RENDER_WARN</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>RENDER_WARN</secondary></indexterm>
+<para><computeroutput>#define RENDER_WARN( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a2bc02fc4f884aa0ba4e2e7fe4b7a9378">FRAMEWORK_RENDER_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00035">35</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1ab2d905cc348709f40b7a708520a3b20d"/><section>
+    <title>SHADER_CRITICAL</title>
+<indexterm><primary>SHADER_CRITICAL</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>SHADER_CRITICAL</secondary></indexterm>
+<para><computeroutput>#define SHADER_CRITICAL( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00030">30</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1ad74d0ba1508c428d12e6547e6b147736"/><section>
+    <title>SHADER_DEBUG</title>
+<indexterm><primary>SHADER_DEBUG</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>SHADER_DEBUG</secondary></indexterm>
+<para><computeroutput>#define SHADER_DEBUG( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00026">26</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1aee23df25d91dd3dc395dbe9f228d0dc5"/><section>
+    <title>SHADER_ERROR</title>
+<indexterm><primary>SHADER_ERROR</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>SHADER_ERROR</secondary></indexterm>
+<para><computeroutput>#define SHADER_ERROR( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00029">29</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a84ec8db8b16c3dc75d4333d027933307"/><section>
+    <title>SHADER_INFO</title>
+<indexterm><primary>SHADER_INFO</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>SHADER_INFO</secondary></indexterm>
+<para><computeroutput>#define SHADER_INFO( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00027">27</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a144c4c4fdab0eda547803251a9b8b484"/><section>
+    <title>SHADER_TRACE</title>
+<indexterm><primary>SHADER_TRACE</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>SHADER_TRACE</secondary></indexterm>
+<para><computeroutput>#define SHADER_TRACE( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00025">25</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a0b7ccd3a5f8e659c900a2fa8bc6a54c6"/><section>
+    <title>SHADER_WARN</title>
+<indexterm><primary>SHADER_WARN</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>SHADER_WARN</secondary></indexterm>
+<para><computeroutput>#define SHADER_WARN( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a6bd0d769d972f9fd7bf7b39c16086752">FRAMEWORK_SHADER_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00028">28</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a73c574e339fedaa4f4d6e0daaccae75c"/><section>
+    <title>TEXTURE_CRITICAL</title>
+<indexterm><primary>TEXTURE_CRITICAL</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>TEXTURE_CRITICAL</secondary></indexterm>
+<para><computeroutput>#define TEXTURE_CRITICAL( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;critical(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00044">44</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1aaa165da0c7e884c82e82719e94fe7796"/><section>
+    <title>TEXTURE_DEBUG</title>
+<indexterm><primary>TEXTURE_DEBUG</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>TEXTURE_DEBUG</secondary></indexterm>
+<para><computeroutput>#define TEXTURE_DEBUG( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;debug(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00040">40</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a33777c718d2cf6c465890e91c9c1125a"/><section>
+    <title>TEXTURE_ERROR</title>
+<indexterm><primary>TEXTURE_ERROR</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>TEXTURE_ERROR</secondary></indexterm>
+<para><computeroutput>#define TEXTURE_ERROR( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;error(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00043">43</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a0318e3f8b9a66d16d5ad13c38aee5f23"/><section>
+    <title>TEXTURE_INFO</title>
+<indexterm><primary>TEXTURE_INFO</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>TEXTURE_INFO</secondary></indexterm>
+<para><computeroutput>#define TEXTURE_INFO( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;info(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00041">41</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a4cbfbda981f7aed603465c0ddcd70b78"/><section>
+    <title>TEXTURE_TRACE</title>
+<indexterm><primary>TEXTURE_TRACE</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>TEXTURE_TRACE</secondary></indexterm>
+<para><computeroutput>#define TEXTURE_TRACE( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;trace(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00039">39</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+<anchor xml:id="_log_8h_1a98dc18b24c06df031f1fdba4771d682b"/><section>
+    <title>TEXTURE_WARN</title>
+<indexterm><primary>TEXTURE_WARN</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>TEXTURE_WARN</secondary></indexterm>
+<para><computeroutput>#define TEXTURE_WARN( ...)&#160;&#160;&#160;if (spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>) != nullptr) {spdlog::get(<link linkend="_log_8h_1a28bcaac65a5c94440ab434e6275b5ea6">FRAMEWORK_TEXTURE_LOGGER_NAME</link>)-&gt;warn(__VA_ARGS__);}</computeroutput></para><para>
+Definition at line <link linkend="_log_8h_source_1l00042">42</link> of file <link linkend="_log_8h_source">log.h</link>.</para>
+</section>
+</section>
+</section>

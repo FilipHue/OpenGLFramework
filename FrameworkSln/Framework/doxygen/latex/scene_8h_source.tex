@@ -1,0 +1,53 @@
+\hypertarget{scene_8h_source}{}\doxysection{scene.\+h}
+\label{scene_8h_source}\index{src/components/scene/scene.h@{src/components/scene/scene.h}}
+\mbox{\hyperlink{scene_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}../../world.h"{}}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scene__input_8h}{scene\_input.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}../camera/camera.h"{}}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}../camera/camera\_input.h"{}}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}../mesh/mesh.h"{}}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}../../managers/texture/texture\_manager.h"{}}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}../../managers/shape/shape\_manager.h"{}}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}../../managers/shader/shader.h"{}}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00014}\mbox{\hyperlink{class_scene}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene}{Scene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_world}{World}}}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00016}\mbox{\hyperlink{class_scene_ae9ac4693fbc4e101d5581859b7589d21}{00016}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_input}{SceneInput}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00017}\mbox{\hyperlink{class_scene_a235814840b9b0394dc2e28813a04a187}{00017}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shape_manager}{ShapeManager}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00020}\mbox{\hyperlink{class_scene_a0b26384e4afe100d4209b7ded40379d2}{00020}}\ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}*\ \mbox{\hyperlink{class_scene_a0b26384e4afe100d4209b7ded40379d2}{p\_scene\_camera}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00021}\mbox{\hyperlink{class_scene_ae8f7639d0227ed705f883d9debba12c2}{00021}}\ \ \ \ \ \mbox{\hyperlink{class_camera_input}{CameraInput}}*\ \mbox{\hyperlink{class_scene_ae8f7639d0227ed705f883d9debba12c2}{p\_camera\_input}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00022}\mbox{\hyperlink{class_scene_a73a7a8f6d8741fdf66b092fdd7da9b1d}{00022}}\ \ \ \ \ \mbox{\hyperlink{class_scene_input}{SceneInput}}*\ \mbox{\hyperlink{class_scene_a73a7a8f6d8741fdf66b092fdd7da9b1d}{p\_scene\_input}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00023}\mbox{\hyperlink{class_scene_ab905449eea56603315d2ff0a26172cf7}{00023}}\ \ \ \ \ \mbox{\hyperlink{class_texture_manger}{TextureManger}}*\ \mbox{\hyperlink{class_scene_ab905449eea56603315d2ff0a26172cf7}{p\_texture\_manager}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00024}\mbox{\hyperlink{class_scene_a4c54a24f162c9d5652a72b36df6928f2}{00024}}\ \ \ \ \ \mbox{\hyperlink{class_shape_manager}{ShapeManager}}*\ \mbox{\hyperlink{class_scene_a4c54a24f162c9d5652a72b36df6928f2}{p\_shape\_manager}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00026}00026\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene}}();}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a9de2fe5d4aa89f9537a76a8a1f0abf4d}{CreateMesh}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name,\ std::vector<Vertex>\&\ vertices,\ std::vector<unsigned\ int>\&\ indices,\ \mbox{\hyperlink{structmaterial}{Material}}*\ \mbox{\hyperlink{structmaterial}{material}});}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a77d7e54a3d79703adc13f0d51add7be2}{RenderMesh}}(\mbox{\hyperlink{class_mesh}{Mesh}}*\ mesh,\ \mbox{\hyperlink{class_shader}{Shader}}*\ shader,\ glm::vec3\ position);}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a77d7e54a3d79703adc13f0d51add7be2}{RenderMesh}}(\mbox{\hyperlink{class_mesh}{Mesh}}*\ mesh,\ \mbox{\hyperlink{class_shader}{Shader}}*\ shader,\ glm::vec3\ position,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ texture\_name);}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a77d7e54a3d79703adc13f0d51add7be2}{RenderMesh}}(\mbox{\hyperlink{class_mesh}{Mesh}}*\ mesh,\ \mbox{\hyperlink{class_shader}{Shader}}*\ shader,\ glm::vec3\ position,\ glm::vec3\ light\_position);}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a77d7e54a3d79703adc13f0d51add7be2}{RenderMesh}}(\mbox{\hyperlink{class_mesh}{Mesh}}*\ mesh,\ \mbox{\hyperlink{class_shader}{Shader}}*\ shader,\ glm::mat4\ model\_matrix);}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a77d7e54a3d79703adc13f0d51add7be2}{RenderMesh}}(\mbox{\hyperlink{class_mesh}{Mesh}}*\ mesh,\ \mbox{\hyperlink{class_shader}{Shader}}*\ shader,\ glm::mat4\ model\_matrix,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ texture\_name);}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a77d7e54a3d79703adc13f0d51add7be2}{RenderMesh}}(\mbox{\hyperlink{class_mesh}{Mesh}}*\ mesh,\ \mbox{\hyperlink{class_shader}{Shader}}*\ shader,\ glm::mat4\ model\_matrix,\ glm::vec3\ light\_position);}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00038}00038\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00039}\mbox{\hyperlink{class_scene_ae2b329139aeb75b95cfa41297a90b1be}{00039}}\ \ \ \ \ \mbox{\hyperlink{class_window}{Window}}*\ \mbox{\hyperlink{class_scene_ae2b329139aeb75b95cfa41297a90b1be}{p\_window}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00040}\mbox{\hyperlink{class_scene_a17c516524bf6450db5d1048199e59ca0}{00040}}\ \ \ \ \ std::unordered\_map<std::string,\ Mesh*>\ \mbox{\hyperlink{class_scene_a17c516524bf6450db5d1048199e59ca0}{meshes}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00041}\mbox{\hyperlink{class_scene_a76ad89c41f3186072ae53a10bbfcd8e1}{00041}}\ \ \ \ \ std::unordered\_map<std::string,\ Shader*>\ \mbox{\hyperlink{class_scene_a76ad89c41f3186072ae53a10bbfcd8e1}{shaders}};}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00043}00043\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ InitFromData(std::vector<Vertex>\&\ vertices,\ std::vector<unsigned\ int>\&\ indices);}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{void}\ SendToShader(\mbox{\hyperlink{class_mesh}{Mesh}}*\ mesh,\ \mbox{\hyperlink{class_shader}{Shader}}*\ shader,\ glm::mat4\ modelMatrix);}
+\DoxyCodeLine{\Hypertarget{scene_8h_source_l00060}00060\ \};}
+
+\end{DoxyCode}

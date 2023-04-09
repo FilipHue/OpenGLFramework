@@ -1,0 +1,39 @@
+\hypertarget{texture__manager_8h_source}{}\doxysection{texture\+\_\+manager.\+h}
+\label{texture__manager_8h_source}\index{src/managers/texture/texture\_manager.h@{src/managers/texture/texture\_manager.h}}
+\mbox{\hyperlink{texture__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <core.h>}}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <glad/glad.h>}}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{texture__2_d_8h}{texture\_2D.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00011}\mbox{\hyperlink{class_texture_manger}{00011}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture_manger}{TextureManger}}}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00013}\mbox{\hyperlink{class_texture_manger_aa70951a0328ba29f64176f16b3ea47d8}{00013}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture2_d}{Texture2D}};}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00014}00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_texture_manger_ac3e06553f16a5a714bd5a87065f92019}{LoadTexture2D}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ file\_path,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name);}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_texture2_d}{Texture2D}}*\ \mbox{\hyperlink{class_texture_manger_a4e88fc790721433c962598f141096f89}{GetTexture2D}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name);}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00023}00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{static}\ GLuint\ GetPixelFormat(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ channels);}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{static}\ GLuint\ GetInternalFormat(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ channels);}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00039}00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00040}00040\ \ \ \ \ std::unordered\_map<const\ char*,\ Texture2D*>\ textures\_2D;}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ GLuint\ pixel\_format[5]\ =\ \{\ 0,\ GL\_RED,\ GL\_RG,\ GL\_RGB,\ GL\_RGBA\ \};}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ GLuint\ internal\_format[4][5]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \{\ 0,\ GL\_R8,\ GL\_RG8,\ GL\_RGB8,\ GL\_RGBA8\ \},}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \{\ 0,\ GL\_R16,\ GL\_RG16,\ GL\_RGB16,\ GL\_RGBA16\ \},}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \{\ 0,\ GL\_R16F,\ GL\_RG16F,\ GL\_RGB16F,\ GL\_RGBA16F\ \},}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \{\ 0,\ GL\_R32F,\ GL\_RG32F,\ GL\_RGB32F,\ GL\_RGBA32F\ \}}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00048}00048\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00049}00049\ \};}
+\DoxyCodeLine{\Hypertarget{texture__manager_8h_source_l00050}00050\ }
+
+\end{DoxyCode}

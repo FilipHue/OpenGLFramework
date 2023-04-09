@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_window_callbacks" xml:lang="en-US">
+<title>WindowCallbacks Class Reference</title>
+<indexterm><primary>WindowCallbacks</primary></indexterm>
+<para>
+<computeroutput>#include &lt;window_callbacks.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_window_callbacks_1a0a382cac4755d006d981c08addc38015">WindowCallbacks</link> ()=delete</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_window_callbacks_1a553f958a25683445088050a69d3de8e9">Window</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_window__callbacks_8h_source_1l00008">8</link> of file <link linkend="_window__callbacks_8h_source">window_callbacks.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_window_callbacks_1a0a382cac4755d006d981c08addc38015"/><section>
+    <title>WindowCallbacks()</title>
+<indexterm><primary>WindowCallbacks</primary><secondary>WindowCallbacks</secondary></indexterm>
+<indexterm><primary>WindowCallbacks</primary><secondary>WindowCallbacks</secondary></indexterm>
+<para><computeroutput>WindowCallbacks::WindowCallbacks ( )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_class_window_callbacks_1a553f958a25683445088050a69d3de8e9"/><section>
+    <title>Window</title>
+<indexterm><primary>Window</primary><secondary>WindowCallbacks</secondary></indexterm>
+<indexterm><primary>WindowCallbacks</primary><secondary>Window</secondary></indexterm>
+<para><computeroutput>friend class <link linkend="_class_window">Window</link><computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_window__callbacks_8h_source_1l00010">10</link> of file <link linkend="_window__callbacks_8h_source">window_callbacks.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/engine/core/window/<link linkend="_window__callbacks_8h">window_callbacks.h</link>src/engine/core/window/<link linkend="_window__callbacks_8cpp">window_callbacks.cpp</link></section>
+</section>

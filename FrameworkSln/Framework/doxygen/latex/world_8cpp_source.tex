@@ -1,0 +1,55 @@
+\hypertarget{world_8cpp_source}{}\doxysection{world.\+cpp}
+\label{world_8cpp_source}\index{src/world.cpp@{src/world.cpp}}
+\mbox{\hyperlink{world_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{world_8h}{world.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00003}\mbox{\hyperlink{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}{00003}}\ \mbox{\hyperlink{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}{World::World}}()}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00005}00005\ \ \ \ \ p\_window\ =\ \mbox{\hyperlink{class_engine_a77697a5d3d4fb8b8ef84b07d71567b0e}{Engine::GetWindow}}();}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00006}00006\ \ \ \ \ d\_elapsed\_time\ =\ d\_previous\_time\ =\ d\_delta\_time\ =\ 0.0f;}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00009}\mbox{\hyperlink{class_world_acea6eb85cbad062ded1e62193496e9f5}{00009}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_acea6eb85cbad062ded1e62193496e9f5}{World::Run}}()}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\_window\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{while}\ (!p\_window-\/>\mbox{\hyperlink{class_window_a6aa86d4800090cfeb56c52f63383c179}{ShouldClose}}())\ \{}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ LoopUpdate();}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00020}\mbox{\hyperlink{class_world_afa3dd686cb3b3f3084d6c64e9d640820}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_afa3dd686cb3b3f3084d6c64e9d640820}{World::Exit}}()}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00022}00022\ \ \ \ \ glfwSetWindowShouldClose(p\_window-\/>\mbox{\hyperlink{class_window_a682df3064b8c04aee17f6c159829a764}{GetNativeWindow}}(),\ 1);}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00025}\mbox{\hyperlink{class_world_a09f54785fbc2dd9ce3119fc6ef7e9fc4}{00025}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_world_a09f54785fbc2dd9ce3119fc6ef7e9fc4}{World::GetDeltaTime}}()}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return}\ d\_delta\_time;}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00030}00030\ \textcolor{keywordtype}{void}\ World::ComputeDeltaTime()}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00032}00032\ \ \ \ \ d\_elapsed\_time\ =\ \mbox{\hyperlink{class_engine_abcd8b03e49c314ad6eb387dee28d54e7}{Engine::GetElapsedTime}}();}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00033}00033\ \ \ \ \ d\_delta\_time\ =\ d\_elapsed\_time\ -\/\ d\_previous\_time;}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00034}00034\ \ \ \ \ d\_previous\_time\ =\ d\_elapsed\_time;}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00037}00037\ \textcolor{keywordtype}{void}\ World::LoopUpdate()}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00039}00039\ \ \ \ \ ComputeDeltaTime();}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00041}00041\ \ \ \ \ p\_window-\/>\mbox{\hyperlink{class_window_a5773af5bbba89347336d9a8793340184}{PollEvents}}();}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00042}00042\ \ \ \ \ p\_window-\/>\mbox{\hyperlink{class_window_a068d24ef772bf4be412269b7818f0a80}{ContinousEvents}}(d\_delta\_time);}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{class_world_a0ed085d9bdc6f831dcf462f968846166}{StartFrame}}();}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{class_world_a3082ec0230bd04bf977a4e27599bb8c1}{Update}}(d\_delta\_time);}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{class_world_aaa6d2623410d5e8a789ec917639597ef}{EndFrame}}();}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00048}00048\ \ \ \ \ p\_window-\/>\mbox{\hyperlink{class_window_abe1b83eda6980f2b9964aab08b5310ed}{SwapBuffers}}();}
+\DoxyCodeLine{\Hypertarget{world_8cpp_source_l00049}00049\ \}}
+
+\end{DoxyCode}

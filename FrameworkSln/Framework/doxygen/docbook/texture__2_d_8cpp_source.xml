@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_texture__2_d_8cpp_source" xml:lang="en-US">
+<title>texture_2D.cpp</title>
+<indexterm><primary>src/managers/texture/texture_2D.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_texture__2_d_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_texture__2_d_8h">texture_2D.h</link>&quot;</emphasis>
+<anchor xml:id="_texture__2_d_8cpp_source_1l00002"/>00002 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00003"/><link linkend="_texture__2_d_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78">00003</link> <emphasis role="preprocessor">#define&#32;STB_IMAGE_IMPLEMENTATION</emphasis>
+<anchor xml:id="_texture__2_d_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;stb_image.h&gt;</emphasis>
+<anchor xml:id="_texture__2_d_8cpp_source_1l00005"/>00005 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00006"/><link linkend="_class_texture2_d_1ab62c7c5172a4800b4629cd475147819d">00006</link> <link linkend="_class_texture2_d_1ab62c7c5172a4800b4629cd475147819d">Texture2D::Texture2D</link>()
+<anchor xml:id="_texture__2_d_8cpp_source_1l00007"/>00007 {
+<anchor xml:id="_texture__2_d_8cpp_source_1l00008"/>00008 &#32;&#32;&#32;&#32;width&#32;=&#32;0;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00009"/>00009 &#32;&#32;&#32;&#32;height&#32;=&#32;0;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00010"/>00010 &#32;&#32;&#32;&#32;channels&#32;=&#32;0;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00011"/>00011 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;texture_id&#32;=&#32;0;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00013"/>00013 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;image_data&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00015"/>00015 }
+<anchor xml:id="_texture__2_d_8cpp_source_1l00016"/>00016 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00017"/>00017 <emphasis role="keywordtype">void</emphasis>&#32;Texture2D::Init(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;file_path)
+<anchor xml:id="_texture__2_d_8cpp_source_1l00018"/>00018 {
+<anchor xml:id="_texture__2_d_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;image_data&#32;=&#32;stbi_load(file_path,&#32;&amp;width,&#32;&amp;height,&#32;&amp;channels,&#32;0);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(image_data&#32;==&#32;NULL)&#32;{
+<anchor xml:id="_texture__2_d_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_log_8h_1a98dc18b24c06df031f1fdba4771d682b">TEXTURE_WARN</link>(<emphasis role="stringliteral">&quot;Error&#32;at&#32;initializing&#32;texture:&#32;{}&quot;</emphasis>,&#32;file_path);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_texture__2_d_8cpp_source_1l00024"/>00024 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;glGenTextures(1,&#32;&amp;texture_id);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;glBindTexture(GL_TEXTURE_2D,&#32;texture_id);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00027"/>00027 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;glTexParameteri(GL_TEXTURE_2D,&#32;GL_TEXTURE_WRAP_S,&#32;GL_REPEAT);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;glTexParameteri(GL_TEXTURE_2D,&#32;GL_TEXTURE_WRAP_T,&#32;GL_REPEAT);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;glTexParameteri(GL_TEXTURE_2D,&#32;GL_TEXTURE_MIN_FILTER,&#32;GL_LINEAR_MIPMAP_LINEAR);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;glTexParameteri(GL_TEXTURE_2D,&#32;GL_TEXTURE_MAG_FILTER,&#32;GL_LINEAR);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00032"/>00032 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;glTexImage2D(GL_TEXTURE_2D,&#32;0,&#32;TextureManger::GetInternalFormat(channels),&#32;width,&#32;height,&#32;0,&#32;TextureManger::GetPixelFormat(channels),&#32;GL_UNSIGNED_BYTE,&#32;image_data);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;glGenerateMipmap(GL_TEXTURE_2D);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00035"/>00035 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;glBindTexture(GL_TEXTURE_2D,&#32;0);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00037"/>00037 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;stbi_image_free(image_data);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00039"/>00039 }
+<anchor xml:id="_texture__2_d_8cpp_source_1l00040"/>00040 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00041"/>00041 <emphasis role="keywordtype">void</emphasis>&#32;Texture2D::Init(<emphasis role="keywordtype">int</emphasis>&#32;width,&#32;<emphasis role="keywordtype">int</emphasis>&#32;height,&#32;<emphasis role="keywordtype">int</emphasis>&#32;channels,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;image_data)
+<anchor xml:id="_texture__2_d_8cpp_source_1l00042"/>00042 {
+<anchor xml:id="_texture__2_d_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;this-&gt;width&#32;=&#32;width;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;this-&gt;height&#32;=&#32;height;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;this-&gt;channels&#32;=&#32;channels;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00046"/>00046 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;glGenTextures(1,&#32;&amp;texture_id);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;glBindTexture(GL_TEXTURE_2D,&#32;texture_id);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00049"/>00049 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;glTexParameteri(GL_TEXTURE_2D,&#32;GL_TEXTURE_WRAP_S,&#32;GL_REPEAT);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;glTexParameteri(GL_TEXTURE_2D,&#32;GL_TEXTURE_WRAP_T,&#32;GL_REPEAT);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;glTexParameteri(GL_TEXTURE_2D,&#32;GL_TEXTURE_MIN_FILTER,&#32;GL_LINEAR_MIPMAP_LINEAR);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;glTexParameteri(GL_TEXTURE_2D,&#32;GL_TEXTURE_MAG_FILTER,&#32;GL_LINEAR);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00054"/>00054 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;glTexImage2D(GL_TEXTURE_2D,&#32;0,&#32;TextureManger::GetInternalFormat(channels),&#32;width,&#32;height,&#32;0,&#32;TextureManger::GetPixelFormat(channels),&#32;GL_UNSIGNED_BYTE,&#32;image_data);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;glGenerateMipmap(GL_TEXTURE_2D);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00057"/>00057 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;glBindTexture(GL_TEXTURE_2D,&#32;0);
+<anchor xml:id="_texture__2_d_8cpp_source_1l00059"/>00059 }
+<anchor xml:id="_texture__2_d_8cpp_source_1l00060"/>00060 
+<anchor xml:id="_texture__2_d_8cpp_source_1l00061"/><link linkend="_class_texture2_d_1a4b6d5b8203df33567ed1e8ad016a6d7f">00061</link> <emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_texture2_d_1a4b6d5b8203df33567ed1e8ad016a6d7f">Texture2D::GetTextureID</link>()
+<anchor xml:id="_texture__2_d_8cpp_source_1l00062"/>00062 {
+<anchor xml:id="_texture__2_d_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;texture_id;
+<anchor xml:id="_texture__2_d_8cpp_source_1l00064"/>00064 }
+</programlisting></section>

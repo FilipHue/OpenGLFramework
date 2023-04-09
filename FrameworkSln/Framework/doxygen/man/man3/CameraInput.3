@@ -1,0 +1,93 @@
+.TH "CameraInput" 3 "Sun Apr 9 2023" "OpenGL Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CameraInput
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <camera_input\&.h>\fP
+.PP
+Inherits \fBInputController\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCameraInput\fP (\fBCamera\fP *camera)"
+.br
+.RI "Method for attaching the camera controller to a camera object\&. "
+.in -1c
+
+Public Member Functions inherited from \fBInputController\fP
+.in +1c
+.ti -1c
+.RI "\fBInputController\fP ()"
+.br
+.RI "Method for connecting the input controller to a component\&. "
+.ti -1c
+.RI "\fB~InputController\fP ()"
+.br
+.ti -1c
+.RI "void \fBToogleEvents\fP ()"
+.br
+.RI "Method for toggling the state of the input controller (active or not) "
+.ti -1c
+.RI "bool \fBIsActive\fP ()"
+.br
+.RI "Method for checking the state of the input controller\&. "
+.in -1c
+.SS "Additional Inherited Members"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBOnInputUpdate\fP (double delta_time, int mods)=0"
+.br
+.RI "Method for handling continous events (like key presses) "
+.ti -1c
+.RI "virtual void \fBOnKeyPress\fP (int key, int mods)=0"
+.br
+.RI "Method for handling key presses\&. "
+.ti -1c
+.RI "virtual void \fBOnKeyRelease\fP (int key, int mods)=0"
+.br
+.RI "Method for handling key releases\&. "
+.ti -1c
+.RI "virtual void \fBOnMouseMove\fP (double x_pos, double y_pos, double delta_x, double delta_y)=0"
+.br
+.RI "Method for handling mouse movement\&. "
+.ti -1c
+.RI "virtual void \fBOnMouseButtonPress\fP (double x_pos, double y_pos, int button, int mods)=0"
+.br
+.RI "Method for handling mouse button presses\&. "
+.ti -1c
+.RI "virtual void \fBOnMouseButttonRelease\fP (double x_pos, double y_pos, int button, int mods)=0"
+.br
+.RI "Method for handling mouse button releases\&. "
+.ti -1c
+.RI "virtual void \fBOnMouseScroll\fP (double x_offset, double y_offset)=0"
+.br
+.RI "Method for handling mouse scroll\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB7\fP of file \fBcamera_input\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CameraInput::CameraInput (\fBCamera\fP * camera)"
+
+.PP
+Method for attaching the camera controller to a camera object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcamera\fP The camera object to which the controller is attached to 
+.RE
+.PP
+
+.PP
+Definition at line \fB4\fP of file \fBcamera_input\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenGL Framework from the source code\&.

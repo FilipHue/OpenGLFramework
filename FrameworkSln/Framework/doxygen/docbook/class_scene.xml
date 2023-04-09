@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_scene" xml:lang="en-US">
+<title>Scene Class Reference</title>
+<indexterm><primary>Scene</primary></indexterm>
+<para>
+<computeroutput>#include &lt;scene.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Scene:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_scene__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Scene:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_scene__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_camera">Camera</link> * <link linkend="_class_scene_1a0b26384e4afe100d4209b7ded40379d2">p_scene_camera</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_camera_input">CameraInput</link> * <link linkend="_class_scene_1ae8f7639d0227ed705f883d9debba12c2">p_camera_input</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_scene_input">SceneInput</link> * <link linkend="_class_scene_1a73a7a8f6d8741fdf66b092fdd7da9b1d">p_scene_input</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_texture_manger">TextureManger</link> * <link linkend="_class_scene_1ab905449eea56603315d2ff0a26172cf7">p_texture_manager</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_shape_manager">ShapeManager</link> * <link linkend="_class_scene_1a4c54a24f162c9d5652a72b36df6928f2">p_shape_manager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_scene_1ad10176d75a9cc0da56626f682d083507">Scene</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_1a9de2fe5d4aa89f9537a76a8a1f0abf4d">CreateMesh</link> (const char *name, std::vector&lt; <link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link> &gt; &amp;vertices, std::vector&lt; unsigned int &gt; &amp;indices, <link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">Material</link> *<link linkend="_structmaterial">material</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_1a77d7e54a3d79703adc13f0d51add7be2">RenderMesh</link> (<link linkend="_class_mesh">Mesh</link> *mesh, <link linkend="_class_shader">Shader</link> *shader, glm::vec3 position)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_1a5f3f15a2952541b0272e8ee031fa8eb7">RenderMesh</link> (<link linkend="_class_mesh">Mesh</link> *mesh, <link linkend="_class_shader">Shader</link> *shader, glm::vec3 position, const char *texture_name)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_1a2c264a6e1c11d0124ad5817393296331">RenderMesh</link> (<link linkend="_class_mesh">Mesh</link> *mesh, <link linkend="_class_shader">Shader</link> *shader, glm::vec3 position, glm::vec3 light_position)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_1a9cfa3b7cf903638a3e4e7578ee4f2fa5">RenderMesh</link> (<link linkend="_class_mesh">Mesh</link> *mesh, <link linkend="_class_shader">Shader</link> *shader, glm::mat4 model_matrix)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_1af5436d5ef264f477be8a29bfd0365d17">RenderMesh</link> (<link linkend="_class_mesh">Mesh</link> *mesh, <link linkend="_class_shader">Shader</link> *shader, glm::mat4 model_matrix, const char *texture_name)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_1ac8b3aa98fd51cef42210c80062d0b0d8">RenderMesh</link> (<link linkend="_class_mesh">Mesh</link> *mesh, <link linkend="_class_shader">Shader</link> *shader, glm::mat4 model_matrix, glm::vec3 light_position)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Member Functions inherited from <link linkend="_class_input_controller">InputController</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1af2f53ee2e8c951613d83617f259c92d9">OnInputUpdate</link> (double delta_time, int mods)=0</para>
+
+<para>Method for handling continous events (like key presses) </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1ad5b3dca01698d57084e7a7ec5e118872">OnKeyPress</link> (int key, int mods)=0</para>
+
+<para>Method for handling key presses. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1ad3e3d7ed6ad1bc31880ae39dd11dcd00">OnKeyRelease</link> (int key, int mods)=0</para>
+
+<para>Method for handling key releases. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1ac66cbb6519379d2809aab3780819c571">OnMouseMove</link> (double x_pos, double y_pos, double delta_x, double delta_y)=0</para>
+
+<para>Method for handling mouse movement. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1aba038c7018d1f62c228ca77210986e9a">OnMouseButtonPress</link> (double x_pos, double y_pos, int button, int mods)=0</para>
+
+<para>Method for handling mouse button presses. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1a11cfafe3c6c4dd766df4cd014173c1d8">OnMouseButttonRelease</link> (double x_pos, double y_pos, int button, int mods)=0</para>
+
+<para>Method for handling mouse button releases. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1adc73cbb0d307a92462adf0d70f2d1162">OnMouseScroll</link> (double x_offset, double y_offset)=0</para>
+
+<para>Method for handling mouse scroll. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_window">Window</link> * <link linkend="_class_scene_1ae2b329139aeb75b95cfa41297a90b1be">p_window</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; std::string, <link linkend="_class_mesh">Mesh</link> * &gt; <link linkend="_class_scene_1a17c516524bf6450db5d1048199e59ca0">meshes</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; std::string, <link linkend="_class_shader">Shader</link> * &gt; <link linkend="_class_scene_1a76ad89c41f3186072ae53a10bbfcd8e1">shaders</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_scene_1ae9ac4693fbc4e101d5581859b7589d21">SceneInput</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_scene_1a235814840b9b0394dc2e28813a04a187">ShapeManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_world">World</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_world_1afa39d4e6f714a7a3691ac0c656f5e8a8">World</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_1aa729424b4809c70042dcd7e97c16c3ee">Init</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_1a0ed085d9bdc6f831dcf462f968846166">StartFrame</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_1a3082ec0230bd04bf977a4e27599bb8c1">Update</link> (double delta_time)=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_1aaa6d2623410d5e8a789ec917639597ef">EndFrame</link> ()=0</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_world_1acea6eb85cbad062ded1e62193496e9f5">Run</link> ()</para>
+
+<para>Calls the loop update method while the window is active. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_world_1afa3dd686cb3b3f3084d6c64e9d640820">Exit</link> ()</para>
+</listitem>
+            <listitem><para>double <link linkend="_class_world_1a09f54785fbc2dd9ce3119fc6ef7e9fc4">GetDeltaTime</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_input_controller">InputController</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_input_controller_1aba927fffeb0bf4c4fd0835d4dfbdfaec">InputController</link> ()</para>
+
+<para>Method for connecting the input controller to a component. </para>
+</listitem>
+            <listitem><para><link linkend="_class_input_controller_1aa36b76b8144da60b26cd9b8298aa5627">~InputController</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_input_controller_1a7df1a99839e3d5561e6e44cec1b9789b">ToogleEvents</link> ()</para>
+
+<para>Method for toggling the state of the input controller (active or not) </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_input_controller_1a5ce94207ea1b3fd285f2782e96b9407a">IsActive</link> ()</para>
+
+<para>Method for checking the state of the input controller. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_scene_8h_source_1l00014">14</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_scene_1ad10176d75a9cc0da56626f682d083507"/><section>
+    <title>Scene()</title>
+<indexterm><primary>Scene</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>Scene</secondary></indexterm>
+<para><computeroutput>Scene::Scene ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8cpp_source_1l00003">3</link> of file <link linkend="_scene_8cpp_source">scene.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_scene_1a9de2fe5d4aa89f9537a76a8a1f0abf4d"/><section>
+    <title>CreateMesh()</title>
+<indexterm><primary>CreateMesh</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>CreateMesh</secondary></indexterm>
+<para><computeroutput>void Scene::CreateMesh (const char * name, std::vector&lt; <link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link> &gt; &amp; vertices, std::vector&lt; unsigned int &gt; &amp; indices, <link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">Material</link> * material)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8cpp_source_1l00008">8</link> of file <link linkend="_scene_8cpp_source">scene.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1a9cfa3b7cf903638a3e4e7578ee4f2fa5"/><section>
+    <title>RenderMesh()<computeroutput>[1/6]</computeroutput></title>
+<indexterm><primary>RenderMesh</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>RenderMesh</secondary></indexterm>
+<para><computeroutput>void Scene::RenderMesh (<link linkend="_class_mesh">Mesh</link> * mesh, <link linkend="_class_shader">Shader</link> * shader, glm::mat4 model_matrix)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8cpp_source_1l00101">101</link> of file <link linkend="_scene_8cpp_source">scene.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1af5436d5ef264f477be8a29bfd0365d17"/><section>
+    <title>RenderMesh()<computeroutput>[2/6]</computeroutput></title>
+<indexterm><primary>RenderMesh</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>RenderMesh</secondary></indexterm>
+<para><computeroutput>void Scene::RenderMesh (<link linkend="_class_mesh">Mesh</link> * mesh, <link linkend="_class_shader">Shader</link> * shader, glm::mat4 model_matrix, const char * texture_name)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8cpp_source_1l00116">116</link> of file <link linkend="_scene_8cpp_source">scene.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1ac8b3aa98fd51cef42210c80062d0b0d8"/><section>
+    <title>RenderMesh()<computeroutput>[3/6]</computeroutput></title>
+<indexterm><primary>RenderMesh</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>RenderMesh</secondary></indexterm>
+<para><computeroutput>void Scene::RenderMesh (<link linkend="_class_mesh">Mesh</link> * mesh, <link linkend="_class_shader">Shader</link> * shader, glm::mat4 model_matrix, glm::vec3 light_position)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8cpp_source_1l00136">136</link> of file <link linkend="_scene_8cpp_source">scene.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1a77d7e54a3d79703adc13f0d51add7be2"/><section>
+    <title>RenderMesh()<computeroutput>[4/6]</computeroutput></title>
+<indexterm><primary>RenderMesh</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>RenderMesh</secondary></indexterm>
+<para><computeroutput>void Scene::RenderMesh (<link linkend="_class_mesh">Mesh</link> * mesh, <link linkend="_class_shader">Shader</link> * shader, glm::vec3 position)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8cpp_source_1l00017">17</link> of file <link linkend="_scene_8cpp_source">scene.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1a5f3f15a2952541b0272e8ee031fa8eb7"/><section>
+    <title>RenderMesh()<computeroutput>[5/6]</computeroutput></title>
+<indexterm><primary>RenderMesh</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>RenderMesh</secondary></indexterm>
+<para><computeroutput>void Scene::RenderMesh (<link linkend="_class_mesh">Mesh</link> * mesh, <link linkend="_class_shader">Shader</link> * shader, glm::vec3 position, const char * texture_name)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8cpp_source_1l00034">34</link> of file <link linkend="_scene_8cpp_source">scene.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1a2c264a6e1c11d0124ad5817393296331"/><section>
+    <title>RenderMesh()<computeroutput>[6/6]</computeroutput></title>
+<indexterm><primary>RenderMesh</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>RenderMesh</secondary></indexterm>
+<para><computeroutput>void Scene::RenderMesh (<link linkend="_class_mesh">Mesh</link> * mesh, <link linkend="_class_shader">Shader</link> * shader, glm::vec3 position, glm::vec3 light_position)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8cpp_source_1l00056">56</link> of file <link linkend="_scene_8cpp_source">scene.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_class_scene_1ae9ac4693fbc4e101d5581859b7589d21"/><section>
+    <title>SceneInput</title>
+<indexterm><primary>SceneInput</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>SceneInput</secondary></indexterm>
+<para><computeroutput>friend class <link linkend="_class_scene_input">SceneInput</link><computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00016">16</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1a235814840b9b0394dc2e28813a04a187"/><section>
+    <title>ShapeManager</title>
+<indexterm><primary>ShapeManager</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>ShapeManager</secondary></indexterm>
+<para><computeroutput>friend class <link linkend="_class_shape_manager">ShapeManager</link><computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00017">17</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_scene_1a17c516524bf6450db5d1048199e59ca0"/><section>
+    <title>meshes</title>
+<indexterm><primary>meshes</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>meshes</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;std::string, <link linkend="_class_mesh">Mesh</link>*&gt; Scene::meshes<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00040">40</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1ae8f7639d0227ed705f883d9debba12c2"/><section>
+    <title>p_camera_input</title>
+<indexterm><primary>p_camera_input</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>p_camera_input</secondary></indexterm>
+<para><computeroutput><link linkend="_class_camera_input">CameraInput</link>* Scene::p_camera_input</computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00021">21</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1a0b26384e4afe100d4209b7ded40379d2"/><section>
+    <title>p_scene_camera</title>
+<indexterm><primary>p_scene_camera</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>p_scene_camera</secondary></indexterm>
+<para><computeroutput><link linkend="_class_camera">Camera</link>* Scene::p_scene_camera</computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00020">20</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1a73a7a8f6d8741fdf66b092fdd7da9b1d"/><section>
+    <title>p_scene_input</title>
+<indexterm><primary>p_scene_input</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>p_scene_input</secondary></indexterm>
+<para><computeroutput><link linkend="_class_scene_input">SceneInput</link>* Scene::p_scene_input</computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00022">22</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1a4c54a24f162c9d5652a72b36df6928f2"/><section>
+    <title>p_shape_manager</title>
+<indexterm><primary>p_shape_manager</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>p_shape_manager</secondary></indexterm>
+<para><computeroutput><link linkend="_class_shape_manager">ShapeManager</link>* Scene::p_shape_manager</computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00024">24</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1ab905449eea56603315d2ff0a26172cf7"/><section>
+    <title>p_texture_manager</title>
+<indexterm><primary>p_texture_manager</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>p_texture_manager</secondary></indexterm>
+<para><computeroutput><link linkend="_class_texture_manger">TextureManger</link>* Scene::p_texture_manager</computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00023">23</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1ae2b329139aeb75b95cfa41297a90b1be"/><section>
+    <title>p_window</title>
+<indexterm><primary>p_window</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>p_window</secondary></indexterm>
+<para><computeroutput><link linkend="_class_window">Window</link>* Scene::p_window<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00039">39</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<anchor xml:id="_class_scene_1a76ad89c41f3186072ae53a10bbfcd8e1"/><section>
+    <title>shaders</title>
+<indexterm><primary>shaders</primary><secondary>Scene</secondary></indexterm>
+<indexterm><primary>Scene</primary><secondary>shaders</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;std::string, <link linkend="_class_shader">Shader</link>*&gt; Scene::shaders<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_scene_8h_source_1l00041">41</link> of file <link linkend="_scene_8h_source">scene.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/components/scene/<link linkend="_scene_8h">scene.h</link>src/components/scene/<link linkend="_scene_8cpp">scene.cpp</link></section>
+</section>

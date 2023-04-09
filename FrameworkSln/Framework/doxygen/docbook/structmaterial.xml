@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmaterial" xml:lang="en-US">
+<title>material Struct Reference</title>
+<indexterm><primary>material</primary></indexterm>
+<para>
+<computeroutput>#include &lt;material.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const char * <link linkend="_structmaterial_1a6c9702db8ba10025c20efb81a96ce976">name</link></para>
+</listitem>
+            <listitem><para>glm::vec3 <link linkend="_structmaterial_1af632818ebb9719ee9a6bb9c2b5122504">Ka</link></para>
+</listitem>
+            <listitem><para>glm::vec3 <link linkend="_structmaterial_1a665292640cc52bde33c2bf9dd8b93551">Kd</link></para>
+</listitem>
+            <listitem><para>glm::vec3 <link linkend="_structmaterial_1a95ce8a36cb532bd25a2a97b83fe7de36">Ksp</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_structmaterial_1a75a7b1f8b3d8820a2a5a0ec976e8bc84">Ksh</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_structmaterial_1ad117ab5a6c13364caccc28997d11abf4">operator&lt;&lt;</link> (std::ostream &amp;os, const <link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">Material</link> &amp;m)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_material_8h_source_1l00007">7</link> of file <link linkend="_material_8h_source">material.h</link>.</para>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_structmaterial_1ad117ab5a6c13364caccc28997d11abf4"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>material</secondary></indexterm>
+<indexterm><primary>material</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; os, const <link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">Material</link> &amp; m)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_material_8h_source_1l00015">15</link> of file <link linkend="_material_8h_source">material.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structmaterial_1af632818ebb9719ee9a6bb9c2b5122504"/><section>
+    <title>Ka</title>
+<indexterm><primary>Ka</primary><secondary>material</secondary></indexterm>
+<indexterm><primary>material</primary><secondary>Ka</secondary></indexterm>
+<para><computeroutput>glm::vec3 material::Ka</computeroutput></para><para>
+Definition at line <link linkend="_material_8h_source_1l00010">10</link> of file <link linkend="_material_8h_source">material.h</link>.</para>
+</section>
+<anchor xml:id="_structmaterial_1a665292640cc52bde33c2bf9dd8b93551"/><section>
+    <title>Kd</title>
+<indexterm><primary>Kd</primary><secondary>material</secondary></indexterm>
+<indexterm><primary>material</primary><secondary>Kd</secondary></indexterm>
+<para><computeroutput>glm::vec3 material::Kd</computeroutput></para><para>
+Definition at line <link linkend="_material_8h_source_1l00011">11</link> of file <link linkend="_material_8h_source">material.h</link>.</para>
+</section>
+<anchor xml:id="_structmaterial_1a75a7b1f8b3d8820a2a5a0ec976e8bc84"/><section>
+    <title>Ksh</title>
+<indexterm><primary>Ksh</primary><secondary>material</secondary></indexterm>
+<indexterm><primary>material</primary><secondary>Ksh</secondary></indexterm>
+<para><computeroutput>float material::Ksh</computeroutput></para><para>
+Definition at line <link linkend="_material_8h_source_1l00013">13</link> of file <link linkend="_material_8h_source">material.h</link>.</para>
+</section>
+<anchor xml:id="_structmaterial_1a95ce8a36cb532bd25a2a97b83fe7de36"/><section>
+    <title>Ksp</title>
+<indexterm><primary>Ksp</primary><secondary>material</secondary></indexterm>
+<indexterm><primary>material</primary><secondary>Ksp</secondary></indexterm>
+<para><computeroutput>glm::vec3 material::Ksp</computeroutput></para><para>
+Definition at line <link linkend="_material_8h_source_1l00012">12</link> of file <link linkend="_material_8h_source">material.h</link>.</para>
+</section>
+<anchor xml:id="_structmaterial_1a6c9702db8ba10025c20efb81a96ce976"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>material</secondary></indexterm>
+<indexterm><primary>material</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>const char* material::name</computeroutput></para><para>
+Definition at line <link linkend="_material_8h_source_1l00008">8</link> of file <link linkend="_material_8h_source">material.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/utils/<link linkend="_material_8h">material.h</link></section>
+</section>

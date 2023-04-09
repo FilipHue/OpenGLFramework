@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_input__controller_8cpp" xml:lang="en-US">
+<title>src/engine/core/input_controller/input_controller.cpp File Reference</title>
+<indexterm><primary>src/engine/core/input_controller/input_controller.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;input_controller.h&quot;<?linebreak?></programlisting>Include dependency graph for input_controller.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="input__controller_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

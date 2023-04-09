@@ -1,0 +1,26 @@
+digraph "Scene"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="Scene",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="World",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_world.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="InputController",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_input_controller.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" p_scene_camera" ];
+  Node4 [label="Camera",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_camera.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" p_camera_input" ];
+  Node5 [label="CameraInput",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_camera_input.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" p_scene_input" ];
+  Node6 [label="SceneInput",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_scene_input.html",tooltip=" "];
+  Node3 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" p_texture_manager" ];
+  Node7 [label="TextureManger",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_texture_manger.html",tooltip=" "];
+  Node8 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" p_shape_manager" ];
+  Node8 [label="ShapeManager",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_shape_manager.html",tooltip=" "];
+  Node9 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" p_window" ];
+  Node9 [label="Window",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_window.html",tooltip=" "];
+}

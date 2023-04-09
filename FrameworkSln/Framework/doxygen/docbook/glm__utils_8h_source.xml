@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_glm__utils_8h_source" xml:lang="en-US">
+<title>glm_utils.h</title>
+<indexterm><primary>src/utils/glm_utils.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_glm__utils_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_glm__utils_8h_source_1l00002"/>00002 
+<anchor xml:id="_glm__utils_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;ostream&gt;</emphasis>
+<anchor xml:id="_glm__utils_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;glm.hpp&gt;</emphasis>
+<anchor xml:id="_glm__utils_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;gtc/type_ptr.hpp&gt;</emphasis>
+<anchor xml:id="_glm__utils_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;gtc/matrix_transform.hpp&gt;</emphasis>
+<anchor xml:id="_glm__utils_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&lt;gtc/quaternion.hpp&gt;</emphasis>
+<anchor xml:id="_glm__utils_8h_source_1l00008"/>00008 
+<anchor xml:id="_glm__utils_8h_source_1l00009"/><link linkend="_glm__utils_8h_1a9cb9e704b009dbda0914de6b8e2935c2">00009</link> <emphasis role="keyword">inline</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_glm__utils_8h_1a9cb9e704b009dbda0914de6b8e2935c2">operator&lt;&lt; </link>(std::ostream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;glm::ivec2&amp;&#32;vec)&#32;{
+<anchor xml:id="_glm__utils_8h_source_1l00010"/>00010 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;[&quot;</emphasis>&#32;&lt;&lt;&#32;vec.x&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.y&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;]&quot;</emphasis>;
+<anchor xml:id="_glm__utils_8h_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;out;
+<anchor xml:id="_glm__utils_8h_source_1l00012"/>00012 }
+<anchor xml:id="_glm__utils_8h_source_1l00013"/>00013 
+<anchor xml:id="_glm__utils_8h_source_1l00014"/><link linkend="_glm__utils_8h_1ad60f50e61628c9acc765899c058c8bac">00014</link> <emphasis role="keyword">inline</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_glm__utils_8h_1a9cb9e704b009dbda0914de6b8e2935c2">operator&lt;&lt; </link>(std::ostream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;glm::vec2&amp;&#32;vec)&#32;{
+<anchor xml:id="_glm__utils_8h_source_1l00015"/>00015 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;[&quot;</emphasis>&#32;&lt;&lt;&#32;vec.x&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.y&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;]&quot;</emphasis>;
+<anchor xml:id="_glm__utils_8h_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;out;
+<anchor xml:id="_glm__utils_8h_source_1l00017"/>00017 }
+<anchor xml:id="_glm__utils_8h_source_1l00018"/>00018 
+<anchor xml:id="_glm__utils_8h_source_1l00019"/><link linkend="_glm__utils_8h_1a0201b2cb58d9b8f3a93781b596d149ba">00019</link> <emphasis role="keyword">inline</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_glm__utils_8h_1a9cb9e704b009dbda0914de6b8e2935c2">operator&lt;&lt; </link>(std::ostream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;glm::ivec3&amp;&#32;vec)&#32;{
+<anchor xml:id="_glm__utils_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;[&quot;</emphasis>&#32;&lt;&lt;&#32;vec.x&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.y&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.z&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;]&quot;</emphasis>;
+<anchor xml:id="_glm__utils_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;out;
+<anchor xml:id="_glm__utils_8h_source_1l00022"/>00022 }
+<anchor xml:id="_glm__utils_8h_source_1l00023"/>00023 
+<anchor xml:id="_glm__utils_8h_source_1l00024"/><link linkend="_glm__utils_8h_1ae2fa9fa89bc03b53544c3eeb6d781bd8">00024</link> <emphasis role="keyword">inline</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_glm__utils_8h_1a9cb9e704b009dbda0914de6b8e2935c2">operator&lt;&lt; </link>(std::ostream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;glm::vec3&amp;&#32;vec)&#32;{
+<anchor xml:id="_glm__utils_8h_source_1l00025"/>00025 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;[&quot;</emphasis>&#32;&lt;&lt;&#32;vec.x&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.y&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.z&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;]&quot;</emphasis>;
+<anchor xml:id="_glm__utils_8h_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;out;
+<anchor xml:id="_glm__utils_8h_source_1l00027"/>00027 }
+<anchor xml:id="_glm__utils_8h_source_1l00028"/>00028 
+<anchor xml:id="_glm__utils_8h_source_1l00029"/><link linkend="_glm__utils_8h_1a76785ed06f6be69d7e12eb78eb28d7e3">00029</link> <emphasis role="keyword">inline</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_glm__utils_8h_1a9cb9e704b009dbda0914de6b8e2935c2">operator&lt;&lt; </link>(std::ostream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;glm::ivec4&amp;&#32;vec)&#32;{
+<anchor xml:id="_glm__utils_8h_source_1l00030"/>00030 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;[&quot;</emphasis>&#32;&lt;&lt;&#32;vec.x&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.y&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.z&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.w&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;]&quot;</emphasis>;
+<anchor xml:id="_glm__utils_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;out;
+<anchor xml:id="_glm__utils_8h_source_1l00032"/>00032 }
+<anchor xml:id="_glm__utils_8h_source_1l00033"/>00033 
+<anchor xml:id="_glm__utils_8h_source_1l00034"/><link linkend="_glm__utils_8h_1a24e5905179736dc71e25b66691d634a3">00034</link> <emphasis role="keyword">inline</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_glm__utils_8h_1a9cb9e704b009dbda0914de6b8e2935c2">operator&lt;&lt; </link>(std::ostream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;glm::vec4&amp;&#32;vec)&#32;{
+<anchor xml:id="_glm__utils_8h_source_1l00035"/>00035 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;[&quot;</emphasis>&#32;&lt;&lt;&#32;vec.x&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.y&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.z&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;vec.w&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;]&quot;</emphasis>;
+<anchor xml:id="_glm__utils_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;out;
+<anchor xml:id="_glm__utils_8h_source_1l00037"/>00037 }
+<anchor xml:id="_glm__utils_8h_source_1l00038"/>00038 
+<anchor xml:id="_glm__utils_8h_source_1l00039"/><link linkend="_glm__utils_8h_1a5d083d38b569ca70c445e4352ec08b1a">00039</link> <emphasis role="keyword">inline</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_glm__utils_8h_1a9cb9e704b009dbda0914de6b8e2935c2">operator&lt;&lt; </link>(std::ostream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;glm::quat&amp;&#32;rot)&#32;{
+<anchor xml:id="_glm__utils_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;[&quot;</emphasis>&#32;&lt;&lt;&#32;rot.x&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;rot.y&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;rot.z&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;rot.w&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;]&quot;</emphasis>;
+<anchor xml:id="_glm__utils_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;out;
+<anchor xml:id="_glm__utils_8h_source_1l00042"/>00042 }
+</programlisting></section>

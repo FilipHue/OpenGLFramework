@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_shape_manager" xml:lang="en-US">
+<title>ShapeManager Class Reference</title>
+<indexterm><primary>ShapeManager</primary></indexterm>
+<para>
+<computeroutput>#include &lt;shape_manager.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_shape_manager_1a89d87212e60b3b0940aa8fa9000def95">ShapeManager</link> (<link linkend="_class_scene">Scene</link> *scene)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_manager_1a9710768a9f9111b24e4ad8926b4f18b2">CreateRectangleX</link> (const char *name, float width, float height)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_manager_1aa3cbfcc112b4f3a5faa17920dd43a87e">CreateRectangleY</link> (const char *name, float width, float height)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_manager_1a58cfdef2bbcb6fe18e44fa4c9eb09041">CreateRectangleZ</link> (const char *name, float width, float height)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_manager_1a33c0343c8bbc14cc57c82ac5a1a4196b">CreateTriangleX</link> (const char *name, float sideA, float sideB, float sideC, glm::vec3 startPosition)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_manager_1a0fed955e717b339da0530ba59a0132d6">CreateTriangleY</link> (const char *name, float sideA, float sideB, float sideC, glm::vec3 startPosition)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_manager_1a8fc74771c2f1c070b085d7a2b67613ad">CreateTriangleZ</link> (const char *name, float sideA, float sideB, float sideC, glm::vec3 startPosition)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_manager_1a20ec5228b6215739d358640dc754ae7f">CreateCube</link> (const char *name, float width, float height, float length)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_shape_manager_1a032858ae1fe02d2d1170981c2af2d67c">Scene</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_shape__manager_8h_source_1l00008">8</link> of file <link linkend="_shape__manager_8h_source">shape_manager.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_shape_manager_1a89d87212e60b3b0940aa8fa9000def95"/><section>
+    <title>ShapeManager()</title>
+<indexterm><primary>ShapeManager</primary><secondary>ShapeManager</secondary></indexterm>
+<indexterm><primary>ShapeManager</primary><secondary>ShapeManager</secondary></indexterm>
+<para><computeroutput>ShapeManager::ShapeManager (<link linkend="_class_scene">Scene</link> * scene)</computeroutput></para><para>
+Definition at line <link linkend="_shape__manager_8cpp_source_1l00003">3</link> of file <link linkend="_shape__manager_8cpp_source">shape_manager.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_shape_manager_1a20ec5228b6215739d358640dc754ae7f"/><section>
+    <title>CreateCube()</title>
+<indexterm><primary>CreateCube</primary><secondary>ShapeManager</secondary></indexterm>
+<indexterm><primary>ShapeManager</primary><secondary>CreateCube</secondary></indexterm>
+<para><computeroutput>void ShapeManager::CreateCube (const char * name, float width, float height, float length)</computeroutput></para><para>
+Definition at line <link linkend="_shape__manager_8cpp_source_1l00081">81</link> of file <link linkend="_shape__manager_8cpp_source">shape_manager.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shape_manager_1a9710768a9f9111b24e4ad8926b4f18b2"/><section>
+    <title>CreateRectangleX()</title>
+<indexterm><primary>CreateRectangleX</primary><secondary>ShapeManager</secondary></indexterm>
+<indexterm><primary>ShapeManager</primary><secondary>CreateRectangleX</secondary></indexterm>
+<para><computeroutput>void ShapeManager::CreateRectangleX (const char * name, float width, float height)</computeroutput></para><para>
+Definition at line <link linkend="_shape__manager_8cpp_source_1l00014">14</link> of file <link linkend="_shape__manager_8cpp_source">shape_manager.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shape_manager_1aa3cbfcc112b4f3a5faa17920dd43a87e"/><section>
+    <title>CreateRectangleY()</title>
+<indexterm><primary>CreateRectangleY</primary><secondary>ShapeManager</secondary></indexterm>
+<indexterm><primary>ShapeManager</primary><secondary>CreateRectangleY</secondary></indexterm>
+<para><computeroutput>void ShapeManager::CreateRectangleY (const char * name, float width, float height)</computeroutput></para><para>
+Definition at line <link linkend="_shape__manager_8cpp_source_1l00031">31</link> of file <link linkend="_shape__manager_8cpp_source">shape_manager.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shape_manager_1a58cfdef2bbcb6fe18e44fa4c9eb09041"/><section>
+    <title>CreateRectangleZ()</title>
+<indexterm><primary>CreateRectangleZ</primary><secondary>ShapeManager</secondary></indexterm>
+<indexterm><primary>ShapeManager</primary><secondary>CreateRectangleZ</secondary></indexterm>
+<para><computeroutput>void ShapeManager::CreateRectangleZ (const char * name, float width, float height)</computeroutput></para><para>
+Definition at line <link linkend="_shape__manager_8cpp_source_1l00048">48</link> of file <link linkend="_shape__manager_8cpp_source">shape_manager.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shape_manager_1a33c0343c8bbc14cc57c82ac5a1a4196b"/><section>
+    <title>CreateTriangleX()</title>
+<indexterm><primary>CreateTriangleX</primary><secondary>ShapeManager</secondary></indexterm>
+<indexterm><primary>ShapeManager</primary><secondary>CreateTriangleX</secondary></indexterm>
+<para><computeroutput>void ShapeManager::CreateTriangleX (const char * name, float sideA, float sideB, float sideC, glm::vec3 startPosition = <computeroutput>glm::vec3(0)</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_shape__manager_8cpp_source_1l00065">65</link> of file <link linkend="_shape__manager_8cpp_source">shape_manager.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shape_manager_1a0fed955e717b339da0530ba59a0132d6"/><section>
+    <title>CreateTriangleY()</title>
+<indexterm><primary>CreateTriangleY</primary><secondary>ShapeManager</secondary></indexterm>
+<indexterm><primary>ShapeManager</primary><secondary>CreateTriangleY</secondary></indexterm>
+<para><computeroutput>void ShapeManager::CreateTriangleY (const char * name, float sideA, float sideB, float sideC, glm::vec3 startPosition)</computeroutput></para><para>
+Definition at line <link linkend="_shape__manager_8cpp_source_1l00073">73</link> of file <link linkend="_shape__manager_8cpp_source">shape_manager.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shape_manager_1a8fc74771c2f1c070b085d7a2b67613ad"/><section>
+    <title>CreateTriangleZ()</title>
+<indexterm><primary>CreateTriangleZ</primary><secondary>ShapeManager</secondary></indexterm>
+<indexterm><primary>ShapeManager</primary><secondary>CreateTriangleZ</secondary></indexterm>
+<para><computeroutput>void ShapeManager::CreateTriangleZ (const char * name, float sideA, float sideB, float sideC, glm::vec3 startPosition)</computeroutput></para><para>
+Definition at line <link linkend="_shape__manager_8cpp_source_1l00077">77</link> of file <link linkend="_shape__manager_8cpp_source">shape_manager.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_class_shape_manager_1a032858ae1fe02d2d1170981c2af2d67c"/><section>
+    <title>Scene</title>
+<indexterm><primary>Scene</primary><secondary>ShapeManager</secondary></indexterm>
+<indexterm><primary>ShapeManager</primary><secondary>Scene</secondary></indexterm>
+<para><computeroutput>friend class <link linkend="_class_scene">Scene</link><computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_shape__manager_8h_source_1l00010">10</link> of file <link linkend="_shape__manager_8h_source">shape_manager.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/managers/shape/<link linkend="_shape__manager_8h">shape_manager.h</link>src/managers/shape/<link linkend="_shape__manager_8cpp">shape_manager.cpp</link></section>
+</section>

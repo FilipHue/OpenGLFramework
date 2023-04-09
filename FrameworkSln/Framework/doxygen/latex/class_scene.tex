@@ -1,0 +1,315 @@
+\hypertarget{class_scene}{}\doxysection{Scene Class Reference}
+\label{class_scene}\index{Scene@{Scene}}
+
+
+{\ttfamily \#include $<$scene.\+h$>$}
+
+
+
+Inheritance diagram for Scene\+:
+% FIG 0
+
+
+Collaboration diagram for Scene\+:
+% FIG 1
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera}{Camera}} $\ast$ \mbox{\hyperlink{class_scene_a0b26384e4afe100d4209b7ded40379d2}{p\+\_\+scene\+\_\+camera}}
+\item 
+\mbox{\hyperlink{class_camera_input}{Camera\+Input}} $\ast$ \mbox{\hyperlink{class_scene_ae8f7639d0227ed705f883d9debba12c2}{p\+\_\+camera\+\_\+input}}
+\item 
+\mbox{\hyperlink{class_scene_input}{Scene\+Input}} $\ast$ \mbox{\hyperlink{class_scene_a73a7a8f6d8741fdf66b092fdd7da9b1d}{p\+\_\+scene\+\_\+input}}
+\item 
+\mbox{\hyperlink{class_texture_manger}{Texture\+Manger}} $\ast$ \mbox{\hyperlink{class_scene_ab905449eea56603315d2ff0a26172cf7}{p\+\_\+texture\+\_\+manager}}
+\item 
+\mbox{\hyperlink{class_shape_manager}{Shape\+Manager}} $\ast$ \mbox{\hyperlink{class_scene_a4c54a24f162c9d5652a72b36df6928f2}{p\+\_\+shape\+\_\+manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene}} ()
+\item 
+void \mbox{\hyperlink{class_scene_a9de2fe5d4aa89f9537a76a8a1f0abf4d}{Create\+Mesh}} (const char $\ast$name, std\+::vector$<$ \mbox{\hyperlink{vertex_8h_a9a691a57a842e8225d7a070565828c27}{Vertex}} $>$ \&vertices, std\+::vector$<$ unsigned int $>$ \&indices, \mbox{\hyperlink{material_8h_aa8c92fe9490e4ed00377792bf8304307}{Material}} $\ast$\mbox{\hyperlink{structmaterial}{material}})
+\item 
+void \mbox{\hyperlink{class_scene_a77d7e54a3d79703adc13f0d51add7be2}{Render\+Mesh}} (\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$mesh, \mbox{\hyperlink{class_shader}{Shader}} $\ast$shader, glm\+::vec3 position)
+\item 
+void \mbox{\hyperlink{class_scene_a5f3f15a2952541b0272e8ee031fa8eb7}{Render\+Mesh}} (\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$mesh, \mbox{\hyperlink{class_shader}{Shader}} $\ast$shader, glm\+::vec3 position, const char $\ast$texture\+\_\+name)
+\item 
+void \mbox{\hyperlink{class_scene_a2c264a6e1c11d0124ad5817393296331}{Render\+Mesh}} (\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$mesh, \mbox{\hyperlink{class_shader}{Shader}} $\ast$shader, glm\+::vec3 position, glm\+::vec3 light\+\_\+position)
+\item 
+void \mbox{\hyperlink{class_scene_a9cfa3b7cf903638a3e4e7578ee4f2fa5}{Render\+Mesh}} (\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$mesh, \mbox{\hyperlink{class_shader}{Shader}} $\ast$shader, glm\+::mat4 model\+\_\+matrix)
+\item 
+void \mbox{\hyperlink{class_scene_af5436d5ef264f477be8a29bfd0365d17}{Render\+Mesh}} (\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$mesh, \mbox{\hyperlink{class_shader}{Shader}} $\ast$shader, glm\+::mat4 model\+\_\+matrix, const char $\ast$texture\+\_\+name)
+\item 
+void \mbox{\hyperlink{class_scene_ac8b3aa98fd51cef42210c80062d0b0d8}{Render\+Mesh}} (\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$mesh, \mbox{\hyperlink{class_shader}{Shader}} $\ast$shader, glm\+::mat4 model\+\_\+matrix, glm\+::vec3 light\+\_\+position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_input_controller}{Input\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_input_controller_af2f53ee2e8c951613d83617f259c92d9}{On\+Input\+Update}} (double delta\+\_\+time, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling continous events (like key presses) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_ad5b3dca01698d57084e7a7ec5e118872}{On\+Key\+Press}} (int key, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling key presses. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_ad3e3d7ed6ad1bc31880ae39dd11dcd00}{On\+Key\+Release}} (int key, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling key releases. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_ac66cbb6519379d2809aab3780819c571}{On\+Mouse\+Move}} (double x\+\_\+pos, double y\+\_\+pos, double delta\+\_\+x, double delta\+\_\+y)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse movement. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_aba038c7018d1f62c228ca77210986e9a}{On\+Mouse\+Button\+Press}} (double x\+\_\+pos, double y\+\_\+pos, int button, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse button presses. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_a11cfafe3c6c4dd766df4cd014173c1d8}{On\+Mouse\+Buttton\+Release}} (double x\+\_\+pos, double y\+\_\+pos, int button, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse button releases. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_adc73cbb0d307a92462adf0d70f2d1162}{On\+Mouse\+Scroll}} (double x\+\_\+offset, double y\+\_\+offset)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse scroll. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_window}{Window}} $\ast$ \mbox{\hyperlink{class_scene_ae2b329139aeb75b95cfa41297a90b1be}{p\+\_\+window}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_mesh}{Mesh}} $\ast$ $>$ \mbox{\hyperlink{class_scene_a17c516524bf6450db5d1048199e59ca0}{meshes}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_shader}{Shader}} $\ast$ $>$ \mbox{\hyperlink{class_scene_a76ad89c41f3186072ae53a10bbfcd8e1}{shaders}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_scene_ae9ac4693fbc4e101d5581859b7589d21}{Scene\+Input}}
+\item 
+class \mbox{\hyperlink{class_scene_a235814840b9b0394dc2e28813a04a187}{Shape\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_world}{World}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}{World}} ()
+\item 
+virtual void \mbox{\hyperlink{class_world_aa729424b4809c70042dcd7e97c16c3ee}{Init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_world_a0ed085d9bdc6f831dcf462f968846166}{Start\+Frame}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_world_a3082ec0230bd04bf977a4e27599bb8c1}{Update}} (double delta\+\_\+time)=0
+\item 
+virtual void \mbox{\hyperlink{class_world_aaa6d2623410d5e8a789ec917639597ef}{End\+Frame}} ()=0
+\item 
+void \mbox{\hyperlink{class_world_acea6eb85cbad062ded1e62193496e9f5}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Calls the loop update method while the window is active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_world_afa3dd686cb3b3f3084d6c64e9d640820}{Exit}} ()
+\item 
+double \mbox{\hyperlink{class_world_a09f54785fbc2dd9ce3119fc6ef7e9fc4}{Get\+Delta\+Time}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_input_controller}{Input\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}{Input\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Method for connecting the input controller to a component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_input_controller_aa36b76b8144da60b26cd9b8298aa5627}{$\sim$\+Input\+Controller}} ()
+\item 
+void \mbox{\hyperlink{class_input_controller_a7df1a99839e3d5561e6e44cec1b9789b}{Toogle\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Method for toggling the state of the input controller (active or not) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_controller_a5ce94207ea1b3fd285f2782e96b9407a}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Method for checking the state of the input controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00014}{14}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_ad10176d75a9cc0da56626f682d083507}\label{class_scene_ad10176d75a9cc0da56626f682d083507}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_a9de2fe5d4aa89f9537a76a8a1f0abf4d}\label{class_scene_a9de2fe5d4aa89f9537a76a8a1f0abf4d}} 
+\index{Scene@{Scene}!CreateMesh@{CreateMesh}}
+\index{CreateMesh@{CreateMesh}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{CreateMesh()}{CreateMesh()}}
+{\footnotesize\ttfamily void Scene\+::\+Create\+Mesh (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{vertex_8h_a9a691a57a842e8225d7a070565828c27}{Vertex}} $>$ \&}]{vertices,  }\item[{std\+::vector$<$ unsigned int $>$ \&}]{indices,  }\item[{\mbox{\hyperlink{material_8h_aa8c92fe9490e4ed00377792bf8304307}{Material}} $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}.
+
+\mbox{\Hypertarget{class_scene_a9cfa3b7cf903638a3e4e7578ee4f2fa5}\label{class_scene_a9cfa3b7cf903638a3e4e7578ee4f2fa5}} 
+\index{Scene@{Scene}!RenderMesh@{RenderMesh}}
+\index{RenderMesh@{RenderMesh}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{RenderMesh()}{RenderMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void Scene\+::\+Render\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{class_shader}{Shader}} $\ast$}]{shader,  }\item[{glm\+::mat4}]{model\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}.
+
+\mbox{\Hypertarget{class_scene_af5436d5ef264f477be8a29bfd0365d17}\label{class_scene_af5436d5ef264f477be8a29bfd0365d17}} 
+\index{Scene@{Scene}!RenderMesh@{RenderMesh}}
+\index{RenderMesh@{RenderMesh}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{RenderMesh()}{RenderMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void Scene\+::\+Render\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{class_shader}{Shader}} $\ast$}]{shader,  }\item[{glm\+::mat4}]{model\+\_\+matrix,  }\item[{const char $\ast$}]{texture\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}.
+
+\mbox{\Hypertarget{class_scene_ac8b3aa98fd51cef42210c80062d0b0d8}\label{class_scene_ac8b3aa98fd51cef42210c80062d0b0d8}} 
+\index{Scene@{Scene}!RenderMesh@{RenderMesh}}
+\index{RenderMesh@{RenderMesh}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{RenderMesh()}{RenderMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void Scene\+::\+Render\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{class_shader}{Shader}} $\ast$}]{shader,  }\item[{glm\+::mat4}]{model\+\_\+matrix,  }\item[{glm\+::vec3}]{light\+\_\+position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8cpp_source_l00136}{136}} of file \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}.
+
+\mbox{\Hypertarget{class_scene_a77d7e54a3d79703adc13f0d51add7be2}\label{class_scene_a77d7e54a3d79703adc13f0d51add7be2}} 
+\index{Scene@{Scene}!RenderMesh@{RenderMesh}}
+\index{RenderMesh@{RenderMesh}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{RenderMesh()}{RenderMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void Scene\+::\+Render\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{class_shader}{Shader}} $\ast$}]{shader,  }\item[{glm\+::vec3}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}.
+
+\mbox{\Hypertarget{class_scene_a5f3f15a2952541b0272e8ee031fa8eb7}\label{class_scene_a5f3f15a2952541b0272e8ee031fa8eb7}} 
+\index{Scene@{Scene}!RenderMesh@{RenderMesh}}
+\index{RenderMesh@{RenderMesh}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{RenderMesh()}{RenderMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void Scene\+::\+Render\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{class_shader}{Shader}} $\ast$}]{shader,  }\item[{glm\+::vec3}]{position,  }\item[{const char $\ast$}]{texture\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}.
+
+\mbox{\Hypertarget{class_scene_a2c264a6e1c11d0124ad5817393296331}\label{class_scene_a2c264a6e1c11d0124ad5817393296331}} 
+\index{Scene@{Scene}!RenderMesh@{RenderMesh}}
+\index{RenderMesh@{RenderMesh}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{RenderMesh()}{RenderMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily void Scene\+::\+Render\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{class_shader}{Shader}} $\ast$}]{shader,  }\item[{glm\+::vec3}]{position,  }\item[{glm\+::vec3}]{light\+\_\+position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{scene_8cpp_source}{scene.\+cpp}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_scene_ae9ac4693fbc4e101d5581859b7589d21}\label{class_scene_ae9ac4693fbc4e101d5581859b7589d21}} 
+\index{Scene@{Scene}!SceneInput@{SceneInput}}
+\index{SceneInput@{SceneInput}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{SceneInput}{SceneInput}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_scene_input}{Scene\+Input}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00016}{16}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{class_scene_a235814840b9b0394dc2e28813a04a187}\label{class_scene_a235814840b9b0394dc2e28813a04a187}} 
+\index{Scene@{Scene}!ShapeManager@{ShapeManager}}
+\index{ShapeManager@{ShapeManager}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{ShapeManager}{ShapeManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_shape_manager}{Shape\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00017}{17}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_a17c516524bf6450db5d1048199e59ca0}\label{class_scene_a17c516524bf6450db5d1048199e59ca0}} 
+\index{Scene@{Scene}!meshes@{meshes}}
+\index{meshes@{meshes}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{meshes}{meshes}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_mesh}{Mesh}}$\ast$$>$ Scene\+::meshes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00040}{40}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{class_scene_ae8f7639d0227ed705f883d9debba12c2}\label{class_scene_ae8f7639d0227ed705f883d9debba12c2}} 
+\index{Scene@{Scene}!p\_camera\_input@{p\_camera\_input}}
+\index{p\_camera\_input@{p\_camera\_input}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{p\_camera\_input}{p\_camera\_input}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_input}{Camera\+Input}}$\ast$ Scene\+::p\+\_\+camera\+\_\+input}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00021}{21}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{class_scene_a0b26384e4afe100d4209b7ded40379d2}\label{class_scene_a0b26384e4afe100d4209b7ded40379d2}} 
+\index{Scene@{Scene}!p\_scene\_camera@{p\_scene\_camera}}
+\index{p\_scene\_camera@{p\_scene\_camera}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{p\_scene\_camera}{p\_scene\_camera}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera}{Camera}}$\ast$ Scene\+::p\+\_\+scene\+\_\+camera}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00020}{20}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{class_scene_a73a7a8f6d8741fdf66b092fdd7da9b1d}\label{class_scene_a73a7a8f6d8741fdf66b092fdd7da9b1d}} 
+\index{Scene@{Scene}!p\_scene\_input@{p\_scene\_input}}
+\index{p\_scene\_input@{p\_scene\_input}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{p\_scene\_input}{p\_scene\_input}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_input}{Scene\+Input}}$\ast$ Scene\+::p\+\_\+scene\+\_\+input}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00022}{22}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{class_scene_a4c54a24f162c9d5652a72b36df6928f2}\label{class_scene_a4c54a24f162c9d5652a72b36df6928f2}} 
+\index{Scene@{Scene}!p\_shape\_manager@{p\_shape\_manager}}
+\index{p\_shape\_manager@{p\_shape\_manager}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{p\_shape\_manager}{p\_shape\_manager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shape_manager}{Shape\+Manager}}$\ast$ Scene\+::p\+\_\+shape\+\_\+manager}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00024}{24}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{class_scene_ab905449eea56603315d2ff0a26172cf7}\label{class_scene_ab905449eea56603315d2ff0a26172cf7}} 
+\index{Scene@{Scene}!p\_texture\_manager@{p\_texture\_manager}}
+\index{p\_texture\_manager@{p\_texture\_manager}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{p\_texture\_manager}{p\_texture\_manager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture_manger}{Texture\+Manger}}$\ast$ Scene\+::p\+\_\+texture\+\_\+manager}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00023}{23}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{class_scene_ae2b329139aeb75b95cfa41297a90b1be}\label{class_scene_ae2b329139aeb75b95cfa41297a90b1be}} 
+\index{Scene@{Scene}!p\_window@{p\_window}}
+\index{p\_window@{p\_window}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{p\_window}{p\_window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_window}{Window}}$\ast$ Scene\+::p\+\_\+window\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00039}{39}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+\mbox{\Hypertarget{class_scene_a76ad89c41f3186072ae53a10bbfcd8e1}\label{class_scene_a76ad89c41f3186072ae53a10bbfcd8e1}} 
+\index{Scene@{Scene}!shaders@{shaders}}
+\index{shaders@{shaders}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{shaders}{shaders}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_shader}{Shader}}$\ast$$>$ Scene\+::shaders\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{scene_8h_source_l00041}{41}} of file \mbox{\hyperlink{scene_8h_source}{scene.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/components/scene/\mbox{\hyperlink{scene_8h}{scene.\+h}}\item 
+src/components/scene/\mbox{\hyperlink{scene_8cpp}{scene.\+cpp}}\end{DoxyCompactItemize}

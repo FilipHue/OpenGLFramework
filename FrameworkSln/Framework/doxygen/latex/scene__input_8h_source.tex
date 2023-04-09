@@ -1,0 +1,34 @@
+\hypertarget{scene__input_8h_source}{}\doxysection{scene\+\_\+input.\+h}
+\label{scene__input_8h_source}\index{src/components/scene/scene\_input.h@{src/components/scene/scene\_input.h}}
+\mbox{\hyperlink{scene__input_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00003}00003\ \textcolor{comment}{//\#include\ "{}../../engine/core/input\_controller/input\_controller.h"{}}}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scene_8h}{scene.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00006}\mbox{\hyperlink{class_scene_input}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_input}{SceneInput}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_input_controller}{InputController}}}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00008}\mbox{\hyperlink{class_scene_input_a032858ae1fe02d2d1170981c2af2d67c}{00008}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene}{Scene}};}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00010}00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{class_scene_input}{SceneInput}}(\mbox{\hyperlink{class_scene}{Scene}}*\ scene);}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_input_a6cb288e18fc0454240e35c4832389322}{OnKeyPress}}(\textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ mods);}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00015}00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{void}\ OnInputUpdate(\textcolor{keywordtype}{double}\ deltaTime,\ \textcolor{keywordtype}{int}\ mods)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ OnKeyRelease(\textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ mods)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{void}\ OnMouseMove(\textcolor{keywordtype}{double}\ x\_pos,\ \textcolor{keywordtype}{double}\ y\_pos,\ \textcolor{keywordtype}{double}\ delta\_x,\ \textcolor{keywordtype}{double}\ delta\_y)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{void}\ OnMouseButtonPress(\textcolor{keywordtype}{double}\ mouseX,\ \textcolor{keywordtype}{double}\ mouseY,\ \textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ mods)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{void}\ OnMouseButttonRelease(\textcolor{keywordtype}{double}\ mouseX,\ \textcolor{keywordtype}{double}\ mouseY,\ \textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ mods)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{void}\ OnMouseScroll(\textcolor{keywordtype}{double}\ x\_offset,\ \textcolor{keywordtype}{double}\ y\_offset)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00024}00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{class_scene}{Scene}}*\ scene;}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ toogle\_wireframe;}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00027}00027\ \};}
+\DoxyCodeLine{\Hypertarget{scene__input_8h_source_l00028}00028\ }
+
+\end{DoxyCode}

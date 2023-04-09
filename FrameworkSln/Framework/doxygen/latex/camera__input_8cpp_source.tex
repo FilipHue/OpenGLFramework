@@ -1,0 +1,66 @@
+\hypertarget{camera__input_8cpp_source}{}\doxysection{camera\+\_\+input.\+cpp}
+\label{camera__input_8cpp_source}\index{src/components/camera/camera\_input.cpp@{src/components/camera/camera\_input.cpp}}
+\mbox{\hyperlink{camera__input_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{camera__input_8h}{camera\_input.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../../engine/engine.h"{}}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00004}\mbox{\hyperlink{class_camera_input_a138aeb0e4b14ba5fee1e081213102fbb}{00004}}\ \mbox{\hyperlink{class_camera_input_a138aeb0e4b14ba5fee1e081213102fbb}{CameraInput::CameraInput}}(\mbox{\hyperlink{class_camera}{Camera}}*\ camera)}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00006}00006\ \ \ \ \ this-\/>camera\ =\ camera;}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00009}00009\ \textcolor{keywordtype}{void}\ CameraInput::OnInputUpdate(\textcolor{keywordtype}{double}\ deltaTime,\ \textcolor{keywordtype}{int}\ mods)}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_engine_a77697a5d3d4fb8b8ef84b07d71567b0e}{Engine::GetWindow}}()-\/>GetContinousPress(GLFW\_KEY\_W))\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ camera-\/>\mbox{\hyperlink{class_camera_a59031bd85295e5c2ee27535925a48d47}{MoveForward}}(deltaTime);}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_engine_a77697a5d3d4fb8b8ef84b07d71567b0e}{Engine::GetWindow}}()-\/>GetContinousPress(GLFW\_KEY\_S))\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ camera-\/>\mbox{\hyperlink{class_camera_ac7ebe0bafd14a15a7ee0d7cd27d66eb0}{MoveBackwards}}(deltaTime);}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_engine_a77697a5d3d4fb8b8ef84b07d71567b0e}{Engine::GetWindow}}()-\/>GetContinousPress(GLFW\_KEY\_A))\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ camera-\/>\mbox{\hyperlink{class_camera_a8860ae39635dc5b4f7e8dc9c0113cf6f}{MoveLeft}}(deltaTime);}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_engine_a77697a5d3d4fb8b8ef84b07d71567b0e}{Engine::GetWindow}}()-\/>GetContinousPress(GLFW\_KEY\_D))\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ camera-\/>\mbox{\hyperlink{class_camera_a532c2904b5fcab9e1d4c37bf3a86a9f2}{MoveRight}}(deltaTime);}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_engine_a77697a5d3d4fb8b8ef84b07d71567b0e}{Engine::GetWindow}}()-\/>GetContinousPress(GLFW\_KEY\_Q))\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ camera-\/>\mbox{\hyperlink{class_camera_ae4b636c39d52b712fc7cd7fc526ae602}{MoveUp}}(deltaTime);}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_engine_a77697a5d3d4fb8b8ef84b07d71567b0e}{Engine::GetWindow}}()-\/>GetContinousPress(GLFW\_KEY\_E))\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ camera-\/>\mbox{\hyperlink{class_camera_a5adbb4b3c6ceac32dbf21a413604db67}{MoveDown}}(deltaTime);}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00036}00036\ \textcolor{keywordtype}{void}\ CameraInput::OnKeyPress(\textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ mods)}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00040}00040\ \textcolor{keywordtype}{void}\ CameraInput::OnKeyRelease(\textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ mods)}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00041}00041\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00044}00044\ \textcolor{keywordtype}{void}\ CameraInput::OnMouseMove(\textcolor{keywordtype}{double}\ x\_pos,\ \textcolor{keywordtype}{double}\ y\_pos,\ \textcolor{keywordtype}{double}\ delta\_x,\ \textcolor{keywordtype}{double}\ delta\_y)}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00045}00045\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00046}00046\ \ \ \ \ camera-\/>\mbox{\hyperlink{class_camera_a83430aef96c210cb1d901f62f0915bf0}{RotateOX}}(-\/delta\_y\ *\ camera-\/>\mbox{\hyperlink{class_camera_afa991f3e2f164beaba1df5fbf7162eb0}{GetCameraSensitivity}}());}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00047}00047\ \ \ \ \ camera-\/>\mbox{\hyperlink{class_camera_a2e12b851bfa0b3e2ebd7f1168ea1f9b6}{RotateOY}}(-\/delta\_x\ *\ camera-\/>\mbox{\hyperlink{class_camera_afa991f3e2f164beaba1df5fbf7162eb0}{GetCameraSensitivity}}());}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00050}00050\ \textcolor{keywordtype}{void}\ CameraInput::OnMouseButtonPress(\textcolor{keywordtype}{double}\ mouseX,\ \textcolor{keywordtype}{double}\ mouseY,\ \textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ mods)}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00051}00051\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00054}00054\ \textcolor{keywordtype}{void}\ CameraInput::OnMouseButttonRelease(\textcolor{keywordtype}{double}\ mouseX,\ \textcolor{keywordtype}{double}\ mouseY,\ \textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ mods)}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00058}00058\ \textcolor{keywordtype}{void}\ CameraInput::OnMouseScroll(\textcolor{keywordtype}{double}\ x\_offset,\ \textcolor{keywordtype}{double}\ y\_offset)}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00059}00059\ \{}
+\DoxyCodeLine{\Hypertarget{camera__input_8cpp_source_l00060}00060\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_input_controller" xml:lang="en-US">
+<title>InputController Class Reference</title>
+<indexterm><primary>InputController</primary></indexterm>
+<para>
+<computeroutput>#include &lt;input_controller.h&gt;</computeroutput>
+</para>
+Inheritance diagram for InputController:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_input_controller__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_input_controller_1aba927fffeb0bf4c4fd0835d4dfbdfaec">InputController</link> ()</para>
+
+<para>Method for connecting the input controller to a component. </para>
+</listitem>
+            <listitem><para><link linkend="_class_input_controller_1aa36b76b8144da60b26cd9b8298aa5627">~InputController</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_input_controller_1a7df1a99839e3d5561e6e44cec1b9789b">ToogleEvents</link> ()</para>
+
+<para>Method for toggling the state of the input controller (active or not) </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_input_controller_1a5ce94207ea1b3fd285f2782e96b9407a">IsActive</link> ()</para>
+
+<para>Method for checking the state of the input controller. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1af2f53ee2e8c951613d83617f259c92d9">OnInputUpdate</link> (double delta_time, int mods)=0</para>
+
+<para>Method for handling continous events (like key presses) </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1ad5b3dca01698d57084e7a7ec5e118872">OnKeyPress</link> (int key, int mods)=0</para>
+
+<para>Method for handling key presses. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1ad3e3d7ed6ad1bc31880ae39dd11dcd00">OnKeyRelease</link> (int key, int mods)=0</para>
+
+<para>Method for handling key releases. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1ac66cbb6519379d2809aab3780819c571">OnMouseMove</link> (double x_pos, double y_pos, double delta_x, double delta_y)=0</para>
+
+<para>Method for handling mouse movement. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1aba038c7018d1f62c228ca77210986e9a">OnMouseButtonPress</link> (double x_pos, double y_pos, int button, int mods)=0</para>
+
+<para>Method for handling mouse button presses. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1a11cfafe3c6c4dd766df4cd014173c1d8">OnMouseButttonRelease</link> (double x_pos, double y_pos, int button, int mods)=0</para>
+
+<para>Method for handling mouse button releases. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1adc73cbb0d307a92462adf0d70f2d1162">OnMouseScroll</link> (double x_offset, double y_offset)=0</para>
+
+<para>Method for handling mouse scroll. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_input_controller_1a553f958a25683445088050a69d3de8e9">Window</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_input__controller_8h_source_1l00005">5</link> of file <link linkend="_input__controller_8h_source">input_controller.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_input_controller_1aba927fffeb0bf4c4fd0835d4dfbdfaec"/><section>
+    <title>InputController()</title>
+<indexterm><primary>InputController</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>InputController</secondary></indexterm>
+<para><computeroutput>InputController::InputController ( )</computeroutput></para><para>
+
+<para>Method for connecting the input controller to a component. </para>
+</para>
+<para>
+Definition at line <link linkend="_input__controller_8cpp_source_1l00003">3</link> of file <link linkend="_input__controller_8cpp_source">input_controller.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_input_controller_1aa36b76b8144da60b26cd9b8298aa5627"/><section>
+    <title>~InputController()</title>
+<indexterm><primary>~InputController</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>~InputController</secondary></indexterm>
+<para><computeroutput>InputController::~InputController ( )</computeroutput></para><para>
+Definition at line <link linkend="_input__controller_8cpp_source_1l00009">9</link> of file <link linkend="_input__controller_8cpp_source">input_controller.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_input_controller_1a5ce94207ea1b3fd285f2782e96b9407a"/><section>
+    <title>IsActive()</title>
+<indexterm><primary>IsActive</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>IsActive</secondary></indexterm>
+<para><computeroutput>bool InputController::IsActive ( )</computeroutput></para><para>
+
+<para>Method for checking the state of the input controller. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>1 if it&apos;s active or 0 otheriwse </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_input__controller_8cpp_source_1l00019">19</link> of file <link linkend="_input__controller_8cpp_source">input_controller.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_input_controller_1af2f53ee2e8c951613d83617f259c92d9"/><section>
+    <title>OnInputUpdate()</title>
+<indexterm><primary>OnInputUpdate</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>OnInputUpdate</secondary></indexterm>
+<para><computeroutput>virtual void InputController::OnInputUpdate (double delta_time, int mods)<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method for handling continous events (like key presses) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>delta_time</entry><entry>
+<para>The time between the current frame and last frame </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mods</entry><entry>
+<para>The code of combination presses with special keys (L_SHIFT, L_ALT, L_CTRL, R_SHIFT, R_ALT, R_CTRL) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_input_controller_1ad5b3dca01698d57084e7a7ec5e118872"/><section>
+    <title>OnKeyPress()</title>
+<indexterm><primary>OnKeyPress</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>OnKeyPress</secondary></indexterm>
+<para><computeroutput>virtual void InputController::OnKeyPress (int key, int mods)<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method for handling key presses. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The code of the pressed key </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mods</entry><entry>
+<para>The code of combination presses with special keys (L_SHIFT, L_ALT, L_CTRL, R_SHIFT, R_ALT, R_CTRL) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_scene_input_1a6cb288e18fc0454240e35c4832389322">SceneInput</link>.</para>
+</section>
+<anchor xml:id="_class_input_controller_1ad3e3d7ed6ad1bc31880ae39dd11dcd00"/><section>
+    <title>OnKeyRelease()</title>
+<indexterm><primary>OnKeyRelease</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>OnKeyRelease</secondary></indexterm>
+<para><computeroutput>virtual void InputController::OnKeyRelease (int key, int mods)<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method for handling key releases. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The code of the released key </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mods</entry><entry>
+<para>The code of combination presses with special keys (L_SHIFT, L_ALT, L_CTRL, R_SHIFT, R_ALT, R_CTRL) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_input_controller_1aba038c7018d1f62c228ca77210986e9a"/><section>
+    <title>OnMouseButtonPress()</title>
+<indexterm><primary>OnMouseButtonPress</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>OnMouseButtonPress</secondary></indexterm>
+<para><computeroutput>virtual void InputController::OnMouseButtonPress (double x_pos, double y_pos, int button, int mods)<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method for handling mouse button presses. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>x_pos</entry><entry>
+<para>The X position of the mouse at the time of the button press </para>
+</entry>
+                            </row>
+                            <row>
+<entry>y_pos</entry><entry>
+<para>The Y position of the mouse at the time of the button press </para>
+</entry>
+                            </row>
+                            <row>
+<entry>button</entry><entry>
+<para>The code of the button pressed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mods</entry><entry>
+<para>The code of combination presses with special keys (L_SHIFT, L_ALT, L_CTRL, R_SHIFT, R_ALT, R_CTRL) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_input_controller_1a11cfafe3c6c4dd766df4cd014173c1d8"/><section>
+    <title>OnMouseButttonRelease()</title>
+<indexterm><primary>OnMouseButttonRelease</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>OnMouseButttonRelease</secondary></indexterm>
+<para><computeroutput>virtual void InputController::OnMouseButttonRelease (double x_pos, double y_pos, int button, int mods)<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method for handling mouse button releases. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>x_pos</entry><entry>
+<para>The X position of the mouse at the time of the button release </para>
+</entry>
+                            </row>
+                            <row>
+<entry>y_pos</entry><entry>
+<para>The Y position of the mouse at the time of the button release </para>
+</entry>
+                            </row>
+                            <row>
+<entry>button</entry><entry>
+<para>The code of the button released </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mods</entry><entry>
+<para>The code of combination presses with special keys (L_SHIFT, L_ALT, L_CTRL, R_SHIFT, R_ALT, R_CTRL) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_input_controller_1ac66cbb6519379d2809aab3780819c571"/><section>
+    <title>OnMouseMove()</title>
+<indexterm><primary>OnMouseMove</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>OnMouseMove</secondary></indexterm>
+<para><computeroutput>virtual void InputController::OnMouseMove (double x_pos, double y_pos, double delta_x, double delta_y)<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method for handling mouse movement. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>x_pos</entry><entry>
+<para>The X position of the mouse at the time of the movement </para>
+</entry>
+                            </row>
+                            <row>
+<entry>y_pos</entry><entry>
+<para>The Y position of the mouse at the time of the movement </para>
+</entry>
+                            </row>
+                            <row>
+<entry>delta_x</entry><entry>
+<para>The distance between the last X position of the mouse and x_pos </para>
+</entry>
+                            </row>
+                            <row>
+<entry>delta_y</entry><entry>
+<para>The distance between the last Y position of the mouse and y_pos </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_input_controller_1adc73cbb0d307a92462adf0d70f2d1162"/><section>
+    <title>OnMouseScroll()</title>
+<indexterm><primary>OnMouseScroll</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>OnMouseScroll</secondary></indexterm>
+<para><computeroutput>virtual void InputController::OnMouseScroll (double x_offset, double y_offset)<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method for handling mouse scroll. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>x_offset</entry><entry>
+<para>The X offset of the scroll </para>
+</entry>
+                            </row>
+                            <row>
+<entry>y_offset</entry><entry>
+<para>The Y offset of the scroll </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_input_controller_1a7df1a99839e3d5561e6e44cec1b9789b"/><section>
+    <title>ToogleEvents()</title>
+<indexterm><primary>ToogleEvents</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>ToogleEvents</secondary></indexterm>
+<para><computeroutput>void InputController::ToogleEvents ( )</computeroutput></para><para>
+
+<para>Method for toggling the state of the input controller (active or not) </para>
+</para>
+<para>
+Definition at line <link linkend="_input__controller_8cpp_source_1l00013">13</link> of file <link linkend="_input__controller_8cpp_source">input_controller.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_class_input_controller_1a553f958a25683445088050a69d3de8e9"/><section>
+    <title>Window</title>
+<indexterm><primary>Window</primary><secondary>InputController</secondary></indexterm>
+<indexterm><primary>InputController</primary><secondary>Window</secondary></indexterm>
+<para><computeroutput>friend class <link linkend="_class_window">Window</link><computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_input__controller_8h_source_1l00007">7</link> of file <link linkend="_input__controller_8h_source">input_controller.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/engine/core/input_controller/<link linkend="_input__controller_8h">input_controller.h</link>src/engine/core/input_controller/<link linkend="_input__controller_8cpp">input_controller.cpp</link></section>
+</section>

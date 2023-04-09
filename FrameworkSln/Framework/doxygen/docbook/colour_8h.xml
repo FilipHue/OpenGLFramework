@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_colour_8h" xml:lang="en-US">
+<title>src/utils/colour.h File Reference</title>
+<indexterm><primary>src/utils/colour.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;<?linebreak?></programlisting>Include dependency graph for colour.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="colour_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="colour_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structcolour">colour</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_structcolour">colour</link> <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> <link linkend="_colour_8h_1a51d8c3c1115dd0016b8c001a09979fca">RED</link> = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 255, 0, 0 }</para>
+</listitem>
+            <listitem><para>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> <link linkend="_colour_8h_1a4632ccbd76246817dd1a08b98a87c096">GREEN</link> = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 0, 255, 0 }</para>
+</listitem>
+            <listitem><para>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> <link linkend="_colour_8h_1af30f3c8c705599c04b610b20e87e9bbc">BLUE</link> = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 0, 0, 255 }</para>
+</listitem>
+            <listitem><para>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> <link linkend="_colour_8h_1af8c87421f571ab4b8f8d21373eb4d670">WHITE</link> = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 255, 255, 255 }</para>
+</listitem>
+            <listitem><para>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> <link linkend="_colour_8h_1a4bc9d660ad8006705ece1fb03f4a99c8">BLACK</link> = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 0, 0, 0 }</para>
+</listitem>
+            <listitem><para>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> <link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link> = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 128, 128, 128 }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_colour_8h_1a4e4efc2f4957c1adccca338399490e20"/><section>
+    <title>Colour</title>
+<indexterm><primary>Colour</primary><secondary>colour.h</secondary></indexterm>
+<indexterm><primary>colour.h</primary><secondary>Colour</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_structcolour">colour</link> <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link></computeroutput></para><para>
+Definition at line <link linkend="_colour_8h_source_1l00005">5</link> of file <link linkend="_colour_8h_source">colour.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_colour_8h_1a4bc9d660ad8006705ece1fb03f4a99c8"/><section>
+    <title>BLACK</title>
+<indexterm><primary>BLACK</primary><secondary>colour.h</secondary></indexterm>
+<indexterm><primary>colour.h</primary><secondary>BLACK</secondary></indexterm>
+<para><computeroutput>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> BLACK = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 0, 0, 0 }</computeroutput></para><para>
+Definition at line <link linkend="_colour_8h_source_1l00024">24</link> of file <link linkend="_colour_8h_source">colour.h</link>.</para>
+</section>
+<anchor xml:id="_colour_8h_1af30f3c8c705599c04b610b20e87e9bbc"/><section>
+    <title>BLUE</title>
+<indexterm><primary>BLUE</primary><secondary>colour.h</secondary></indexterm>
+<indexterm><primary>colour.h</primary><secondary>BLUE</secondary></indexterm>
+<para><computeroutput>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> BLUE = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 0, 0, 255 }</computeroutput></para><para>
+Definition at line <link linkend="_colour_8h_source_1l00022">22</link> of file <link linkend="_colour_8h_source">colour.h</link>.</para>
+</section>
+<anchor xml:id="_colour_8h_1a4632ccbd76246817dd1a08b98a87c096"/><section>
+    <title>GREEN</title>
+<indexterm><primary>GREEN</primary><secondary>colour.h</secondary></indexterm>
+<indexterm><primary>colour.h</primary><secondary>GREEN</secondary></indexterm>
+<para><computeroutput>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> GREEN = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 0, 255, 0 }</computeroutput></para><para>
+Definition at line <link linkend="_colour_8h_source_1l00021">21</link> of file <link linkend="_colour_8h_source">colour.h</link>.</para>
+</section>
+<anchor xml:id="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a"/><section>
+    <title>GREY</title>
+<indexterm><primary>GREY</primary><secondary>colour.h</secondary></indexterm>
+<indexterm><primary>colour.h</primary><secondary>GREY</secondary></indexterm>
+<para><computeroutput>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> GREY = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 128, 128, 128 }</computeroutput></para><para>
+Definition at line <link linkend="_colour_8h_source_1l00025">25</link> of file <link linkend="_colour_8h_source">colour.h</link>.</para>
+</section>
+<anchor xml:id="_colour_8h_1a51d8c3c1115dd0016b8c001a09979fca"/><section>
+    <title>RED</title>
+<indexterm><primary>RED</primary><secondary>colour.h</secondary></indexterm>
+<indexterm><primary>colour.h</primary><secondary>RED</secondary></indexterm>
+<para><computeroutput>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> RED = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 255, 0, 0 }</computeroutput></para><para>
+Definition at line <link linkend="_colour_8h_source_1l00020">20</link> of file <link linkend="_colour_8h_source">colour.h</link>.</para>
+</section>
+<anchor xml:id="_colour_8h_1af8c87421f571ab4b8f8d21373eb4d670"/><section>
+    <title>WHITE</title>
+<indexterm><primary>WHITE</primary><secondary>colour.h</secondary></indexterm>
+<indexterm><primary>colour.h</primary><secondary>WHITE</secondary></indexterm>
+<para><computeroutput>const <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link> WHITE = <link linkend="_colour_8h_1a4e4efc2f4957c1adccca338399490e20">Colour</link>{ 255, 255, 255 }</computeroutput></para><para>
+Definition at line <link linkend="_colour_8h_source_1l00023">23</link> of file <link linkend="_colour_8h_source">colour.h</link>.</para>
+</section>
+</section>
+</section>
