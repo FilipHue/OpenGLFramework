@@ -83,14 +83,14 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, glm::vec3
 		return;
 	}
 
-	glm::vec3 lightColour = glm::vec3(1.0f, 1.0f, 0.8f);
-	glm::vec3 objectColour = glm::vec3(GREY.red, GREY.green, GREY.blue);
-	glm::vec3 viewPosition = p_scene_camera->GetCameraPosition();
+	glm::vec3 light_colour = glm::vec3(1.0f, 1.0f, 0.8f);
+	glm::vec3 object_colour = glm::vec3(GREY.red, GREY.green, GREY.blue);
+	glm::vec3 view_position = p_scene_camera->GetCameraPosition();
 
-	shaders["PhongShader"]->SetVec3("light_position", light_position);
-	shaders["PhongShader"]->SetVec3("lightColour", lightColour);
-	shaders["PhongShader"]->SetVec3("objectColour", objectColour);
-	shaders["PhongShader"]->SetVec3("viewPosition", viewPosition);
+	shaders["PhongShader"]->SetVec3("lightPosition", light_position);
+	shaders["PhongShader"]->SetVec3("lightColour", light_colour);
+	shaders["PhongShader"]->SetVec3("objectColour", object_colour);
+	shaders["PhongShader"]->SetVec3("viewPosition", view_position);
 
 	glBindVertexArray(mesh->GetVAO());
 	glDrawElementsBaseVertex(GL_TRIANGLES, mesh->GetIndices().size(),
@@ -161,14 +161,14 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, glm::
 		return;
 	}
 
-	glm::vec3 lightColour = glm::vec3(1.0f, 1.0f, 0.8f);
-	glm::vec3 objectColour = glm::vec3(GREY.red, GREY.green, GREY.blue);
-	glm::vec3 viewPosition = p_scene_camera->GetCameraPosition();
+	glm::vec3 light_colour = glm::vec3(1.0f, 1.0f, 0.8f);
+	glm::vec3 object_colour = glm::vec3(GREY.red, GREY.green, GREY.blue);
+	glm::vec3 view_position = p_scene_camera->GetCameraPosition();
 
-	shaders["PhongShader"]->SetVec3("light_position", light_position);
-	shaders["PhongShader"]->SetVec3("lightColour", lightColour);
-	shaders["PhongShader"]->SetVec3("objectColour", objectColour);
-	shaders["PhongShader"]->SetVec3("viewPosition", viewPosition);
+	shaders["PhongShader"]->SetVec3("lightPosition", light_position);
+	shaders["PhongShader"]->SetVec3("lightColour", light_colour);
+	shaders["PhongShader"]->SetVec3("objectColour", object_colour);
+	shaders["PhongShader"]->SetVec3("viewPosition", view_position);
 
 	glBindVertexArray(mesh->GetVAO());
 	glDrawElementsBaseVertex(GL_TRIANGLES, mesh->GetIndices().size(),
@@ -190,20 +190,20 @@ void Scene::Init()
 	p_texture_manager = new TextureManger();
 
 	Shader* simple_shader = new Shader(
-		"D:\\OPGLFW_V2.0\\FrameworkSln\\Framework\\assets\\shaders\\simple\\simple_vertex_shader.glsl",
-		"D:\\OPGLFW_V2.0\\FrameworkSln\\Framework\\assets\\shaders\\simple\\simple_fragment_shader.glsl"
+		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\shaders\\simple\\simple_vertex_shader.glsl",
+		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\shaders\\simple\\simple_fragment_shader.glsl"
 	);
 	shaders["SimpleShader"] = simple_shader;
 
 	Shader* texture_shader = new Shader(
-		"D:\\OPGLFW_V2.0\\FrameworkSln\\Framework\\assets\\shaders\\texture\\texture_vertex_shader.glsl",
-		"D:\\OPGLFW_V2.0\\FrameworkSln\\Framework\\assets\\shaders\\texture\\texture_fragment_shader.glsl"
+		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\shaders\\texture\\texture_vertex_shader.glsl",
+		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\shaders\\texture\\texture_fragment_shader.glsl"
 	);
 	shaders["TextureShader"] = texture_shader;
 
 	Shader* phong_shader = new Shader(
-		"D:\\OPGLFW_V2.0\\FrameworkSln\\Framework\\assets\\shaders\\lighting\\phong_vertex_shader.glsl",
-		"D:\\OPGLFW_V2.0\\FrameworkSln\\Framework\\assets\\shaders\\lighting\\phong_fragment_shader.glsl"
+		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\shaders\\lighting\\phong_vertex_shader.glsl",
+		"D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\shaders\\lighting\\phong_fragment_shader.glsl"
 	);
 	shaders["PhongShader"] = phong_shader;
 
