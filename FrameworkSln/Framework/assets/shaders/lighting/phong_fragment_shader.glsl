@@ -5,33 +5,46 @@ out vec4 fragColour;
 in vec3 fragPosition;
 in vec3 fragNormal;
 
-uniform vec3 lightPosition;
-uniform vec3 lightColour;
+struct Material {
+	vec3 Ka;
+	vec3 Kd;
+	vec3 Ksp;
+	float Ksh;
+};
+
+struct Light {
+	vec3 position;
+	vec3 colour;
+
+	vec3 Ka;
+	vec3 Kd;
+	vec3 Ksp;
+	float Ksh;
+};	
+	
 uniform vec3 objectColour;
 uniform vec3 viewPosition;
 
-uniform vec3 Ka;
-uniform vec3 Kd;
-uniform vec3 Ksp;
-uniform float Ksh;
+uniform Material material;
+uniform Light light;
 
 void main() 
 {
 	// ambient
-	vec3 ambient = Ka * lightColour;
+	vec3 ambient = light.Ka * light.colour * material.Ka;
 
 	// diffuse
 	vec3 normal = normalize(fragNormal);
-	vec3 lightDirection = normalize(lightPosition - fragPosition);
-	vec3 diffuse = max(dot(normal, lightDirection), 0.0) * lightColour * Kd;
+	vec3 lightDirection = normalize(light.position - fragPosition);
+	vec3 diffuse = max(dot(normal, lightDirection), 0.0) * light.colour * light.Kd * material.Kd;
 
 	// specular
 	vec3 viewDirection = normalize(viewPosition - fragPosition);
 	vec3 reflectDirection = reflect(-lightDirection, normal);
-	vec3 specular = pow(max(dot(viewDirection, reflectDirection), 0.0), 32) * Ksp * lightColour;
+	vec3 specular = pow(max(dot(viewDirection, reflectDirection), 0.0), material.Ksh) * material.Ksp * light.colour;
 
 	// attenuation factor
-	float d = distance(lightPosition, fragPosition); 
+	float d = distance(light.position, fragPosition); 
 	float attenuationFactor = 1 / (1 + 0.14 * d + 0.07 * d * d);
 
 	// result

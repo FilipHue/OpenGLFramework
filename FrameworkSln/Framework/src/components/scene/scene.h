@@ -2,14 +2,20 @@
 
 #include <unordered_map>
 
+#include "../../utils/light_utils.h"
+
 #include "../../world.h"
+
 #include "scene_input.h"
+
 #include "../camera/camera.h"
 #include "../camera/camera_input.h"
 #include "../mesh/mesh.h"
 #include "../../managers/texture/texture_manager.h"
 #include "../../managers/shape/shape_manager.h"
 #include "../../managers/shader/shader.h"
+
+#include "../../managers/file/file_manager.h"
 
 class Scene : public World
 {
@@ -28,12 +34,7 @@ protected:
 
 	void CreateMesh(const char* name, std::vector<Vertex>& vertices, std::vector<unsigned int>& indices, Material* material);
 
-	void RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position);
-	void RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* texture_name);
-	void RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, glm::vec3 light_position);
-	void RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix);
-	void RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, const char* texture_name);
-	void RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, glm::vec3 light_position);
+	void RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* texture_name = NULL, LightProperties* light_props = NULL);
 
 protected:
 	Window* p_window;
@@ -55,6 +56,7 @@ private:
 	 * @param mesh			The mesh from which we take the material properties
 	 * @param shader		The shader used
 	 * @param modelMatrix	The model matrix of the mesh object
+	 * @param with_material State variable that tells if the object comes with or without a material
 	*/
-	void SendToShader(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix);
+	void SendToShader(Mesh* mesh, Shader* shader, glm::mat4 modelMatrix, bool with_material = 0);
 };

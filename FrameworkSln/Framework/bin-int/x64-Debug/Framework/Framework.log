@@ -1,13 +1,2 @@
-﻿  Test.cpp
-  main.cpp
-  scene.cpp
-D:\OPGLFW_V2.0\FrameworkSln\Framework\src\components\scene\scene.cpp(30,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-D:\OPGLFW_V2.0\FrameworkSln\Framework\src\components\scene\scene.cpp(52,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-D:\OPGLFW_V2.0\FrameworkSln\Framework\src\components\scene\scene.cpp(97,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-D:\OPGLFW_V2.0\FrameworkSln\Framework\src\components\scene\scene.cpp(112,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-D:\OPGLFW_V2.0\FrameworkSln\Framework\src\components\scene\scene.cpp(132,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-D:\OPGLFW_V2.0\FrameworkSln\Framework\src\components\scene\scene.cpp(175,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-  scene_input.cpp
-  shape_manager.cpp
-  Generating Code...
-  Framework.vcxproj -> D:\OPGLFW_V2.0\FrameworkSln\Framework\bin\x64-Debug\Framework\Framework.exe
+﻿  Demo.cpp
+  Framework.vcxproj -> D:\Diverse\OpenGLFramework\FrameworkSln\Framework\bin\x64-Debug\Framework\Framework.exe

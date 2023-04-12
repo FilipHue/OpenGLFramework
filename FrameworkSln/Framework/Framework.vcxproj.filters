@@ -42,7 +42,7 @@
     <ClCompile Include="src\components\scene\scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Test.cpp">
+    <ClCompile Include="Demo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\managers\shader\shader.cpp">
@@ -67,6 +67,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\managers\shape\shape_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\managers\file\file_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -131,7 +134,7 @@
     <ClInclude Include="src\components\scene\scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Test.h">
+    <ClInclude Include="Demo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\managers\shader\shader.h">
@@ -170,6 +173,12 @@
     <ClInclude Include="src\managers\shape\shape_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\managers\file\file_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\light_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\shaders\simple\simple_fragment_shader.glsl" />
@@ -178,5 +187,16 @@
     <None Include="assets\shaders\lighting\phong_vertex_shader.glsl" />
     <None Include="assets\shaders\texture\texture_fragment_shader.glsl" />
     <None Include="assets\shaders\texture\texture_vertex_shader.glsl" />
+    <None Include="assets\shaders\grid\grid_fragment_shader.glsl" />
+    <None Include="assets\shaders\grid\grid_vertex_shader.glsl" />
+    <None Include="assets\shaders\test\test_fragment_shader.glsl" />
+    <None Include="assets\shaders\test\test_vertex_shader.glsl" />
+    <None Include="assets\shaders\lighting\phongt_fragment_shader.glsl" />
+    <None Include="assets\shaders\lighting\phongt_vertex_shader.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\textures\container.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -114,6 +114,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(SolutionDir)Framework\dependencies\GLAD\include;$(SolutionDir)Framework\dependencies\GLFW\include;$(SolutionDir)Framework\dependencies\GLM;$(SolutionDir)Framework\dependencies\SPDLOG\include;$(SolutionDir)Framework\dependencies\STB;$(SolutionDir)Framework\utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,6 +136,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Framework\dependencies\GLAD\include;$(SolutionDir)Framework\dependencies\GLFW\include;$(SolutionDir)Framework\dependencies\GLM;$(SolutionDir)Framework\dependencies\SPDLOG\include;$(SolutionDir)Framework\dependencies\STB;$(SolutionDir)Framework\utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\managers\file\file_manager.cpp" />
     <ClCompile Include="src\components\camera\camera_input.cpp" />
     <ClCompile Include="src\components\camera\camera.cpp" />
     <ClCompile Include="dependencies\GLAD\include\glad.c" />
@@ -164,11 +167,12 @@
     <ClCompile Include="src\managers\shape\shape_manager.cpp" />
     <ClCompile Include="src\world.cpp" />
     <ClCompile Include="src\components\scene\scene.cpp" />
-    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="Demo.cpp" />
     <ClCompile Include="src\managers\texture\texture_2D.cpp" />
     <ClCompile Include="src\managers\texture\texture_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\managers\file\file_manager.h" />
     <ClInclude Include="src\components\camera\camera_input.h" />
     <ClInclude Include="src\components\camera\camera.h" />
     <ClInclude Include="dependencies\GLM\simd\common.h" />
@@ -195,21 +199,31 @@
     <ClInclude Include="src\managers\shape\shape_manager.h" />
     <ClInclude Include="src\utils\colour.h" />
     <ClInclude Include="src\utils\glm_utils.h" />
+    <ClInclude Include="src\utils\light_utils.h" />
     <ClInclude Include="src\utils\material.h" />
     <ClInclude Include="src\utils\vertex.h" />
-    <ClInclude Include="Test.h" />
+    <ClInclude Include="Demo.h" />
     <ClInclude Include="src\managers\texture\texture_2D.h" />
     <ClInclude Include="src\managers\texture\texture_manager.h" />
     <ClInclude Include="utils\core.h" />
     <ClInclude Include="src\world.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\shaders\grid\grid_fragment_shader.glsl" />
+    <None Include="assets\shaders\grid\grid_vertex_shader.glsl" />
+    <None Include="assets\shaders\lighting\phongt_fragment_shader.glsl" />
+    <None Include="assets\shaders\lighting\phongt_vertex_shader.glsl" />
     <None Include="assets\shaders\lighting\phong_fragment_shader.glsl" />
     <None Include="assets\shaders\lighting\phong_vertex_shader.glsl" />
     <None Include="assets\shaders\simple\simple_fragment_shader.glsl" />
     <None Include="assets\shaders\simple\simple_vertex_shader.glsl" />
+    <None Include="assets\shaders\test\test_fragment_shader.glsl" />
+    <None Include="assets\shaders\test\test_vertex_shader.glsl" />
     <None Include="assets\shaders\texture\texture_fragment_shader.glsl" />
     <None Include="assets\shaders\texture\texture_vertex_shader.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\textures\container.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

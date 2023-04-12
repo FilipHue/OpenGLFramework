@@ -13,21 +13,16 @@
 #include <iostream>
 
 
-
-
 class Shader
 {
 public:
 	/**
 	 * @brief						Class constructor
-	 * @param vertext_shader_path		The vertex shader file path
+	 * @param vertext_shader_path	The vertex shader file path
 	 * @param fragment_shader_path	The fragment shader file path
 	*/	
 	Shader(const char* vertex_shader_path, const char* fragment_shader_path);
 
-	/**
-	  * It enables openGL to use this shader program
-	  */
 	void Use();
 
 	void SetBool(const std::string& name, bool value) const;

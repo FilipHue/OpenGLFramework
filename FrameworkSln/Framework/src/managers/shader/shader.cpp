@@ -54,7 +54,7 @@ Shader::Shader(const char* vertex_shader_path, const char* fragment_shader_path)
 	glCompileShader(fragment_shader);
 	glGetShaderiv(fragment_shader, GL_COMPILE_STATUS, &success);
 	if (!success) {
-		glGetShaderInfoLog(vertex_shader, 512, NULL, infoLog);
+		glGetShaderInfoLog(fragment_shader, 512, NULL, infoLog);
 		SHADER_ERROR("FRAGMENT SHADER COMPILATION FAILED\n{}", infoLog);
 	}
 
