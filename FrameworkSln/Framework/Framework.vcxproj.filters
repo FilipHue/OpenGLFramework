@@ -193,6 +193,7 @@
     <None Include="assets\shaders\test\test_vertex_shader.glsl" />
     <None Include="assets\shaders\lighting\phongt_fragment_shader.glsl" />
     <None Include="assets\shaders\lighting\phongt_vertex_shader.glsl" />
+    <None Include="Doxyfile" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\container.png">

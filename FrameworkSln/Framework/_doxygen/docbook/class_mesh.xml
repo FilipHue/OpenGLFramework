@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_mesh" xml:lang="en-US">
+<title>Mesh Class Reference</title>
+<indexterm><primary>Mesh</primary></indexterm>
+<para>
+<computeroutput>#include &lt;mesh.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_mesh_1a059ef42f924f1ec776634cfb0a588e66">Mesh</link> (std::string mesh_id, unsigned int VAO, std::vector&lt; <link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link> &gt; &amp;vertices, std::vector&lt; unsigned int &gt; &amp;indices, <link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">Material</link> *<link linkend="_structmaterial">material</link>=nullptr, bool has_error=false)</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_class_mesh_1a84a579817f5c86e8e4840f0f2f5f5d0f">GetMeshId</link> () const</para>
+</listitem>
+            <listitem><para>const unsigned int <link linkend="_class_mesh_1abdeea7b206b62ed5c898ea8e3d237244">GetVAO</link> () const</para>
+</listitem>
+            <listitem><para>const std::vector&lt; <link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link> &gt; <link linkend="_class_mesh_1a8914670896ad947368745f7fd82ba9dd">GetVertices</link> () const</para>
+</listitem>
+            <listitem><para>const std::vector&lt; unsigned int &gt; <link linkend="_class_mesh_1aaaa51cde5fad8e11a6d22cf92318239f">GetIndices</link> () const</para>
+</listitem>
+            <listitem><para>const <link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">Material</link> * <link linkend="_class_mesh_1a8529bb5172422e3e527da9bfe88f7c20">GetMaterial</link> () const</para>
+</listitem>
+            <listitem><para>const bool <link linkend="_class_mesh_1a7dafd24a0b4c8db87ab8c0b075326662">GetError</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mesh_1a51777273f23b1e3a5cb798873a33a892">HasError</link> (bool error)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_mesh_8h_source_1l00008">8</link> of file <link linkend="_mesh_8h_source">mesh.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_mesh_1a059ef42f924f1ec776634cfb0a588e66"/><section>
+    <title>Mesh()</title>
+<indexterm><primary>Mesh</primary><secondary>Mesh</secondary></indexterm>
+<indexterm><primary>Mesh</primary><secondary>Mesh</secondary></indexterm>
+<para><computeroutput>Mesh::Mesh (std::string mesh_id, unsigned int VAO, std::vector&lt; <link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link> &gt; &amp; vertices, std::vector&lt; unsigned int &gt; &amp; indices, <link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">Material</link> * material = <computeroutput>nullptr</computeroutput>
+, bool has_error = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_mesh_8cpp_source_1l00003">3</link> of file <link linkend="_mesh_8cpp_source">mesh.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_mesh_1a7dafd24a0b4c8db87ab8c0b075326662"/><section>
+    <title>GetError()</title>
+<indexterm><primary>GetError</primary><secondary>Mesh</secondary></indexterm>
+<indexterm><primary>Mesh</primary><secondary>GetError</secondary></indexterm>
+<para><computeroutput>const bool Mesh::GetError ( ) const</computeroutput></para><para>
+Definition at line <link linkend="_mesh_8cpp_source_1l00037">37</link> of file <link linkend="_mesh_8cpp_source">mesh.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_mesh_1aaaa51cde5fad8e11a6d22cf92318239f"/><section>
+    <title>GetIndices()</title>
+<indexterm><primary>GetIndices</primary><secondary>Mesh</secondary></indexterm>
+<indexterm><primary>Mesh</primary><secondary>GetIndices</secondary></indexterm>
+<para><computeroutput>const std::vector&lt; unsigned int &gt; Mesh::GetIndices ( ) const</computeroutput></para><para>
+Definition at line <link linkend="_mesh_8cpp_source_1l00027">27</link> of file <link linkend="_mesh_8cpp_source">mesh.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_mesh_1a8529bb5172422e3e527da9bfe88f7c20"/><section>
+    <title>GetMaterial()</title>
+<indexterm><primary>GetMaterial</primary><secondary>Mesh</secondary></indexterm>
+<indexterm><primary>Mesh</primary><secondary>GetMaterial</secondary></indexterm>
+<para><computeroutput>const <link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">Material</link> * Mesh::GetMaterial ( ) const</computeroutput></para><para>
+Definition at line <link linkend="_mesh_8cpp_source_1l00032">32</link> of file <link linkend="_mesh_8cpp_source">mesh.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_mesh_1a84a579817f5c86e8e4840f0f2f5f5d0f"/><section>
+    <title>GetMeshId()</title>
+<indexterm><primary>GetMeshId</primary><secondary>Mesh</secondary></indexterm>
+<indexterm><primary>Mesh</primary><secondary>GetMeshId</secondary></indexterm>
+<para><computeroutput>const char * Mesh::GetMeshId ( ) const</computeroutput></para><para>
+Definition at line <link linkend="_mesh_8cpp_source_1l00012">12</link> of file <link linkend="_mesh_8cpp_source">mesh.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_mesh_1abdeea7b206b62ed5c898ea8e3d237244"/><section>
+    <title>GetVAO()</title>
+<indexterm><primary>GetVAO</primary><secondary>Mesh</secondary></indexterm>
+<indexterm><primary>Mesh</primary><secondary>GetVAO</secondary></indexterm>
+<para><computeroutput>const unsigned int Mesh::GetVAO ( ) const</computeroutput></para><para>
+Definition at line <link linkend="_mesh_8cpp_source_1l00017">17</link> of file <link linkend="_mesh_8cpp_source">mesh.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_mesh_1a8914670896ad947368745f7fd82ba9dd"/><section>
+    <title>GetVertices()</title>
+<indexterm><primary>GetVertices</primary><secondary>Mesh</secondary></indexterm>
+<indexterm><primary>Mesh</primary><secondary>GetVertices</secondary></indexterm>
+<para><computeroutput>const std::vector&lt; <link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link> &gt; Mesh::GetVertices ( ) const</computeroutput></para><para>
+Definition at line <link linkend="_mesh_8cpp_source_1l00022">22</link> of file <link linkend="_mesh_8cpp_source">mesh.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_mesh_1a51777273f23b1e3a5cb798873a33a892"/><section>
+    <title>HasError()</title>
+<indexterm><primary>HasError</primary><secondary>Mesh</secondary></indexterm>
+<indexterm><primary>Mesh</primary><secondary>HasError</secondary></indexterm>
+<para><computeroutput>void Mesh::HasError (bool error)</computeroutput></para><para>
+Definition at line <link linkend="_mesh_8cpp_source_1l00042">42</link> of file <link linkend="_mesh_8cpp_source">mesh.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/components/mesh/<link linkend="_mesh_8h">mesh.h</link>src/components/mesh/<link linkend="_mesh_8cpp">mesh.cpp</link></section>
+</section>

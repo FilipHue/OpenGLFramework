@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_window__callbacks_8h_source" xml:lang="en-US">
+<title>window_callbacks.h</title>
+<indexterm><primary>src/engine/core/window/window_callbacks.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_window__callbacks_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_window__callbacks_8h_source_1l00002"/>00002 
+<anchor xml:id="_window__callbacks_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_window_8h">window.h</link>&quot;</emphasis>
+<anchor xml:id="_window__callbacks_8h_source_1l00004"/>00004 
+<anchor xml:id="_window__callbacks_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;glad/glad.h&quot;</emphasis>
+<anchor xml:id="_window__callbacks_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;glfw3.h&quot;</emphasis>
+<anchor xml:id="_window__callbacks_8h_source_1l00007"/>00007 
+<anchor xml:id="_window__callbacks_8h_source_1l00008"/><link linkend="_class_window_callbacks">00008</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_window_callbacks">WindowCallbacks</link>
+<anchor xml:id="_window__callbacks_8h_source_1l00009"/>00009 {
+<anchor xml:id="_window__callbacks_8h_source_1l00010"/><link linkend="_class_window_callbacks_1a553f958a25683445088050a69d3de8e9">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_window">Window</link>;
+<anchor xml:id="_window__callbacks_8h_source_1l00011"/>00011 
+<anchor xml:id="_window__callbacks_8h_source_1l00012"/>00012 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_window__callbacks_8h_source_1l00013"/><link linkend="_class_window_callbacks_1a0a382cac4755d006d981c08addc38015">00013</link> &#32;&#32;&#32;&#32;<link linkend="_class_window_callbacks_1a0a382cac4755d006d981c08addc38015">WindowCallbacks</link>()&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+<anchor xml:id="_window__callbacks_8h_source_1l00014"/>00014 
+<anchor xml:id="_window__callbacks_8h_source_1l00015"/>00015 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_window__callbacks_8h_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;KeyCallback(GLFWwindow*&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;key,&#32;<emphasis role="keywordtype">int</emphasis>&#32;scancode,&#32;<emphasis role="keywordtype">int</emphasis>&#32;action,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mods);
+<anchor xml:id="_window__callbacks_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;MousePress(GLFWwindow*&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;button,&#32;<emphasis role="keywordtype">int</emphasis>&#32;action,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mods);
+<anchor xml:id="_window__callbacks_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;MouseMove(GLFWwindow*&#32;window,&#32;<emphasis role="keywordtype">double</emphasis>&#32;x_pos,&#32;<emphasis role="keywordtype">double</emphasis>&#32;y_pos);
+<anchor xml:id="_window__callbacks_8h_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;MouseScroll(GLFWwindow*&#32;window,&#32;<emphasis role="keywordtype">double</emphasis>&#32;x_offset,&#32;<emphasis role="keywordtype">double</emphasis>&#32;y_offset);
+<anchor xml:id="_window__callbacks_8h_source_1l00051"/>00051 };
+<anchor xml:id="_window__callbacks_8h_source_1l00052"/>00052 
+</programlisting></section>

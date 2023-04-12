@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_fdbc7b4b5b4c04d598adc44afc34d9a5" xml:lang="en-US">
+<title>src/engine/core Directory Reference</title>
+<indexterm><primary>src/engine/core Directory Reference</primary></indexterm>
+Directory dependency graph for core:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_fdbc7b4b5b4c04d598adc44afc34d9a5_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_c2a2e746d447b5dd0b523d83d67c8e1b">input_controller</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_8637f58cbfc74ecb0a018ee205f109ac">window</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

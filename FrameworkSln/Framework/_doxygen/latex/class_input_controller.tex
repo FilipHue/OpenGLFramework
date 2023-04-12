@@ -1,0 +1,265 @@
+\hypertarget{class_input_controller}{}\doxysection{Input\+Controller Class Reference}
+\label{class_input_controller}\index{InputController@{InputController}}
+
+
+{\ttfamily \#include $<$input\+\_\+controller.\+h$>$}
+
+
+
+Inheritance diagram for Input\+Controller\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}{Input\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Method for connecting the input controller to a component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_input_controller_aa36b76b8144da60b26cd9b8298aa5627}{$\sim$\+Input\+Controller}} ()
+\item 
+void \mbox{\hyperlink{class_input_controller_a7df1a99839e3d5561e6e44cec1b9789b}{Toogle\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Method for toggling the state of the input controller (active or not) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_controller_a5ce94207ea1b3fd285f2782e96b9407a}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Method for checking the state of the input controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_input_controller_af2f53ee2e8c951613d83617f259c92d9}{On\+Input\+Update}} (double delta\+\_\+time, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling continous events (like key presses) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_ad5b3dca01698d57084e7a7ec5e118872}{On\+Key\+Press}} (int key, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling key presses. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_ad3e3d7ed6ad1bc31880ae39dd11dcd00}{On\+Key\+Release}} (int key, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling key releases. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_ac66cbb6519379d2809aab3780819c571}{On\+Mouse\+Move}} (double x\+\_\+pos, double y\+\_\+pos, double delta\+\_\+x, double delta\+\_\+y)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse movement. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_aba038c7018d1f62c228ca77210986e9a}{On\+Mouse\+Button\+Press}} (double x\+\_\+pos, double y\+\_\+pos, int button, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse button presses. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_a11cfafe3c6c4dd766df4cd014173c1d8}{On\+Mouse\+Buttton\+Release}} (double x\+\_\+pos, double y\+\_\+pos, int button, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse button releases. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_adc73cbb0d307a92462adf0d70f2d1162}{On\+Mouse\+Scroll}} (double x\+\_\+offset, double y\+\_\+offset)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse scroll. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_input_controller_a553f958a25683445088050a69d3de8e9}{Window}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{input__controller_8h_source_l00005}{5}} of file \mbox{\hyperlink{input__controller_8h_source}{input\+\_\+controller.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}\label{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}} 
+\index{InputController@{InputController}!InputController@{InputController}}
+\index{InputController@{InputController}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{InputController()}{InputController()}}
+{\footnotesize\ttfamily Input\+Controller\+::\+Input\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method for connecting the input controller to a component. 
+
+
+
+Definition at line \mbox{\hyperlink{input__controller_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{input__controller_8cpp_source}{input\+\_\+controller.\+cpp}}.
+
+\mbox{\Hypertarget{class_input_controller_aa36b76b8144da60b26cd9b8298aa5627}\label{class_input_controller_aa36b76b8144da60b26cd9b8298aa5627}} 
+\index{InputController@{InputController}!````~InputController@{$\sim$InputController}}
+\index{````~InputController@{$\sim$InputController}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputController()}{~InputController()}}
+{\footnotesize\ttfamily Input\+Controller\+::$\sim$\+Input\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{input__controller_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{input__controller_8cpp_source}{input\+\_\+controller.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_input_controller_a5ce94207ea1b3fd285f2782e96b9407a}\label{class_input_controller_a5ce94207ea1b3fd285f2782e96b9407a}} 
+\index{InputController@{InputController}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily bool Input\+Controller\+::\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method for checking the state of the input controller. 
+
+\begin{DoxyReturn}{Returns}
+1 if it\textquotesingle{}s active or 0 otheriwse 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{input__controller_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{input__controller_8cpp_source}{input\+\_\+controller.\+cpp}}.
+
+\mbox{\Hypertarget{class_input_controller_af2f53ee2e8c951613d83617f259c92d9}\label{class_input_controller_af2f53ee2e8c951613d83617f259c92d9}} 
+\index{InputController@{InputController}!OnInputUpdate@{OnInputUpdate}}
+\index{OnInputUpdate@{OnInputUpdate}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{OnInputUpdate()}{OnInputUpdate()}}
+{\footnotesize\ttfamily virtual void Input\+Controller\+::\+On\+Input\+Update (\begin{DoxyParamCaption}\item[{double}]{delta\+\_\+time,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method for handling continous events (like key presses) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & The time between the current frame and last frame \\
+\hline
+{\em mods} & The code of combination presses with special keys (L\+\_\+\+SHIFT, L\+\_\+\+ALT, L\+\_\+\+CTRL, R\+\_\+\+SHIFT, R\+\_\+\+ALT, R\+\_\+\+CTRL) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_controller_ad5b3dca01698d57084e7a7ec5e118872}\label{class_input_controller_ad5b3dca01698d57084e7a7ec5e118872}} 
+\index{InputController@{InputController}!OnKeyPress@{OnKeyPress}}
+\index{OnKeyPress@{OnKeyPress}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{OnKeyPress()}{OnKeyPress()}}
+{\footnotesize\ttfamily virtual void Input\+Controller\+::\+On\+Key\+Press (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method for handling key presses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The code of the pressed key \\
+\hline
+{\em mods} & The code of combination presses with special keys (L\+\_\+\+SHIFT, L\+\_\+\+ALT, L\+\_\+\+CTRL, R\+\_\+\+SHIFT, R\+\_\+\+ALT, R\+\_\+\+CTRL) \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_scene_input_a6cb288e18fc0454240e35c4832389322}{Scene\+Input}}.
+
+\mbox{\Hypertarget{class_input_controller_ad3e3d7ed6ad1bc31880ae39dd11dcd00}\label{class_input_controller_ad3e3d7ed6ad1bc31880ae39dd11dcd00}} 
+\index{InputController@{InputController}!OnKeyRelease@{OnKeyRelease}}
+\index{OnKeyRelease@{OnKeyRelease}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{OnKeyRelease()}{OnKeyRelease()}}
+{\footnotesize\ttfamily virtual void Input\+Controller\+::\+On\+Key\+Release (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method for handling key releases. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The code of the released key \\
+\hline
+{\em mods} & The code of combination presses with special keys (L\+\_\+\+SHIFT, L\+\_\+\+ALT, L\+\_\+\+CTRL, R\+\_\+\+SHIFT, R\+\_\+\+ALT, R\+\_\+\+CTRL) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_controller_aba038c7018d1f62c228ca77210986e9a}\label{class_input_controller_aba038c7018d1f62c228ca77210986e9a}} 
+\index{InputController@{InputController}!OnMouseButtonPress@{OnMouseButtonPress}}
+\index{OnMouseButtonPress@{OnMouseButtonPress}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{OnMouseButtonPress()}{OnMouseButtonPress()}}
+{\footnotesize\ttfamily virtual void Input\+Controller\+::\+On\+Mouse\+Button\+Press (\begin{DoxyParamCaption}\item[{double}]{x\+\_\+pos,  }\item[{double}]{y\+\_\+pos,  }\item[{int}]{button,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method for handling mouse button presses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos} & The X position of the mouse at the time of the button press \\
+\hline
+{\em y\+\_\+pos} & The Y position of the mouse at the time of the button press \\
+\hline
+{\em button} & The code of the button pressed \\
+\hline
+{\em mods} & The code of combination presses with special keys (L\+\_\+\+SHIFT, L\+\_\+\+ALT, L\+\_\+\+CTRL, R\+\_\+\+SHIFT, R\+\_\+\+ALT, R\+\_\+\+CTRL) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_controller_a11cfafe3c6c4dd766df4cd014173c1d8}\label{class_input_controller_a11cfafe3c6c4dd766df4cd014173c1d8}} 
+\index{InputController@{InputController}!OnMouseButttonRelease@{OnMouseButttonRelease}}
+\index{OnMouseButttonRelease@{OnMouseButttonRelease}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{OnMouseButttonRelease()}{OnMouseButttonRelease()}}
+{\footnotesize\ttfamily virtual void Input\+Controller\+::\+On\+Mouse\+Buttton\+Release (\begin{DoxyParamCaption}\item[{double}]{x\+\_\+pos,  }\item[{double}]{y\+\_\+pos,  }\item[{int}]{button,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method for handling mouse button releases. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos} & The X position of the mouse at the time of the button release \\
+\hline
+{\em y\+\_\+pos} & The Y position of the mouse at the time of the button release \\
+\hline
+{\em button} & The code of the button released \\
+\hline
+{\em mods} & The code of combination presses with special keys (L\+\_\+\+SHIFT, L\+\_\+\+ALT, L\+\_\+\+CTRL, R\+\_\+\+SHIFT, R\+\_\+\+ALT, R\+\_\+\+CTRL) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_controller_ac66cbb6519379d2809aab3780819c571}\label{class_input_controller_ac66cbb6519379d2809aab3780819c571}} 
+\index{InputController@{InputController}!OnMouseMove@{OnMouseMove}}
+\index{OnMouseMove@{OnMouseMove}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{OnMouseMove()}{OnMouseMove()}}
+{\footnotesize\ttfamily virtual void Input\+Controller\+::\+On\+Mouse\+Move (\begin{DoxyParamCaption}\item[{double}]{x\+\_\+pos,  }\item[{double}]{y\+\_\+pos,  }\item[{double}]{delta\+\_\+x,  }\item[{double}]{delta\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method for handling mouse movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos} & The X position of the mouse at the time of the movement \\
+\hline
+{\em y\+\_\+pos} & The Y position of the mouse at the time of the movement \\
+\hline
+{\em delta\+\_\+x} & The distance between the last X position of the mouse and x\+\_\+pos \\
+\hline
+{\em delta\+\_\+y} & The distance between the last Y position of the mouse and y\+\_\+pos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_controller_adc73cbb0d307a92462adf0d70f2d1162}\label{class_input_controller_adc73cbb0d307a92462adf0d70f2d1162}} 
+\index{InputController@{InputController}!OnMouseScroll@{OnMouseScroll}}
+\index{OnMouseScroll@{OnMouseScroll}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{OnMouseScroll()}{OnMouseScroll()}}
+{\footnotesize\ttfamily virtual void Input\+Controller\+::\+On\+Mouse\+Scroll (\begin{DoxyParamCaption}\item[{double}]{x\+\_\+offset,  }\item[{double}]{y\+\_\+offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method for handling mouse scroll. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+offset} & The X offset of the scroll \\
+\hline
+{\em y\+\_\+offset} & The Y offset of the scroll \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_controller_a7df1a99839e3d5561e6e44cec1b9789b}\label{class_input_controller_a7df1a99839e3d5561e6e44cec1b9789b}} 
+\index{InputController@{InputController}!ToogleEvents@{ToogleEvents}}
+\index{ToogleEvents@{ToogleEvents}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{ToogleEvents()}{ToogleEvents()}}
+{\footnotesize\ttfamily void Input\+Controller\+::\+Toogle\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method for toggling the state of the input controller (active or not) 
+
+
+
+Definition at line \mbox{\hyperlink{input__controller_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{input__controller_8cpp_source}{input\+\_\+controller.\+cpp}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_input_controller_a553f958a25683445088050a69d3de8e9}\label{class_input_controller_a553f958a25683445088050a69d3de8e9}} 
+\index{InputController@{InputController}!Window@{Window}}
+\index{Window@{Window}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{Window}{Window}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_window}{Window}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{input__controller_8h_source_l00007}{7}} of file \mbox{\hyperlink{input__controller_8h_source}{input\+\_\+controller.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/engine/core/input\+\_\+controller/\mbox{\hyperlink{input__controller_8h}{input\+\_\+controller.\+h}}\item 
+src/engine/core/input\+\_\+controller/\mbox{\hyperlink{input__controller_8cpp}{input\+\_\+controller.\+cpp}}\end{DoxyCompactItemize}

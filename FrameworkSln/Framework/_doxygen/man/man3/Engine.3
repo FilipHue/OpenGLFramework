@@ -1,0 +1,78 @@
+.TH "Engine" 3 "Sun Apr 9 2023" "OpenGL Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <engine\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEngine\fP ()=delete"
+.br
+.RI "Safety measure in case we accidentaly create an \fBEngine\fP object\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBInit\fP (\fBwindow_properties\fP *wp)"
+.br
+.RI "Method for initializing the glfw library, window and logger\&. "
+.ti -1c
+.RI "static void \fBExit\fP ()"
+.br
+.RI "Method for terminating the glfw library\&. "
+.ti -1c
+.RI "static \fBWindow\fP * \fBGetWindow\fP ()"
+.br
+.ti -1c
+.RI "static double \fBGetElapsedTime\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB7\fP of file \fBengine\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Engine ()\fC [delete]\fP"
+
+.PP
+Safety measure in case we accidentaly create an \fBEngine\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Engine::Exit ()\fC [static]\fP"
+
+.PP
+Method for terminating the glfw library\&. 
+.PP
+Definition at line \fB22\fP of file \fBengine\&.cpp\fP\&.
+.SS "double Engine::GetElapsedTime ()\fC [static]\fP"
+
+.PP
+Definition at line \fB33\fP of file \fBengine\&.cpp\fP\&.
+.SS "\fBWindow\fP * Engine::GetWindow ()\fC [static]\fP"
+
+.PP
+Definition at line \fB28\fP of file \fBengine\&.cpp\fP\&.
+.SS "void Engine::Init (\fBwindow_properties\fP * wp)\fC [static]\fP"
+
+.PP
+Method for initializing the glfw library, window and logger\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwp\fP \fBWindow\fP properties 
+.RE
+.PP
+
+.PP
+Definition at line \fB6\fP of file \fBengine\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenGL Framework from the source code\&.

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_shape__manager_8cpp_source" xml:lang="en-US">
+<title>shape_manager.cpp</title>
+<indexterm><primary>src/managers/shape/shape_manager.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_shape__manager_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_shape__manager_8h">shape_manager.h</link>&quot;</emphasis>
+<anchor xml:id="_shape__manager_8cpp_source_1l00002"/>00002 
+<anchor xml:id="_shape__manager_8cpp_source_1l00003"/><link linkend="_class_shape_manager_1a89d87212e60b3b0940aa8fa9000def95">00003</link> <link linkend="_class_shape_manager_1a89d87212e60b3b0940aa8fa9000def95">ShapeManager::ShapeManager</link>(<link linkend="_class_scene">Scene</link>*&#32;scene)
+<anchor xml:id="_shape__manager_8cpp_source_1l00004"/>00004 {
+<anchor xml:id="_shape__manager_8cpp_source_1l00005"/>00005 &#32;&#32;&#32;&#32;this-&gt;scene&#32;=&#32;scene;
+<anchor xml:id="_shape__manager_8cpp_source_1l00006"/>00006 &#32;&#32;&#32;&#32;defaultMaterial&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_material_8h_1aa8c92fe9490e4ed00377792bf8304307">Material</link>;
+<anchor xml:id="_shape__manager_8cpp_source_1l00007"/>00007 &#32;&#32;&#32;&#32;defaultMaterial-&gt;<link linkend="_structmaterial_1a6c9702db8ba10025c20efb81a96ce976">name</link>&#32;=&#32;<emphasis role="stringliteral">&quot;default&quot;</emphasis>;
+<anchor xml:id="_shape__manager_8cpp_source_1l00008"/>00008 &#32;&#32;&#32;&#32;defaultMaterial-&gt;<link linkend="_structmaterial_1af632818ebb9719ee9a6bb9c2b5122504">Ka</link>&#32;=&#32;glm::vec3(0.1,&#32;0.1,&#32;0.1);
+<anchor xml:id="_shape__manager_8cpp_source_1l00009"/>00009 &#32;&#32;&#32;&#32;defaultMaterial-&gt;<link linkend="_structmaterial_1a665292640cc52bde33c2bf9dd8b93551">Kd</link>&#32;=&#32;glm::vec3(0.2,&#32;0.4,&#32;0.3);
+<anchor xml:id="_shape__manager_8cpp_source_1l00010"/>00010 &#32;&#32;&#32;&#32;defaultMaterial-&gt;<link linkend="_structmaterial_1a95ce8a36cb532bd25a2a97b83fe7de36">Ksp</link>&#32;=&#32;glm::vec3(0.5,&#32;0.5,&#32;0.5);
+<anchor xml:id="_shape__manager_8cpp_source_1l00011"/>00011 &#32;&#32;&#32;&#32;defaultMaterial-&gt;<link linkend="_structmaterial_1a75a7b1f8b3d8820a2a5a0ec976e8bc84">Ksh</link>&#32;=&#32;0.7f;
+<anchor xml:id="_shape__manager_8cpp_source_1l00012"/>00012 }
+<anchor xml:id="_shape__manager_8cpp_source_1l00013"/>00013 
+<anchor xml:id="_shape__manager_8cpp_source_1l00014"/><link linkend="_class_shape_manager_1a9710768a9f9111b24e4ad8926b4f18b2">00014</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shape_manager_1a9710768a9f9111b24e4ad8926b4f18b2">ShapeManager::CreateRectangleX</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;name,&#32;<emphasis role="keywordtype">float</emphasis>&#32;width,&#32;<emphasis role="keywordtype">float</emphasis>&#32;height)
+<anchor xml:id="_shape__manager_8cpp_source_1l00015"/>00015 {
+<anchor xml:id="_shape__manager_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;std::vector&lt;Vertex&gt;&#32;verticies{
+<anchor xml:id="_shape__manager_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;0,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(0,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;width,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;width,&#32;height),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;1)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;0,&#32;height),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(0,&#32;1))
+<anchor xml:id="_shape__manager_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_shape__manager_8cpp_source_1l00022"/>00022 
+<anchor xml:id="_shape__manager_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;std::vector&lt;unsigned&#32;int&gt;&#32;indices{
+<anchor xml:id="_shape__manager_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;1,&#32;2,
+<anchor xml:id="_shape__manager_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;2,&#32;3
+<anchor xml:id="_shape__manager_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_shape__manager_8cpp_source_1l00027"/>00027 
+<anchor xml:id="_shape__manager_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;scene-&gt;<link linkend="_class_scene_1a9de2fe5d4aa89f9537a76a8a1f0abf4d">CreateMesh</link>(name,&#32;verticies,&#32;indices,&#32;<emphasis role="keyword">nullptr</emphasis>);
+<anchor xml:id="_shape__manager_8cpp_source_1l00029"/>00029 }
+<anchor xml:id="_shape__manager_8cpp_source_1l00030"/>00030 
+<anchor xml:id="_shape__manager_8cpp_source_1l00031"/><link linkend="_class_shape_manager_1aa3cbfcc112b4f3a5faa17920dd43a87e">00031</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shape_manager_1aa3cbfcc112b4f3a5faa17920dd43a87e">ShapeManager::CreateRectangleY</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;name,&#32;<emphasis role="keywordtype">float</emphasis>&#32;width,&#32;<emphasis role="keywordtype">float</emphasis>&#32;height)
+<anchor xml:id="_shape__manager_8cpp_source_1l00032"/>00032 {
+<anchor xml:id="_shape__manager_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;std::vector&lt;Vertex&gt;&#32;verticies{
+<anchor xml:id="_shape__manager_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;0,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(0,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(width,&#32;0,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(width,&#32;height,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;1)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;height,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(0,&#32;1))
+<anchor xml:id="_shape__manager_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_shape__manager_8cpp_source_1l00039"/>00039 
+<anchor xml:id="_shape__manager_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;std::vector&lt;unsigned&#32;int&gt;&#32;indices{
+<anchor xml:id="_shape__manager_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;1,&#32;2,
+<anchor xml:id="_shape__manager_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;2,&#32;3
+<anchor xml:id="_shape__manager_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_shape__manager_8cpp_source_1l00044"/>00044 
+<anchor xml:id="_shape__manager_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;scene-&gt;<link linkend="_class_scene_1a9de2fe5d4aa89f9537a76a8a1f0abf4d">CreateMesh</link>(name,&#32;verticies,&#32;indices,&#32;<emphasis role="keyword">nullptr</emphasis>);
+<anchor xml:id="_shape__manager_8cpp_source_1l00046"/>00046 }
+<anchor xml:id="_shape__manager_8cpp_source_1l00047"/>00047 
+<anchor xml:id="_shape__manager_8cpp_source_1l00048"/><link linkend="_class_shape_manager_1a58cfdef2bbcb6fe18e44fa4c9eb09041">00048</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shape_manager_1a58cfdef2bbcb6fe18e44fa4c9eb09041">ShapeManager::CreateRectangleZ</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;name,&#32;<emphasis role="keywordtype">float</emphasis>&#32;width,&#32;<emphasis role="keywordtype">float</emphasis>&#32;height)
+<anchor xml:id="_shape__manager_8cpp_source_1l00049"/>00049 {
+<anchor xml:id="_shape__manager_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;std::vector&lt;Vertex&gt;&#32;verticies{
+<anchor xml:id="_shape__manager_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;0,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(0,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(width,&#32;0,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(width,&#32;0,&#32;height),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;1)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;0,&#32;height),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(0,&#32;1))
+<anchor xml:id="_shape__manager_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_shape__manager_8cpp_source_1l00056"/>00056 
+<anchor xml:id="_shape__manager_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;std::vector&lt;unsigned&#32;int&gt;&#32;indices{
+<anchor xml:id="_shape__manager_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;1,&#32;2,
+<anchor xml:id="_shape__manager_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;2,&#32;3
+<anchor xml:id="_shape__manager_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_shape__manager_8cpp_source_1l00061"/>00061 
+<anchor xml:id="_shape__manager_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;scene-&gt;<link linkend="_class_scene_1a9de2fe5d4aa89f9537a76a8a1f0abf4d">CreateMesh</link>(name,&#32;verticies,&#32;indices,&#32;<emphasis role="keyword">nullptr</emphasis>);
+<anchor xml:id="_shape__manager_8cpp_source_1l00063"/>00063 }
+<anchor xml:id="_shape__manager_8cpp_source_1l00064"/>00064 
+<anchor xml:id="_shape__manager_8cpp_source_1l00065"/><link linkend="_class_shape_manager_1a33c0343c8bbc14cc57c82ac5a1a4196b">00065</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shape_manager_1a33c0343c8bbc14cc57c82ac5a1a4196b">ShapeManager::CreateTriangleX</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;name,&#32;<emphasis role="keywordtype">float</emphasis>&#32;sideA,&#32;<emphasis role="keywordtype">float</emphasis>&#32;sideB,&#32;<emphasis role="keywordtype">float</emphasis>&#32;sideC,&#32;glm::vec3&#32;startPosition&#32;=&#32;glm::vec3(0))
+<anchor xml:id="_shape__manager_8cpp_source_1l00066"/>00066 {
+<anchor xml:id="_shape__manager_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((sideA&#32;+&#32;sideB&#32;&lt;&#32;sideC)&#32;||&#32;(sideA&#32;+&#32;sideC&#32;&lt;&#32;sideB)&#32;||&#32;(sideB&#32;+&#32;sideC&#32;&lt;&#32;sideA))&#32;{
+<anchor xml:id="_shape__manager_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_log_8h_1a486cb435761adba8a3b3cf162859f0e3">RENDER_WARN</link>(<emphasis role="stringliteral">&quot;Triangle&#32;doesn&apos;t&#32;respect&#32;the&#32;rule,&#32;you&#32;dummy&quot;</emphasis>);
+<anchor xml:id="_shape__manager_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_shape__manager_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shape__manager_8cpp_source_1l00071"/>00071 }
+<anchor xml:id="_shape__manager_8cpp_source_1l00072"/>00072 
+<anchor xml:id="_shape__manager_8cpp_source_1l00073"/><link linkend="_class_shape_manager_1a0fed955e717b339da0530ba59a0132d6">00073</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shape_manager_1a0fed955e717b339da0530ba59a0132d6">ShapeManager::CreateTriangleY</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;name,&#32;<emphasis role="keywordtype">float</emphasis>&#32;sideA,&#32;<emphasis role="keywordtype">float</emphasis>&#32;sideB,&#32;<emphasis role="keywordtype">float</emphasis>&#32;sideC,&#32;glm::vec3&#32;startPosition)
+<anchor xml:id="_shape__manager_8cpp_source_1l00074"/>00074 {
+<anchor xml:id="_shape__manager_8cpp_source_1l00075"/>00075 }
+<anchor xml:id="_shape__manager_8cpp_source_1l00076"/>00076 
+<anchor xml:id="_shape__manager_8cpp_source_1l00077"/><link linkend="_class_shape_manager_1a8fc74771c2f1c070b085d7a2b67613ad">00077</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shape_manager_1a8fc74771c2f1c070b085d7a2b67613ad">ShapeManager::CreateTriangleZ</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;name,&#32;<emphasis role="keywordtype">float</emphasis>&#32;sideA,&#32;<emphasis role="keywordtype">float</emphasis>&#32;sideB,&#32;<emphasis role="keywordtype">float</emphasis>&#32;sideC,&#32;glm::vec3&#32;startPosition)
+<anchor xml:id="_shape__manager_8cpp_source_1l00078"/>00078 {
+<anchor xml:id="_shape__manager_8cpp_source_1l00079"/>00079 }
+<anchor xml:id="_shape__manager_8cpp_source_1l00080"/>00080 
+<anchor xml:id="_shape__manager_8cpp_source_1l00081"/><link linkend="_class_shape_manager_1a20ec5228b6215739d358640dc754ae7f">00081</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_shape_manager_1a20ec5228b6215739d358640dc754ae7f">ShapeManager::CreateCube</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;name,&#32;<emphasis role="keywordtype">float</emphasis>&#32;width,&#32;<emphasis role="keywordtype">float</emphasis>&#32;height,&#32;<emphasis role="keywordtype">float</emphasis>&#32;length)
+<anchor xml:id="_shape__manager_8cpp_source_1l00082"/>00082 {
+<anchor xml:id="_shape__manager_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;std::vector&lt;Vertex&gt;&#32;vertices&#32;=&#32;{
+<anchor xml:id="_shape__manager_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;0,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(width,&#32;0,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(width,&#32;height&#32;,0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;1)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;height,&#32;0),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(0,&#32;1)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;0,&#32;length),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(width,&#32;0,&#32;length),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;0)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(width,&#32;height&#32;,length),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(1,&#32;1)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_vertex_8h_1a9a691a57a842e8225d7a070565828c27">Vertex</link>(glm::vec3(0,&#32;height,&#32;length),&#32;<link linkend="_colour_8h_1a5ccb6d6ce1d51d4729846edfbcc9ee1a">GREY</link>,&#32;glm::vec3(0,&#32;1,&#32;0),&#32;glm::vec2(0,&#32;1)),
+<anchor xml:id="_shape__manager_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_shape__manager_8cpp_source_1l00093"/>00093 
+<anchor xml:id="_shape__manager_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;std::vector&lt;unsigned&#32;int&gt;&#32;indices&#32;=&#32;{
+<anchor xml:id="_shape__manager_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;1,&#32;2,
+<anchor xml:id="_shape__manager_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;2,&#32;3,
+<anchor xml:id="_shape__manager_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;4,&#32;7,
+<anchor xml:id="_shape__manager_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;7,&#32;3,
+<anchor xml:id="_shape__manager_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;1,&#32;5,
+<anchor xml:id="_shape__manager_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0,&#32;5,&#32;4,
+<anchor xml:id="_shape__manager_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1,&#32;5,&#32;6,
+<anchor xml:id="_shape__manager_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1,&#32;6,&#32;2,
+<anchor xml:id="_shape__manager_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3,&#32;2,&#32;6,
+<anchor xml:id="_shape__manager_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3,&#32;6,&#32;7,
+<anchor xml:id="_shape__manager_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4,&#32;5,&#32;6,
+<anchor xml:id="_shape__manager_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4,&#32;6,&#32;7
+<anchor xml:id="_shape__manager_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_shape__manager_8cpp_source_1l00108"/>00108 
+<anchor xml:id="_shape__manager_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;scene-&gt;<link linkend="_class_scene_1a9de2fe5d4aa89f9537a76a8a1f0abf4d">CreateMesh</link>(name,&#32;vertices,&#32;indices,&#32;defaultMaterial);
+<anchor xml:id="_shape__manager_8cpp_source_1l00110"/>00110 }
+</programlisting></section>

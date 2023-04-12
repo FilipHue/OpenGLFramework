@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_engine_8cpp_source" xml:lang="en-US">
+<title>engine.cpp</title>
+<indexterm><primary>src/engine/engine.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_engine_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_engine_8h">engine.h</link>&quot;</emphasis>
+<anchor xml:id="_engine_8cpp_source_1l00002"/>00002 
+<anchor xml:id="_engine_8cpp_source_1l00003"/>00003 <link linkend="_class_window">Window</link>*&#32;Engine::p_window&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="_engine_8cpp_source_1l00004"/>00004 <link linkend="_class_logger">Logger</link>*&#32;Engine::p_logger;
+<anchor xml:id="_engine_8cpp_source_1l00005"/>00005 
+<anchor xml:id="_engine_8cpp_source_1l00006"/><link linkend="_class_engine_1a7a4cee29e4ab5e7634475906b6d61281">00006</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_engine_1a7a4cee29e4ab5e7634475906b6d61281">Engine::Init</link>(<link linkend="_structwindow__properties">window_properties</link>*&#32;wp)
+<anchor xml:id="_engine_8cpp_source_1l00007"/>00007 {
+<anchor xml:id="_engine_8cpp_source_1l00008"/>00008 &#32;&#32;&#32;&#32;p_logger&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_logger">Logger</link>();
+<anchor xml:id="_engine_8cpp_source_1l00009"/>00009 &#32;&#32;&#32;&#32;p_logger-&gt;<link linkend="_class_logger_1a42c282f4c0e2c6557d16e2967c1ddf7e">Init</link>();
+<anchor xml:id="_engine_8cpp_source_1l00010"/>00010 
+<anchor xml:id="_engine_8cpp_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!glfwInit())&#32;{
+<anchor xml:id="_engine_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_log_8h_1ac4a9b857cb8a7445bcac07f99736eee8">ENGINE_ERROR</link>(<emphasis role="stringliteral">&quot;GLFW&#32;library&#32;initialization&#32;was&#32;unsuccesful&quot;</emphasis>);
+<anchor xml:id="_engine_8cpp_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(0);
+<anchor xml:id="_engine_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_engine_8cpp_source_1l00015"/>00015 
+<anchor xml:id="_engine_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;p_window&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_window">Window</link>();
+<anchor xml:id="_engine_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;p_window-&gt;<link linkend="_class_window_1aeb0aac2cdf44390e4b9f1a7f8fb93de5">Init</link>(wp);
+<anchor xml:id="_engine_8cpp_source_1l00018"/>00018 
+<anchor xml:id="_engine_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<link linkend="_log_8h_1a6404e6cf7c01e67c7a2f0b07803b0647">ENGINE_INFO</link>(<emphasis role="stringliteral">&quot;Engine&#32;succesfully&#32;initialized&quot;</emphasis>);
+<anchor xml:id="_engine_8cpp_source_1l00020"/>00020 }
+<anchor xml:id="_engine_8cpp_source_1l00021"/>00021 
+<anchor xml:id="_engine_8cpp_source_1l00022"/><link linkend="_class_engine_1a5a84db2911ba0cb28d1765c68d8eee8f">00022</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_engine_1a5a84db2911ba0cb28d1765c68d8eee8f">Engine::Exit</link>()
+<anchor xml:id="_engine_8cpp_source_1l00023"/>00023 {
+<anchor xml:id="_engine_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;glfwTerminate();
+<anchor xml:id="_engine_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<link linkend="_log_8h_1a6404e6cf7c01e67c7a2f0b07803b0647">ENGINE_INFO</link>(<emphasis role="stringliteral">&quot;Shuting&#32;down&#32;engine...&quot;</emphasis>);
+<anchor xml:id="_engine_8cpp_source_1l00026"/>00026 }
+<anchor xml:id="_engine_8cpp_source_1l00027"/>00027 
+<anchor xml:id="_engine_8cpp_source_1l00028"/><link linkend="_class_engine_1a77697a5d3d4fb8b8ef84b07d71567b0e">00028</link> <link linkend="_class_window">Window</link>*&#32;<link linkend="_class_engine_1a77697a5d3d4fb8b8ef84b07d71567b0e">Engine::GetWindow</link>()
+<anchor xml:id="_engine_8cpp_source_1l00029"/>00029 {
+<anchor xml:id="_engine_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;p_window;
+<anchor xml:id="_engine_8cpp_source_1l00031"/>00031 }
+<anchor xml:id="_engine_8cpp_source_1l00032"/>00032 
+<anchor xml:id="_engine_8cpp_source_1l00033"/><link linkend="_class_engine_1abcd8b03e49c314ad6eb387dee28d54e7">00033</link> <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_engine_1abcd8b03e49c314ad6eb387dee28d54e7">Engine::GetElapsedTime</link>()
+<anchor xml:id="_engine_8cpp_source_1l00034"/>00034 {
+<anchor xml:id="_engine_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;glfwGetTime();
+<anchor xml:id="_engine_8cpp_source_1l00036"/>00036 }
+</programlisting></section>

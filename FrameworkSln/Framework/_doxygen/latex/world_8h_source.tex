@@ -1,0 +1,38 @@
+\hypertarget{world_8h_source}{}\doxysection{world.\+h}
+\label{world_8h_source}\index{src/world.h@{src/world.h}}
+\mbox{\hyperlink{world_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{engine_8h}{engine/engine.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input__controller_8h}{engine/core/input\_controller/input\_controller.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00006}\mbox{\hyperlink{class_world}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_world}{World}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_input_controller}{InputController}}}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00008}00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}{World}}();}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00011}\mbox{\hyperlink{class_world_aa729424b4809c70042dcd7e97c16c3ee}{00011}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_aa729424b4809c70042dcd7e97c16c3ee}{Init}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00012}\mbox{\hyperlink{class_world_a0ed085d9bdc6f831dcf462f968846166}{00012}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_a0ed085d9bdc6f831dcf462f968846166}{StartFrame}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00013}\mbox{\hyperlink{class_world_a3082ec0230bd04bf977a4e27599bb8c1}{00013}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_a3082ec0230bd04bf977a4e27599bb8c1}{Update}}(\textcolor{keywordtype}{double}\ delta\_time)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00014}\mbox{\hyperlink{class_world_aaa6d2623410d5e8a789ec917639597ef}{00014}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_aaa6d2623410d5e8a789ec917639597ef}{EndFrame}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_acea6eb85cbad062ded1e62193496e9f5}{Run}}();}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_world_afa3dd686cb3b3f3084d6c64e9d640820}{Exit}}();}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_world_a09f54785fbc2dd9ce3119fc6ef7e9fc4}{GetDeltaTime}}();}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00024}00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ ComputeDeltaTime();}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{void}\ LoopUpdate();}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00032}00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{double}\ d\_delta\_time;}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{double}\ d\_elapsed\_time;}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{double}\ d\_previous\_time;}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_window}{Window}}*\ p\_window;}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00038}00038\ \};}
+\DoxyCodeLine{\Hypertarget{world_8h_source_l00039}00039\ }
+
+\end{DoxyCode}

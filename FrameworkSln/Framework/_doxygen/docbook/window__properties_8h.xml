@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_window__properties_8h" xml:lang="en-US">
+<title>src/engine/core/window/window_properties.h File Reference</title>
+<indexterm><primary>src/engine/core/window/window_properties.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="window__properties_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structwindow__properties">window_properties</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_structwindow__properties">window_properties</link> <link linkend="_window__properties_8h_1a520133188d9a42c48a310a5395a3c1f4">window_properties</link></para>
+
+<para>Structure for keeping window properties. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_window__properties_8h_1a520133188d9a42c48a310a5395a3c1f4"/><section>
+    <title>window_properties</title>
+<indexterm><primary>window_properties</primary><secondary>window_properties.h</secondary></indexterm>
+<indexterm><primary>window_properties.h</primary><secondary>window_properties</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_structwindow__properties">window_properties</link> <link linkend="_structwindow__properties">window_properties</link></computeroutput></para><para>
+
+<para>Structure for keeping window properties. </para>
+</para>
+
+<para>See <link xlink:href="https://www.glfw.org/docs/latest/window_guide.html#window_hints">https://www.glfw.org/docs/latest/window_guide.html#window_hints</link> for more information </para>
+<para>
+Definition at line <link linkend="_window__properties_8h_source_1l00007">7</link> of file <link linkend="_window__properties_8h_source">window_properties.h</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_texture2_d" xml:lang="en-US">
+<title>Texture2D Class Reference</title>
+<indexterm><primary>Texture2D</primary></indexterm>
+<para>
+<computeroutput>#include &lt;texture_2D.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_texture2_d_1ab62c7c5172a4800b4629cd475147819d">Texture2D</link> ()</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_texture2_d_1a4b6d5b8203df33567ed1e8ad016a6d7f">GetTextureID</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_texture2_d_1a1663b6b665fa27f2495604cd0c371706">TextureManger</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_texture__2_d_8h_source_1l00005">5</link> of file <link linkend="_texture__2_d_8h_source">texture_2D.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_texture2_d_1ab62c7c5172a4800b4629cd475147819d"/><section>
+    <title>Texture2D()</title>
+<indexterm><primary>Texture2D</primary><secondary>Texture2D</secondary></indexterm>
+<indexterm><primary>Texture2D</primary><secondary>Texture2D</secondary></indexterm>
+<para><computeroutput>Texture2D::Texture2D ( )</computeroutput></para><para>
+Definition at line <link linkend="_texture__2_d_8cpp_source_1l00006">6</link> of file <link linkend="_texture__2_d_8cpp_source">texture_2D.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_texture2_d_1a4b6d5b8203df33567ed1e8ad016a6d7f"/><section>
+    <title>GetTextureID()</title>
+<indexterm><primary>GetTextureID</primary><secondary>Texture2D</secondary></indexterm>
+<indexterm><primary>Texture2D</primary><secondary>GetTextureID</secondary></indexterm>
+<para><computeroutput>unsigned int Texture2D::GetTextureID ( )</computeroutput></para><para>
+Definition at line <link linkend="_texture__2_d_8cpp_source_1l00061">61</link> of file <link linkend="_texture__2_d_8cpp_source">texture_2D.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_class_texture2_d_1a1663b6b665fa27f2495604cd0c371706"/><section>
+    <title>TextureManger</title>
+<indexterm><primary>TextureManger</primary><secondary>Texture2D</secondary></indexterm>
+<indexterm><primary>Texture2D</primary><secondary>TextureManger</secondary></indexterm>
+<para><computeroutput>friend class <link linkend="_class_texture_manger">TextureManger</link><computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_texture__2_d_8h_source_1l00007">7</link> of file <link linkend="_texture__2_d_8h_source">texture_2D.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/managers/texture/<link linkend="_texture__2_d_8h">texture_2D.h</link>src/managers/texture/<link linkend="_texture__2_d_8cpp">texture_2D.cpp</link></section>
+</section>

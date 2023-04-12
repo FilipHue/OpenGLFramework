@@ -1,0 +1,77 @@
+.TH "vertex" 3 "Sun Apr 9 2023" "OpenGL Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vertex
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vertex\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvertex\fP (glm::vec3 \fBposition\fP, \fBColour\fP \fBcolour\fP=\fBWHITE\fP, glm::vec3 \fBnormal\fP=glm::vec3(0, 1, 0), glm::vec2 \fBtextureCoords\fP=glm::vec2(0))"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "glm::vec3 \fBposition\fP"
+.br
+.ti -1c
+.RI "\fBColour\fP \fBcolour\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBnormal\fP"
+.br
+.ti -1c
+.RI "glm::vec2 \fBtextureCoords\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &os, const \fBVertex\fP &v)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB9\fP of file \fBvertex\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "vertex::vertex (glm::vec3 position, \fBColour\fP colour = \fC\fBWHITE\fP\fP, glm::vec3 normal = \fCglm::vec3(0, 1, 0)\fP, glm::vec2 textureCoords = \fCglm::vec2(0)\fP)\fC [inline]\fP"
+
+.PP
+Definition at line \fB15\fP of file \fBvertex\&.h\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "std::ostream & operator<< (std::ostream & os, const \fBVertex\fP & v)\fC [friend]\fP"
+
+.PP
+Definition at line \fB22\fP of file \fBvertex\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBColour\fP vertex::colour"
+
+.PP
+Definition at line \fB11\fP of file \fBvertex\&.h\fP\&.
+.SS "glm::vec3 vertex::normal"
+
+.PP
+Definition at line \fB12\fP of file \fBvertex\&.h\fP\&.
+.SS "glm::vec3 vertex::position"
+
+.PP
+Definition at line \fB10\fP of file \fBvertex\&.h\fP\&.
+.SS "glm::vec2 vertex::textureCoords"
+
+.PP
+Definition at line \fB13\fP of file \fBvertex\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenGL Framework from the source code\&.

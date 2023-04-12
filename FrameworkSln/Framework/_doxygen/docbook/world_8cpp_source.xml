@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_world_8cpp_source" xml:lang="en-US">
+<title>world.cpp</title>
+<indexterm><primary>src/world.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_world_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_world_8h">world.h</link>&quot;</emphasis>
+<anchor xml:id="_world_8cpp_source_1l00002"/>00002 
+<anchor xml:id="_world_8cpp_source_1l00003"/><link linkend="_class_world_1afa39d4e6f714a7a3691ac0c656f5e8a8">00003</link> <link linkend="_class_world_1afa39d4e6f714a7a3691ac0c656f5e8a8">World::World</link>()
+<anchor xml:id="_world_8cpp_source_1l00004"/>00004 {
+<anchor xml:id="_world_8cpp_source_1l00005"/>00005 &#32;&#32;&#32;&#32;p_window&#32;=&#32;<link linkend="_class_engine_1a77697a5d3d4fb8b8ef84b07d71567b0e">Engine::GetWindow</link>();
+<anchor xml:id="_world_8cpp_source_1l00006"/>00006 &#32;&#32;&#32;&#32;d_elapsed_time&#32;=&#32;d_previous_time&#32;=&#32;d_delta_time&#32;=&#32;0.0f;
+<anchor xml:id="_world_8cpp_source_1l00007"/>00007 }
+<anchor xml:id="_world_8cpp_source_1l00008"/>00008 
+<anchor xml:id="_world_8cpp_source_1l00009"/><link linkend="_class_world_1acea6eb85cbad062ded1e62193496e9f5">00009</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_1acea6eb85cbad062ded1e62193496e9f5">World::Run</link>()
+<anchor xml:id="_world_8cpp_source_1l00010"/>00010 {
+<anchor xml:id="_world_8cpp_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(p_window&#32;==&#32;<emphasis role="keyword">nullptr</emphasis>)&#32;{
+<anchor xml:id="_world_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_world_8cpp_source_1l00013"/>00013 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_world_8cpp_source_1l00014"/>00014 
+<anchor xml:id="_world_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!p_window-&gt;<link linkend="_class_window_1a6aa86d4800090cfeb56c52f63383c179">ShouldClose</link>())&#32;{
+<anchor xml:id="_world_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LoopUpdate();
+<anchor xml:id="_world_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_world_8cpp_source_1l00018"/>00018 }
+<anchor xml:id="_world_8cpp_source_1l00019"/>00019 
+<anchor xml:id="_world_8cpp_source_1l00020"/><link linkend="_class_world_1afa3dd686cb3b3f3084d6c64e9d640820">00020</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_1afa3dd686cb3b3f3084d6c64e9d640820">World::Exit</link>()
+<anchor xml:id="_world_8cpp_source_1l00021"/>00021 {
+<anchor xml:id="_world_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;glfwSetWindowShouldClose(p_window-&gt;<link linkend="_class_window_1a682df3064b8c04aee17f6c159829a764">GetNativeWindow</link>(),&#32;1);
+<anchor xml:id="_world_8cpp_source_1l00023"/>00023 }
+<anchor xml:id="_world_8cpp_source_1l00024"/>00024 
+<anchor xml:id="_world_8cpp_source_1l00025"/><link linkend="_class_world_1a09f54785fbc2dd9ce3119fc6ef7e9fc4">00025</link> <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_world_1a09f54785fbc2dd9ce3119fc6ef7e9fc4">World::GetDeltaTime</link>()
+<anchor xml:id="_world_8cpp_source_1l00026"/>00026 {
+<anchor xml:id="_world_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;d_delta_time;
+<anchor xml:id="_world_8cpp_source_1l00028"/>00028 }
+<anchor xml:id="_world_8cpp_source_1l00029"/>00029 
+<anchor xml:id="_world_8cpp_source_1l00030"/>00030 <emphasis role="keywordtype">void</emphasis>&#32;World::ComputeDeltaTime()
+<anchor xml:id="_world_8cpp_source_1l00031"/>00031 {
+<anchor xml:id="_world_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;d_elapsed_time&#32;=&#32;<link linkend="_class_engine_1abcd8b03e49c314ad6eb387dee28d54e7">Engine::GetElapsedTime</link>();
+<anchor xml:id="_world_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;d_delta_time&#32;=&#32;d_elapsed_time&#32;-&#32;d_previous_time;
+<anchor xml:id="_world_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;d_previous_time&#32;=&#32;d_elapsed_time;
+<anchor xml:id="_world_8cpp_source_1l00035"/>00035 }
+<anchor xml:id="_world_8cpp_source_1l00036"/>00036 
+<anchor xml:id="_world_8cpp_source_1l00037"/>00037 <emphasis role="keywordtype">void</emphasis>&#32;World::LoopUpdate()
+<anchor xml:id="_world_8cpp_source_1l00038"/>00038 {
+<anchor xml:id="_world_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;ComputeDeltaTime();
+<anchor xml:id="_world_8cpp_source_1l00040"/>00040 
+<anchor xml:id="_world_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;p_window-&gt;<link linkend="_class_window_1a5773af5bbba89347336d9a8793340184">PollEvents</link>();
+<anchor xml:id="_world_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;p_window-&gt;<link linkend="_class_window_1a068d24ef772bf4be412269b7818f0a80">ContinousEvents</link>(d_delta_time);
+<anchor xml:id="_world_8cpp_source_1l00043"/>00043 
+<anchor xml:id="_world_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<link linkend="_class_world_1a0ed085d9bdc6f831dcf462f968846166">StartFrame</link>();
+<anchor xml:id="_world_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<link linkend="_class_world_1a3082ec0230bd04bf977a4e27599bb8c1">Update</link>(d_delta_time);
+<anchor xml:id="_world_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<link linkend="_class_world_1aaa6d2623410d5e8a789ec917639597ef">EndFrame</link>();
+<anchor xml:id="_world_8cpp_source_1l00047"/>00047 
+<anchor xml:id="_world_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;p_window-&gt;<link linkend="_class_window_1abe1b83eda6980f2b9964aab08b5310ed">SwapBuffers</link>();
+<anchor xml:id="_world_8cpp_source_1l00049"/>00049 }
+</programlisting></section>

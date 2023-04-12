@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_shader" xml:lang="en-US">
+<title>Shader Class Reference</title>
+<indexterm><primary>Shader</primary></indexterm>
+<para>
+<computeroutput>#include &lt;shader.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_shader_1a399bb2d0c75ad2ab849eb5c8a4d7575f">Shader</link> (const char *vertex_shader_path, const char *fragment_shader_path)</para>
+
+<para>Class constructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1a6b11327cff651ffdb22988b6917b1650">Use</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1a70cd07acf03715e4e927df1be5c5b5a0">SetBool</link> (const std::string &amp;name, bool value) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1a645ef3753b1fc09a30dbb26f817d88e5">SetInt</link> (const std::string &amp;name, int value) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1ac20ee02a436e4baeb63dde08a0364574">SetFloat</link> (const std::string &amp;name, float value) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1a3a6e99e301ccecf029b1848d0ae9cfa9">SetVec2</link> (const std::string &amp;name, glm::vec2 &amp;value) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1acddd2cf07b0b37f0cdfbb44074863c91">SetVec3</link> (const std::string &amp;name, glm::vec3 &amp;value) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1abb9700672c86727c5b895a74f361fa2d">SetVec4</link> (const std::string &amp;name, glm::vec4 &amp;value) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1af7a3746572efb2b89fed45bc52c3f7d5">SetMat2</link> (const std::string &amp;name, glm::mat2 &amp;value) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1ad58277efb139b843f9f0b3d5576c4f73">SetMat3</link> (const std::string &amp;name, glm::mat3 &amp;value) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shader_1a250ff0e81a022d4ab8ab1f8206e8c91b">SetMat4</link> (const std::string &amp;name, glm::mat4 &amp;value) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>unsigned int <link linkend="_class_shader_1acca962099a3587a3d6b5c8e8e54049f8">shaderID</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_shader_8h_source_1l00018">18</link> of file <link linkend="_shader_8h_source">shader.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_shader_1a399bb2d0c75ad2ab849eb5c8a4d7575f"/><section>
+    <title>Shader()</title>
+<indexterm><primary>Shader</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>Shader</secondary></indexterm>
+<para><computeroutput>Shader::Shader (const char * vertex_shader_path, const char * fragment_shader_path)</computeroutput></para><para>
+
+<para>Class constructor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>vertext_shader_path</entry><entry>
+<para>The vertex shader file path </para>
+</entry>
+                            </row>
+                            <row>
+<entry>fragment_shader_path</entry><entry>
+<para>The fragment shader file path </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_shader_8cpp_source_1l00003">3</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_shader_1a70cd07acf03715e4e927df1be5c5b5a0"/><section>
+    <title>SetBool()</title>
+<indexterm><primary>SetBool</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>SetBool</secondary></indexterm>
+<para><computeroutput>void Shader::SetBool (const std::string &amp; name, bool value) const</computeroutput></para><para>
+Definition at line <link linkend="_shader_8cpp_source_1l00080">80</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shader_1ac20ee02a436e4baeb63dde08a0364574"/><section>
+    <title>SetFloat()</title>
+<indexterm><primary>SetFloat</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>SetFloat</secondary></indexterm>
+<para><computeroutput>void Shader::SetFloat (const std::string &amp; name, float value) const</computeroutput></para><para>
+Definition at line <link linkend="_shader_8cpp_source_1l00090">90</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shader_1a645ef3753b1fc09a30dbb26f817d88e5"/><section>
+    <title>SetInt()</title>
+<indexterm><primary>SetInt</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>SetInt</secondary></indexterm>
+<para><computeroutput>void Shader::SetInt (const std::string &amp; name, int value) const</computeroutput></para><para>
+Definition at line <link linkend="_shader_8cpp_source_1l00085">85</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shader_1af7a3746572efb2b89fed45bc52c3f7d5"/><section>
+    <title>SetMat2()</title>
+<indexterm><primary>SetMat2</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>SetMat2</secondary></indexterm>
+<para><computeroutput>void Shader::SetMat2 (const std::string &amp; name, glm::mat2 &amp; value) const</computeroutput></para><para>
+Definition at line <link linkend="_shader_8cpp_source_1l00110">110</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shader_1ad58277efb139b843f9f0b3d5576c4f73"/><section>
+    <title>SetMat3()</title>
+<indexterm><primary>SetMat3</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>SetMat3</secondary></indexterm>
+<para><computeroutput>void Shader::SetMat3 (const std::string &amp; name, glm::mat3 &amp; value) const</computeroutput></para><para>
+Definition at line <link linkend="_shader_8cpp_source_1l00115">115</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shader_1a250ff0e81a022d4ab8ab1f8206e8c91b"/><section>
+    <title>SetMat4()</title>
+<indexterm><primary>SetMat4</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>SetMat4</secondary></indexterm>
+<para><computeroutput>void Shader::SetMat4 (const std::string &amp; name, glm::mat4 &amp; value) const</computeroutput></para><para>
+Definition at line <link linkend="_shader_8cpp_source_1l00120">120</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shader_1a3a6e99e301ccecf029b1848d0ae9cfa9"/><section>
+    <title>SetVec2()</title>
+<indexterm><primary>SetVec2</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>SetVec2</secondary></indexterm>
+<para><computeroutput>void Shader::SetVec2 (const std::string &amp; name, glm::vec2 &amp; value) const</computeroutput></para><para>
+Definition at line <link linkend="_shader_8cpp_source_1l00095">95</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shader_1acddd2cf07b0b37f0cdfbb44074863c91"/><section>
+    <title>SetVec3()</title>
+<indexterm><primary>SetVec3</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>SetVec3</secondary></indexterm>
+<para><computeroutput>void Shader::SetVec3 (const std::string &amp; name, glm::vec3 &amp; value) const</computeroutput></para><para>
+Definition at line <link linkend="_shader_8cpp_source_1l00100">100</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shader_1abb9700672c86727c5b895a74f361fa2d"/><section>
+    <title>SetVec4()</title>
+<indexterm><primary>SetVec4</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>SetVec4</secondary></indexterm>
+<para><computeroutput>void Shader::SetVec4 (const std::string &amp; name, glm::vec4 &amp; value) const</computeroutput></para><para>
+Definition at line <link linkend="_shader_8cpp_source_1l00105">105</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_shader_1a6b11327cff651ffdb22988b6917b1650"/><section>
+    <title>Use()</title>
+<indexterm><primary>Use</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>Use</secondary></indexterm>
+<para><computeroutput>void Shader::Use ( )</computeroutput></para>
+<para>It enables openGL to use this shader program </para>
+<para>
+Definition at line <link linkend="_shader_8cpp_source_1l00075">75</link> of file <link linkend="_shader_8cpp_source">shader.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_shader_1acca962099a3587a3d6b5c8e8e54049f8"/><section>
+    <title>shaderID</title>
+<indexterm><primary>shaderID</primary><secondary>Shader</secondary></indexterm>
+<indexterm><primary>Shader</primary><secondary>shaderID</secondary></indexterm>
+<para><computeroutput>unsigned int Shader::shaderID</computeroutput></para><para>
+Definition at line <link linkend="_shader_8h_source_1l00046">46</link> of file <link linkend="_shader_8h_source">shader.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/managers/shader/<link linkend="_shader_8h">shader.h</link>src/managers/shader/<link linkend="_shader_8cpp">shader.cpp</link></section>
+</section>

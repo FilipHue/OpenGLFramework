@@ -1,0 +1,45 @@
+\hypertarget{logger_8cpp_source}{}\doxysection{logger.\+cpp}
+\label{logger_8cpp_source}\index{src/managers/logger/logger.cpp@{src/managers/logger/logger.cpp}}
+\mbox{\hyperlink{logger_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logger_8h}{logger.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00003}\mbox{\hyperlink{class_logger_a42c282f4c0e2c6557d16e2967c1ddf7e}{00003}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_logger_a42c282f4c0e2c6557d16e2967c1ddf7e}{Logger::Init}}()}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00004}00004\ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00005}00005\ \ \ \ \ console\_sink\ =\ std::make\_shared<spdlog::sinks::stdout\_color\_sink\_mt>();}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00006}00006\ \ \ \ \ console\_sink-\/>set\_pattern(\textcolor{stringliteral}{"{}\%\string^[\%T]\ \%n:\ \%v\%\$"{}});}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00008}00008\ \ \ \ \ sinks\ =\ \{\ console\_sink\ \};}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00010}00010\ \ \ \ \ core\_logger\ =\ std::make\_shared\ <\ spdlog::logger>(\mbox{\hyperlink{log_8h_aebac4307cdb57f4153c9d1d24247edf6}{FRAMEWORK\_CORE\_LOGGER\_NAME}},\ sinks.begin(),\ sinks.end());}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00011}00011\ \ \ \ \ core\_logger-\/>set\_level(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00012}00012\ \ \ \ \ core\_logger-\/>flush\_on(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00013}00013\ \ \ \ \ spdlog::register\_logger(core\_logger);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00015}00015\ \ \ \ \ engine\_logger\ =\ std::make\_shared\ <\ spdlog::logger>(\mbox{\hyperlink{log_8h_a52426ef65dd886ac472ab5eaf8396245}{FRAMEWORK\_ENGINE\_LOGGER\_NAME}},\ sinks.begin(),\ sinks.end());}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00016}00016\ \ \ \ \ engine\_logger-\/>set\_level(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00017}00017\ \ \ \ \ engine\_logger-\/>flush\_on(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00018}00018\ \ \ \ \ spdlog::register\_logger(engine\_logger);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00020}00020\ \ \ \ \ shader\_logger\ =\ std::make\_shared\ <\ spdlog::logger>(\mbox{\hyperlink{log_8h_a6bd0d769d972f9fd7bf7b39c16086752}{FRAMEWORK\_SHADER\_LOGGER\_NAME}},\ sinks.begin(),\ sinks.end());}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00021}00021\ \ \ \ \ shader\_logger-\/>set\_level(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00022}00022\ \ \ \ \ shader\_logger-\/>flush\_on(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00023}00023\ \ \ \ \ spdlog::register\_logger(shader\_logger);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00025}00025\ \ \ \ \ render\_logger\ =\ std::make\_shared\ <\ spdlog::logger>(\mbox{\hyperlink{log_8h_a2bc02fc4f884aa0ba4e2e7fe4b7a9378}{FRAMEWORK\_RENDER\_LOGGER\_NAME}},\ sinks.begin(),\ sinks.end());}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00026}00026\ \ \ \ \ render\_logger-\/>set\_level(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00027}00027\ \ \ \ \ render\_logger-\/>flush\_on(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00028}00028\ \ \ \ \ spdlog::register\_logger(render\_logger);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00030}00030\ \ \ \ \ texture\_logger\ =\ std::make\_shared\ <\ spdlog::logger>(\mbox{\hyperlink{log_8h_a28bcaac65a5c94440ab434e6275b5ea6}{FRAMEWORK\_TEXTURE\_LOGGER\_NAME}},\ sinks.begin(),\ sinks.end());}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00031}00031\ \ \ \ \ texture\_logger-\/>set\_level(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00032}00032\ \ \ \ \ texture\_logger-\/>flush\_on(spdlog::level::trace);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00033}00033\ \ \ \ \ spdlog::register\_logger(texture\_logger);}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00036}\mbox{\hyperlink{class_logger_a918e72e940f8cffb370c9966dc3e9af2}{00036}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_logger_a918e72e940f8cffb370c9966dc3e9af2}{Logger::Shutdown}}()}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00038}00038\ \ \ \ \ spdlog::shutdown();}
+\DoxyCodeLine{\Hypertarget{logger_8cpp_source_l00039}00039\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_afb3136e7559cd88be9465dbdd504cb7" xml:lang="en-US">
+<title>src/components/scene Directory Reference</title>
+<indexterm><primary>src/components/scene Directory Reference</primary></indexterm>
+Directory dependency graph for scene:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_afb3136e7559cd88be9465dbdd504cb7_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_scene_8cpp">scene.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_scene_8h">scene.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_scene__input_8cpp">scene_input.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_scene__input_8h">scene_input.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

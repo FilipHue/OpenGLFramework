@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_camera_input" xml:lang="en-US">
+<title>CameraInput Class Reference</title>
+<indexterm><primary>CameraInput</primary></indexterm>
+<para>
+<computeroutput>#include &lt;camera_input.h&gt;</computeroutput>
+</para>
+Inheritance diagram for CameraInput:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_input__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for CameraInput:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_camera_input__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_camera_input_1a138aeb0e4b14ba5fee1e081213102fbb">CameraInput</link> (<link linkend="_class_camera">Camera</link> *camera)</para>
+
+<para>Method for attaching the camera controller to a camera object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_input_controller">InputController</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_input_controller_1aba927fffeb0bf4c4fd0835d4dfbdfaec">InputController</link> ()</para>
+
+<para>Method for connecting the input controller to a component. </para>
+</listitem>
+            <listitem><para><link linkend="_class_input_controller_1aa36b76b8144da60b26cd9b8298aa5627">~InputController</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_input_controller_1a7df1a99839e3d5561e6e44cec1b9789b">ToogleEvents</link> ()</para>
+
+<para>Method for toggling the state of the input controller (active or not) </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_input_controller_1a5ce94207ea1b3fd285f2782e96b9407a">IsActive</link> ()</para>
+
+<para>Method for checking the state of the input controller. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1af2f53ee2e8c951613d83617f259c92d9">OnInputUpdate</link> (double delta_time, int mods)=0</para>
+
+<para>Method for handling continous events (like key presses) </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1ad5b3dca01698d57084e7a7ec5e118872">OnKeyPress</link> (int key, int mods)=0</para>
+
+<para>Method for handling key presses. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1ad3e3d7ed6ad1bc31880ae39dd11dcd00">OnKeyRelease</link> (int key, int mods)=0</para>
+
+<para>Method for handling key releases. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1ac66cbb6519379d2809aab3780819c571">OnMouseMove</link> (double x_pos, double y_pos, double delta_x, double delta_y)=0</para>
+
+<para>Method for handling mouse movement. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1aba038c7018d1f62c228ca77210986e9a">OnMouseButtonPress</link> (double x_pos, double y_pos, int button, int mods)=0</para>
+
+<para>Method for handling mouse button presses. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1a11cfafe3c6c4dd766df4cd014173c1d8">OnMouseButttonRelease</link> (double x_pos, double y_pos, int button, int mods)=0</para>
+
+<para>Method for handling mouse button releases. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_input_controller_1adc73cbb0d307a92462adf0d70f2d1162">OnMouseScroll</link> (double x_offset, double y_offset)=0</para>
+
+<para>Method for handling mouse scroll. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_camera__input_8h_source_1l00007">7</link> of file <link linkend="_camera__input_8h_source">camera_input.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_camera_input_1a138aeb0e4b14ba5fee1e081213102fbb"/><section>
+    <title>CameraInput()</title>
+<indexterm><primary>CameraInput</primary><secondary>CameraInput</secondary></indexterm>
+<indexterm><primary>CameraInput</primary><secondary>CameraInput</secondary></indexterm>
+<para><computeroutput>CameraInput::CameraInput (<link linkend="_class_camera">Camera</link> * camera)</computeroutput></para><para>
+
+<para>Method for attaching the camera controller to a camera object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>camera</entry><entry>
+<para>The camera object to which the controller is attached to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_camera__input_8cpp_source_1l00004">4</link> of file <link linkend="_camera__input_8cpp_source">camera_input.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/components/camera/<link linkend="_camera__input_8h">camera_input.h</link>src/components/camera/<link linkend="_camera__input_8cpp">camera_input.cpp</link></section>
+</section>

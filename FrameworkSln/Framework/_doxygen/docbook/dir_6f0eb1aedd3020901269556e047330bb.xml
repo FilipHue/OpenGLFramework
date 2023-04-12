@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_6f0eb1aedd3020901269556e047330bb" xml:lang="en-US">
+<title>src/managers/logger Directory Reference</title>
+<indexterm><primary>src/managers/logger Directory Reference</primary></indexterm>
+Directory dependency graph for logger:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_6f0eb1aedd3020901269556e047330bb_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_log_8h">log.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_logger_8cpp">logger.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_logger_8h">logger.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logger" xml:lang="en-US">
+<title>Logger Class Reference</title>
+<indexterm><primary>Logger</primary></indexterm>
+<para>
+<computeroutput>#include &lt;logger.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_logger_1a42c282f4c0e2c6557d16e2967c1ddf7e">Init</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_logger_1a918e72e940f8cffb370c9966dc3e9af2">Shutdown</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_logger_8h_source_1l00011">11</link> of file <link linkend="_logger_8h_source">logger.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_logger_1a42c282f4c0e2c6557d16e2967c1ddf7e"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>Logger</secondary></indexterm>
+<indexterm><primary>Logger</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void Logger::Init ( )</computeroutput></para><para>
+Definition at line <link linkend="_logger_8cpp_source_1l00003">3</link> of file <link linkend="_logger_8cpp_source">logger.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_logger_1a918e72e940f8cffb370c9966dc3e9af2"/><section>
+    <title>Shutdown()</title>
+<indexterm><primary>Shutdown</primary><secondary>Logger</secondary></indexterm>
+<indexterm><primary>Logger</primary><secondary>Shutdown</secondary></indexterm>
+<para><computeroutput>void Logger::Shutdown ( )</computeroutput></para><para>
+Definition at line <link linkend="_logger_8cpp_source_1l00036">36</link> of file <link linkend="_logger_8cpp_source">logger.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/managers/logger/<link linkend="_logger_8h">logger.h</link>src/managers/logger/<link linkend="_logger_8cpp">logger.cpp</link></section>
+</section>

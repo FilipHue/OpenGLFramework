@@ -1,0 +1,149 @@
+\hypertarget{class_world}{}\doxysection{World Class Reference}
+\label{class_world}\index{World@{World}}
+
+
+{\ttfamily \#include $<$world.\+h$>$}
+
+
+
+Inheritance diagram for World\+:
+% FIG 0
+
+
+Collaboration diagram for World\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}{World}} ()
+\item 
+virtual void \mbox{\hyperlink{class_world_aa729424b4809c70042dcd7e97c16c3ee}{Init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_world_a0ed085d9bdc6f831dcf462f968846166}{Start\+Frame}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_world_a3082ec0230bd04bf977a4e27599bb8c1}{Update}} (double delta\+\_\+time)=0
+\item 
+virtual void \mbox{\hyperlink{class_world_aaa6d2623410d5e8a789ec917639597ef}{End\+Frame}} ()=0
+\item 
+void \mbox{\hyperlink{class_world_acea6eb85cbad062ded1e62193496e9f5}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Calls the loop update method while the window is active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_world_afa3dd686cb3b3f3084d6c64e9d640820}{Exit}} ()
+\item 
+double \mbox{\hyperlink{class_world_a09f54785fbc2dd9ce3119fc6ef7e9fc4}{Get\+Delta\+Time}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_input_controller}{Input\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_controller_aba927fffeb0bf4c4fd0835d4dfbdfaec}{Input\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Method for connecting the input controller to a component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_input_controller_aa36b76b8144da60b26cd9b8298aa5627}{$\sim$\+Input\+Controller}} ()
+\item 
+void \mbox{\hyperlink{class_input_controller_a7df1a99839e3d5561e6e44cec1b9789b}{Toogle\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Method for toggling the state of the input controller (active or not) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_controller_a5ce94207ea1b3fd285f2782e96b9407a}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Method for checking the state of the input controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_input_controller}{Input\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_input_controller_af2f53ee2e8c951613d83617f259c92d9}{On\+Input\+Update}} (double delta\+\_\+time, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling continous events (like key presses) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_ad5b3dca01698d57084e7a7ec5e118872}{On\+Key\+Press}} (int key, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling key presses. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_ad3e3d7ed6ad1bc31880ae39dd11dcd00}{On\+Key\+Release}} (int key, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling key releases. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_ac66cbb6519379d2809aab3780819c571}{On\+Mouse\+Move}} (double x\+\_\+pos, double y\+\_\+pos, double delta\+\_\+x, double delta\+\_\+y)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse movement. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_aba038c7018d1f62c228ca77210986e9a}{On\+Mouse\+Button\+Press}} (double x\+\_\+pos, double y\+\_\+pos, int button, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse button presses. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_a11cfafe3c6c4dd766df4cd014173c1d8}{On\+Mouse\+Buttton\+Release}} (double x\+\_\+pos, double y\+\_\+pos, int button, int mods)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse button releases. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_input_controller_adc73cbb0d307a92462adf0d70f2d1162}{On\+Mouse\+Scroll}} (double x\+\_\+offset, double y\+\_\+offset)=0
+\begin{DoxyCompactList}\small\item\em Method for handling mouse scroll. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{world_8h_source_l00006}{6}} of file \mbox{\hyperlink{world_8h_source}{world.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}\label{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}} 
+\index{World@{World}!World@{World}}
+\index{World@{World}!World@{World}}
+\doxysubsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily World\+::\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{world_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{world_8cpp_source}{world.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_world_aaa6d2623410d5e8a789ec917639597ef}\label{class_world_aaa6d2623410d5e8a789ec917639597ef}} 
+\index{World@{World}!EndFrame@{EndFrame}}
+\index{EndFrame@{EndFrame}!World@{World}}
+\doxysubsubsection{\texorpdfstring{EndFrame()}{EndFrame()}}
+{\footnotesize\ttfamily virtual void World\+::\+End\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_world_afa3dd686cb3b3f3084d6c64e9d640820}\label{class_world_afa3dd686cb3b3f3084d6c64e9d640820}} 
+\index{World@{World}!Exit@{Exit}}
+\index{Exit@{Exit}!World@{World}}
+\doxysubsubsection{\texorpdfstring{Exit()}{Exit()}}
+{\footnotesize\ttfamily void World\+::\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{world_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{world_8cpp_source}{world.\+cpp}}.
+
+\mbox{\Hypertarget{class_world_a09f54785fbc2dd9ce3119fc6ef7e9fc4}\label{class_world_a09f54785fbc2dd9ce3119fc6ef7e9fc4}} 
+\index{World@{World}!GetDeltaTime@{GetDeltaTime}}
+\index{GetDeltaTime@{GetDeltaTime}!World@{World}}
+\doxysubsubsection{\texorpdfstring{GetDeltaTime()}{GetDeltaTime()}}
+{\footnotesize\ttfamily double World\+::\+Get\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{world_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{world_8cpp_source}{world.\+cpp}}.
+
+\mbox{\Hypertarget{class_world_aa729424b4809c70042dcd7e97c16c3ee}\label{class_world_aa729424b4809c70042dcd7e97c16c3ee}} 
+\index{World@{World}!Init@{Init}}
+\index{Init@{Init}!World@{World}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void World\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_world_acea6eb85cbad062ded1e62193496e9f5}\label{class_world_acea6eb85cbad062ded1e62193496e9f5}} 
+\index{World@{World}!Run@{Run}}
+\index{Run@{Run}!World@{World}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void World\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls the loop update method while the window is active. 
+
+
+
+Definition at line \mbox{\hyperlink{world_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{world_8cpp_source}{world.\+cpp}}.
+
+\mbox{\Hypertarget{class_world_a0ed085d9bdc6f831dcf462f968846166}\label{class_world_a0ed085d9bdc6f831dcf462f968846166}} 
+\index{World@{World}!StartFrame@{StartFrame}}
+\index{StartFrame@{StartFrame}!World@{World}}
+\doxysubsubsection{\texorpdfstring{StartFrame()}{StartFrame()}}
+{\footnotesize\ttfamily virtual void World\+::\+Start\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_world_a3082ec0230bd04bf977a4e27599bb8c1}\label{class_world_a3082ec0230bd04bf977a4e27599bb8c1}} 
+\index{World@{World}!Update@{Update}}
+\index{Update@{Update}!World@{World}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void World\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{delta\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{world_8h}{world.\+h}}\item 
+src/\mbox{\hyperlink{world_8cpp}{world.\+cpp}}\end{DoxyCompactItemize}

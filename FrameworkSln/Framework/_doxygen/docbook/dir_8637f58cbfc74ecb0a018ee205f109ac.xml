@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_8637f58cbfc74ecb0a018ee205f109ac" xml:lang="en-US">
+<title>src/engine/core/window Directory Reference</title>
+<indexterm><primary>src/engine/core/window Directory Reference</primary></indexterm>
+Directory dependency graph for window:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_8637f58cbfc74ecb0a018ee205f109ac_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_window_8cpp">window.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_window_8h">window.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_window__callbacks_8cpp">window_callbacks.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_window__callbacks_8h">window_callbacks.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_window__properties_8h">window_properties.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

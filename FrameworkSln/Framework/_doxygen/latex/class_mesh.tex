@@ -1,0 +1,124 @@
+\hypertarget{class_mesh}{}\doxysection{Mesh Class Reference}
+\label{class_mesh}\index{Mesh@{Mesh}}
+
+
+{\ttfamily \#include $<$mesh.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mesh_a059ef42f924f1ec776634cfb0a588e66}{Mesh}} (std\+::string mesh\+\_\+id, unsigned int VAO, std\+::vector$<$ \mbox{\hyperlink{vertex_8h_a9a691a57a842e8225d7a070565828c27}{Vertex}} $>$ \&vertices, std\+::vector$<$ unsigned int $>$ \&indices, \mbox{\hyperlink{material_8h_aa8c92fe9490e4ed00377792bf8304307}{Material}} $\ast$\mbox{\hyperlink{structmaterial}{material}}=nullptr, bool has\+\_\+error=false)
+\item 
+const char $\ast$ \mbox{\hyperlink{class_mesh_a84a579817f5c86e8e4840f0f2f5f5d0f}{Get\+Mesh\+Id}} () const
+\item 
+const unsigned int \mbox{\hyperlink{class_mesh_abdeea7b206b62ed5c898ea8e3d237244}{Get\+VAO}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{vertex_8h_a9a691a57a842e8225d7a070565828c27}{Vertex}} $>$ \mbox{\hyperlink{class_mesh_a8914670896ad947368745f7fd82ba9dd}{Get\+Vertices}} () const
+\item 
+const std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{class_mesh_aaaa51cde5fad8e11a6d22cf92318239f}{Get\+Indices}} () const
+\item 
+const \mbox{\hyperlink{material_8h_aa8c92fe9490e4ed00377792bf8304307}{Material}} $\ast$ \mbox{\hyperlink{class_mesh_a8529bb5172422e3e527da9bfe88f7c20}{Get\+Material}} () const
+\item 
+const bool \mbox{\hyperlink{class_mesh_a7dafd24a0b4c8db87ab8c0b075326662}{Get\+Error}} () const
+\item 
+void \mbox{\hyperlink{class_mesh_a51777273f23b1e3a5cb798873a33a892}{Has\+Error}} (bool error)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{mesh_8h_source_l00008}{8}} of file \mbox{\hyperlink{mesh_8h_source}{mesh.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mesh_a059ef42f924f1ec776634cfb0a588e66}\label{class_mesh_a059ef42f924f1ec776634cfb0a588e66}} 
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{std\+::string}]{mesh\+\_\+id,  }\item[{unsigned int}]{VAO,  }\item[{std\+::vector$<$ \mbox{\hyperlink{vertex_8h_a9a691a57a842e8225d7a070565828c27}{Vertex}} $>$ \&}]{vertices,  }\item[{std\+::vector$<$ unsigned int $>$ \&}]{indices,  }\item[{\mbox{\hyperlink{material_8h_aa8c92fe9490e4ed00377792bf8304307}{Material}} $\ast$}]{material = {\ttfamily nullptr},  }\item[{bool}]{has\+\_\+error = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mesh_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{mesh_8cpp_source}{mesh.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mesh_a7dafd24a0b4c8db87ab8c0b075326662}\label{class_mesh_a7dafd24a0b4c8db87ab8c0b075326662}} 
+\index{Mesh@{Mesh}!GetError@{GetError}}
+\index{GetError@{GetError}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{GetError()}{GetError()}}
+{\footnotesize\ttfamily const bool Mesh\+::\+Get\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{mesh_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{mesh_8cpp_source}{mesh.\+cpp}}.
+
+\mbox{\Hypertarget{class_mesh_aaaa51cde5fad8e11a6d22cf92318239f}\label{class_mesh_aaaa51cde5fad8e11a6d22cf92318239f}} 
+\index{Mesh@{Mesh}!GetIndices@{GetIndices}}
+\index{GetIndices@{GetIndices}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{GetIndices()}{GetIndices()}}
+{\footnotesize\ttfamily const std\+::vector$<$ unsigned int $>$ Mesh\+::\+Get\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{mesh_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{mesh_8cpp_source}{mesh.\+cpp}}.
+
+\mbox{\Hypertarget{class_mesh_a8529bb5172422e3e527da9bfe88f7c20}\label{class_mesh_a8529bb5172422e3e527da9bfe88f7c20}} 
+\index{Mesh@{Mesh}!GetMaterial@{GetMaterial}}
+\index{GetMaterial@{GetMaterial}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{GetMaterial()}{GetMaterial()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{material_8h_aa8c92fe9490e4ed00377792bf8304307}{Material}} $\ast$ Mesh\+::\+Get\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{mesh_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{mesh_8cpp_source}{mesh.\+cpp}}.
+
+\mbox{\Hypertarget{class_mesh_a84a579817f5c86e8e4840f0f2f5f5d0f}\label{class_mesh_a84a579817f5c86e8e4840f0f2f5f5d0f}} 
+\index{Mesh@{Mesh}!GetMeshId@{GetMeshId}}
+\index{GetMeshId@{GetMeshId}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{GetMeshId()}{GetMeshId()}}
+{\footnotesize\ttfamily const char $\ast$ Mesh\+::\+Get\+Mesh\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{mesh_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{mesh_8cpp_source}{mesh.\+cpp}}.
+
+\mbox{\Hypertarget{class_mesh_abdeea7b206b62ed5c898ea8e3d237244}\label{class_mesh_abdeea7b206b62ed5c898ea8e3d237244}} 
+\index{Mesh@{Mesh}!GetVAO@{GetVAO}}
+\index{GetVAO@{GetVAO}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{GetVAO()}{GetVAO()}}
+{\footnotesize\ttfamily const unsigned int Mesh\+::\+Get\+VAO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{mesh_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{mesh_8cpp_source}{mesh.\+cpp}}.
+
+\mbox{\Hypertarget{class_mesh_a8914670896ad947368745f7fd82ba9dd}\label{class_mesh_a8914670896ad947368745f7fd82ba9dd}} 
+\index{Mesh@{Mesh}!GetVertices@{GetVertices}}
+\index{GetVertices@{GetVertices}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{GetVertices()}{GetVertices()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{vertex_8h_a9a691a57a842e8225d7a070565828c27}{Vertex}} $>$ Mesh\+::\+Get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{mesh_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{mesh_8cpp_source}{mesh.\+cpp}}.
+
+\mbox{\Hypertarget{class_mesh_a51777273f23b1e3a5cb798873a33a892}\label{class_mesh_a51777273f23b1e3a5cb798873a33a892}} 
+\index{Mesh@{Mesh}!HasError@{HasError}}
+\index{HasError@{HasError}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{HasError()}{HasError()}}
+{\footnotesize\ttfamily void Mesh\+::\+Has\+Error (\begin{DoxyParamCaption}\item[{bool}]{error }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mesh_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{mesh_8cpp_source}{mesh.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/components/mesh/\mbox{\hyperlink{mesh_8h}{mesh.\+h}}\item 
+src/components/mesh/\mbox{\hyperlink{mesh_8cpp}{mesh.\+cpp}}\end{DoxyCompactItemize}

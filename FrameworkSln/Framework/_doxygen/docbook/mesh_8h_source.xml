@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mesh_8h_source" xml:lang="en-US">
+<title>mesh.h</title>
+<indexterm><primary>src/components/mesh/mesh.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_mesh_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_mesh_8h_source_1l00002"/>00002 
+<anchor xml:id="_mesh_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;core.h&gt;</emphasis>
+<anchor xml:id="_mesh_8h_source_1l00004"/>00004 
+<anchor xml:id="_mesh_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;../../utils/vertex.h&quot;</emphasis>
+<anchor xml:id="_mesh_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;../../utils/material.h&quot;</emphasis>
+<anchor xml:id="_mesh_8h_source_1l00007"/>00007 
+<anchor xml:id="_mesh_8h_source_1l00008"/><link linkend="_class_mesh">00008</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_mesh">Mesh</link>
+<anchor xml:id="_mesh_8h_source_1l00009"/>00009 {
+<anchor xml:id="_mesh_8h_source_1l00010"/>00010 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_mesh_8h_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<link linkend="_class_mesh">Mesh</link>(
+<anchor xml:id="_mesh_8h_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;mesh_id,
+<anchor xml:id="_mesh_8h_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;VAO,
+<anchor xml:id="_mesh_8h_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;Vertex&gt;&amp;&#32;vertices,
+<anchor xml:id="_mesh_8h_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;unsigned&#32;int&gt;&amp;&#32;indices,
+<anchor xml:id="_mesh_8h_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structmaterial">Material</link>*&#32;<link linkend="_structmaterial">material</link>&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>,
+<anchor xml:id="_mesh_8h_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;has_error&#32;=&#32;<emphasis role="keyword">false</emphasis>
+<anchor xml:id="_mesh_8h_source_1l00018"/>00018 &#32;&#32;&#32;&#32;);
+<anchor xml:id="_mesh_8h_source_1l00019"/>00019 
+<anchor xml:id="_mesh_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_class_mesh_1a84a579817f5c86e8e4840f0f2f5f5d0f">GetMeshId</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mesh_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_mesh_1abdeea7b206b62ed5c898ea8e3d237244">GetVAO</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mesh_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;Vertex&gt;&#32;<link linkend="_class_mesh_1a8914670896ad947368745f7fd82ba9dd">GetVertices</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mesh_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;unsigned&#32;int&gt;&#32;<link linkend="_class_mesh_1aaaa51cde5fad8e11a6d22cf92318239f">GetIndices</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mesh_8h_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structmaterial">Material</link>*&#32;<link linkend="_class_mesh_1a8529bb5172422e3e527da9bfe88f7c20">GetMaterial</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mesh_8h_source_1l00025"/>00025 
+<anchor xml:id="_mesh_8h_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_mesh_1a7dafd24a0b4c8db87ab8c0b075326662">GetError</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mesh_8h_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mesh_1a51777273f23b1e3a5cb798873a33a892">HasError</link>(<emphasis role="keywordtype">bool</emphasis>&#32;error);
+<anchor xml:id="_mesh_8h_source_1l00028"/>00028 
+<anchor xml:id="_mesh_8h_source_1l00029"/>00029 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_mesh_8h_source_1l00030"/>00030 &#32;&#32;&#32;&#32;std::string&#32;mesh_id;
+<anchor xml:id="_mesh_8h_source_1l00031"/>00031 
+<anchor xml:id="_mesh_8h_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;VAO;
+<anchor xml:id="_mesh_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;std::vector&lt;Vertex&gt;&#32;vertices;
+<anchor xml:id="_mesh_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;std::vector&lt;unsigned&#32;int&gt;&#32;indices;
+<anchor xml:id="_mesh_8h_source_1l00035"/>00035 
+<anchor xml:id="_mesh_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<link linkend="_structmaterial">Material</link>*&#32;<link linkend="_structmaterial">material</link>;
+<anchor xml:id="_mesh_8h_source_1l00037"/>00037 
+<anchor xml:id="_mesh_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;has_error;
+<anchor xml:id="_mesh_8h_source_1l00039"/>00039 };
+</programlisting></section>

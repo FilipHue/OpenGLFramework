@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_texture__2_d_8cpp" xml:lang="en-US">
+<title>src/managers/texture/texture_2D.cpp File Reference</title>
+<indexterm><primary>src/managers/texture/texture_2D.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;texture_2D.h&quot;<?linebreak?>#include &lt;stb_image.h&gt;<?linebreak?></programlisting>Include dependency graph for texture_2D.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="texture__2_d_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_texture__2_d_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78">STB_IMAGE_IMPLEMENTATION</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_texture__2_d_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78"/><section>
+    <title>STB_IMAGE_IMPLEMENTATION</title>
+<indexterm><primary>STB_IMAGE_IMPLEMENTATION</primary><secondary>texture_2D.cpp</secondary></indexterm>
+<indexterm><primary>texture_2D.cpp</primary><secondary>STB_IMAGE_IMPLEMENTATION</secondary></indexterm>
+<para><computeroutput>#define STB_IMAGE_IMPLEMENTATION</computeroutput></para><para>
+Definition at line <link linkend="_texture__2_d_8cpp_source_1l00003">3</link> of file <link linkend="_texture__2_d_8cpp_source">texture_2D.cpp</link>.</para>
+</section>
+</section>
+</section>

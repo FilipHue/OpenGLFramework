@@ -1,0 +1,276 @@
+.TH "Window" 3 "Sun Apr 9 2023" "OpenGL Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Window
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <window\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP (\fBwindow_properties\fP *wp)"
+.br
+.RI "Method for initializing the glfw and glad library, setting window hints and creating the window context\&. "
+.ti -1c
+.RI "void \fBShutdown\fP ()"
+.br
+.RI "Method for terminating the window context\&. "
+.ti -1c
+.RI "void \fBPollEvents\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwapBuffers\fP ()"
+.br
+.ti -1c
+.RI "int \fBShouldClose\fP ()"
+.br
+.ti -1c
+.RI "GLFWwindow * \fBGetNativeWindow\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetWindowHints\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetWindowCallbacks\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCursor\fP (int x_pos, int y_pos)"
+.br
+.ti -1c
+.RI "void \fBCenterCursor\fP ()"
+.br
+.ti -1c
+.RI "void \fBShowCursor\fP ()"
+.br
+.ti -1c
+.RI "void \fBHideCursor\fP ()"
+.br
+.ti -1c
+.RI "void \fBDisableCursor\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetWindow\fP (int x_pos, int y_pos)"
+.br
+.ti -1c
+.RI "void \fBCenterWindow\fP ()"
+.br
+.ti -1c
+.RI "bool \fBGetContinousPress\fP (int key)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBKeyCallbacks\fP (int key, int scancode, int action, int mods)"
+.br
+.RI "Method for handling keyboard input\&. "
+.ti -1c
+.RI "static void \fBMouseButtonCallbacks\fP (int button, int action, int mods)"
+.br
+.RI "Method for handling mouse button input\&. "
+.ti -1c
+.RI "static void \fBMouseMoveCallbacks\fP (double x_pos, double y_pos)"
+.br
+.RI "Method for handling mouse movement\&. "
+.ti -1c
+.RI "static void \fBMouseScrollCallbacks\fP (double x_offset, double y_offset)"
+.br
+.RI "Method for handling mouse scroll\&. "
+.ti -1c
+.RI "static void \fBContinousEvents\fP (double delta_time)"
+.br
+.RI "Method for handling continous events (continous key press, for example) "
+.ti -1c
+.RI "static void \fBSubscribeToEvents\fP (\fBInputController\fP *ic)"
+.br
+.RI "Method for connecting an input controller to the current window (for 'listening' to events) "
+.ti -1c
+.RI "static void \fBUnsubscribeFromEvents\fP (\fBInputController\fP *ic)"
+.br
+.RI "Method for disconnecting an input controller from the current window\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "glm::ivec2 \fBresolution\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBWindowCallbacks\fP"
+.br
+.ti -1c
+.RI "class \fBInputController\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB15\fP of file \fBwindow\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Window::CenterCursor ()"
+
+.PP
+Definition at line \fB167\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::CenterWindow ()"
+
+.PP
+Definition at line \fB194\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::ContinousEvents (double delta_time)\fC [static]\fP"
+
+.PP
+Method for handling continous events (continous key press, for example) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdelta_time\fP The time between the last frame and the current frame 
+.RE
+.PP
+
+.PP
+Definition at line \fB133\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::DisableCursor ()"
+
+.PP
+Definition at line \fB184\fP of file \fBwindow\&.cpp\fP\&.
+.SS "bool Window::GetContinousPress (int key)"
+
+.PP
+Definition at line \fB199\fP of file \fBwindow\&.cpp\fP\&.
+.SS "GLFWwindow * Window::GetNativeWindow ()"
+
+.PP
+Definition at line \fB78\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::HideCursor ()"
+
+.PP
+Definition at line \fB179\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::Init (\fBwindow_properties\fP * wp)"
+
+.PP
+Method for initializing the glfw and glad library, setting window hints and creating the window context\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwp\fP Structure for window properties 
+.RE
+.PP
+
+.PP
+Definition at line \fB17\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::KeyCallbacks (int key, int scancode, int action, int mods)\fC [static]\fP"
+
+.PP
+Method for handling keyboard input\&. See window_callbacks for more information 
+.PP
+Definition at line \fB84\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::MouseButtonCallbacks (int button, int action, int mods)\fC [static]\fP"
+
+.PP
+Method for handling mouse button input\&. See window_callbacks for more information 
+.PP
+Definition at line \fB97\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::MouseMoveCallbacks (double x_pos, double y_pos)\fC [static]\fP"
+
+.PP
+Method for handling mouse movement\&. See window_callbacks for more information 
+.PP
+Definition at line \fB105\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::MouseScrollCallbacks (double x_offset, double y_offset)\fC [static]\fP"
+
+.PP
+Method for handling mouse scroll\&. See window_callbacks for more information 
+.PP
+Definition at line \fB126\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::PollEvents ()"
+
+.PP
+Definition at line \fB61\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::SetCursor (int x_pos, int y_pos)"
+
+.PP
+Definition at line \fB162\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::SetWindow (int x_pos, int y_pos)"
+
+.PP
+Definition at line \fB189\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::SetWindowCallbacks ()"
+
+.PP
+Definition at line \fB154\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::SetWindowHints ()"
+
+.PP
+Definition at line \fB140\fP of file \fBwindow\&.cpp\fP\&.
+.SS "int Window::ShouldClose ()"
+
+.PP
+Definition at line \fB71\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::ShowCursor ()"
+
+.PP
+Definition at line \fB174\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::Shutdown ()"
+
+.PP
+Method for terminating the window context\&. 
+.PP
+Definition at line \fB55\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::SubscribeToEvents (\fBInputController\fP * ic)\fC [static]\fP"
+
+.PP
+Method for connecting an input controller to the current window (for 'listening' to events) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIic\fP The input controller that is being connected 
+.RE
+.PP
+
+.PP
+Definition at line \fB204\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::SwapBuffers ()"
+
+.PP
+Definition at line \fB66\fP of file \fBwindow\&.cpp\fP\&.
+.SS "void Window::UnsubscribeFromEvents (\fBInputController\fP * ic)\fC [static]\fP"
+
+.PP
+Method for disconnecting an input controller from the current window\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIic\fP The input controller that is being disconnected 
+.RE
+.PP
+
+.PP
+Definition at line \fB209\fP of file \fBwindow\&.cpp\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBInputController\fP\fC [friend]\fP"
+
+.PP
+Definition at line \fB18\fP of file \fBwindow\&.h\fP\&.
+.SS "friend class \fBWindowCallbacks\fP\fC [friend]\fP"
+
+.PP
+Definition at line \fB17\fP of file \fBwindow\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "glm::ivec2 Window::resolution"
+
+.PP
+Definition at line \fB90\fP of file \fBwindow\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenGL Framework from the source code\&.
