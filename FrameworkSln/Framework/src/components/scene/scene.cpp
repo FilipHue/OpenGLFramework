@@ -16,13 +16,19 @@ void Scene::CreateMesh(const char* name, std::vector<Vertex>& vertices, std::vec
 
 void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* texture_name, LightProperties* light_props)
 {
+	glm::mat4 model_matrix(1);
+	model_matrix = glm::translate(model_matrix, position);
+
+	RenderMesh(mesh, shader, model_matrix, texture_name, light_props);
+}
+
+void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, const char* texture_name, LightProperties* light_props)
+{
 	if (!mesh || !shader || (!p_texture_manager->GetTexture2D(texture_name) && texture_name)) {
 		RENDER_ERROR("Mesh, shader or texture missing");
 		return;
 	}
 
-	glm::mat4 model_matrix(1);
-	model_matrix = glm::translate(model_matrix, position);
 	SendToShader(mesh, shader, model_matrix, light_props == NULL ? 0 : 1);
 
 	if (light_props) {

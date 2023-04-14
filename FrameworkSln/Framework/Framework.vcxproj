@@ -151,6 +151,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="demos\demo1_transformations\demo_transformation.cpp" />
+    <ClCompile Include="demos\demo2_lighting\demo_phong.cpp" />
+    <ClCompile Include="demos\demo2_lighting\demo_phong_texture.cpp" />
     <ClCompile Include="src\managers\file\file_manager.cpp" />
     <ClCompile Include="src\components\camera\camera_input.cpp" />
     <ClCompile Include="src\components\camera\camera.cpp" />
@@ -172,6 +175,10 @@
     <ClCompile Include="src\managers\texture\texture_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="demos.h" />
+    <ClInclude Include="demos\demo1_transformations\demo_transformation.h" />
+    <ClInclude Include="demos\demo2_lighting\demo_phong.h" />
+    <ClInclude Include="demos\demo2_lighting\demo_phong_texture.h" />
     <ClInclude Include="src\managers\file\file_manager.h" />
     <ClInclude Include="src\components\camera\camera_input.h" />
     <ClInclude Include="src\components\camera\camera.h" />

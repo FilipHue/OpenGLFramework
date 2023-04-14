@@ -47,10 +47,10 @@ void Demo::Update(double delta_time)
 		glm::vec3(0.5f, 0.5f, 0.5f)
 	};
 
-	RenderMesh(meshes["Cube1"], shaders["PhongShader"], glm::vec3(-3.5, 0, -0.5), "container", light1);
-	RenderMesh(meshes["Cube2"], shaders["PhongShader"], glm::vec3(2.5, 0, -0.5), "container", light1);
-	RenderMesh(meshes["Cube3"], shaders["PhongShader"], glm::vec3(-5, -3.0, -5), "container", light1);
-	RenderMesh(meshes["Cube4"], shaders["PhongShader"], glm::vec3(-0.5, 2.5, -0.5), "container", light1);
+	RenderMesh(meshes["Cube1"], shaders["PhongtShader"], glm::vec3(-3.5, 0, -0.5), "container", light1);
+	RenderMesh(meshes["Cube2"], shaders["PhongtShader"], glm::vec3(2.5, 0, -0.5), "container", light1);
+	RenderMesh(meshes["Cube3"], shaders["PhongtShader"], glm::vec3(-5, -3.0, -5), "container", light1);
+	RenderMesh(meshes["Cube4"], shaders["PhongtShader"], glm::vec3(-0.5, 2.5, -0.5), "container", light1);
 	RenderMesh(meshes["Cube5"], shaders["SimpleShader"], glm::vec3(lightX, lightY, lightZ));
 }
 

@@ -1,22 +1,2 @@
-﻿  file_manager.cpp
-  camera_input.cpp
-  camera.cpp
-  mesh.cpp
-  scene_input.cpp
-  shader.cpp
-  engine.cpp
-  input_controller.cpp
-  logger.cpp
-  main.cpp
-  window.cpp
-  window_callbacks.cpp
-  shape_manager.cpp
-  world.cpp
-  scene.cpp
-D:\Diverse\OpenGLFramework\FrameworkSln\Framework\src\components\scene\scene.cpp(48,82): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-  Demo.cpp
-  texture_2D.cpp
-  texture_manager.cpp
-  Generating Code...
-  glad.c
+﻿  main.cpp
   Framework.vcxproj -> D:\Diverse\OpenGLFramework\FrameworkSln\Framework\_exec\bin\x64-Debug\Framework\Framework.exe
