@@ -18,8 +18,8 @@ void Demo::Init()
 
 	//p_shape_manager->CreateRectangleY("Screen", p_window->resolution.x, p_window->resolution.y);
 
-	p_texture_manager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\textures\\container.png", "container");
-	p_texture_manager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\textures\\container_specular.png", "container_sp");
+	p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container.png")).c_str(), "container");
+	p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container_specular.png")).c_str(), "container_sp");
 
 	lightMoveSpeed = 2.0f;
 	lightX = 0.0f;

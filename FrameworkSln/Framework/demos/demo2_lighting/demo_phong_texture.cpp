@@ -11,8 +11,8 @@ void DemoPhongTexture::Init()
 	p_shape_manager->CreateCube("Cube7", 10, 1, 10);
 	p_shape_manager->CreateCube("Light", 0.1f, 0.1f, 0.1f);
 
-	p_texture_manager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\textures\\container.png", "container");
-	p_texture_manager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\textures\\container_specular.png", "container_sp");
+	p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container.png")).c_str(), "container");
+	p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container_specular.png")).c_str(), "container_sp");
 
 	lightMoveSpeed = 2.0f;
 	lightX = 0.0f;

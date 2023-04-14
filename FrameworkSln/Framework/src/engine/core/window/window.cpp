@@ -19,6 +19,7 @@ void Window::Init(window_properties* wp)
 	p_properties = wp;
 	resolution.x = wp->width;
 	resolution.y = wp->height;
+	project_dir = wp->project_directory;
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);

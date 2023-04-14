@@ -1,2 +1,5 @@
-﻿  main.cpp
+﻿  Demo.cpp
+  demo_phong_texture.cpp
+  texture_manager.cpp
+  Generating Code...
   Framework.vcxproj -> D:\Diverse\OpenGLFramework\FrameworkSln\Framework\_exec\bin\x64-Debug\Framework\Framework.exe

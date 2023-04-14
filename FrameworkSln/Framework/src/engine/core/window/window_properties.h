@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 /**
  * @brief Structure for keeping window properties
  * @brief See https://www.glfw.org/docs/latest/window_guide.html#window_hints for more information
@@ -7,6 +9,7 @@
 typedef struct window_properties window_properties;
 struct window_properties {
 	const char* title;
+	std::string project_directory;
 
 	unsigned int width;
 	unsigned int height;
@@ -26,6 +29,7 @@ struct window_properties {
 
 	window_properties(
 		const char* title,
+		std::string project_directory,
 
 		unsigned int width,
 		unsigned int height,
@@ -42,9 +46,10 @@ struct window_properties {
 		bool center_cursor = GLFW_TRUE,
 
 		int refresh_rate = 60
-	) : title(title), width(width), height(height),
-		aspect_ration((double)width / height), vsync(vsync), resiable(resizable),
-		visible(visible), decorated(decorated), focused(focused),
-		auto_iconify(auto_iconify), floating(floating), maximized(maximized),
-		center_cursor(center_cursor), refresh_rate(refresh_rate) {}
+	) : title(title), project_directory(project_directory),
+		width(width), height(height), aspect_ration((double)width / height),
+		vsync(vsync), resiable(resizable), visible(visible),
+		decorated(decorated), focused(focused), auto_iconify(auto_iconify),
+		floating(floating), maximized(maximized), center_cursor(center_cursor),
+		refresh_rate(refresh_rate) {}
 };

@@ -71,7 +71,7 @@ void Scene::Init()
 	std::unordered_map<std::string, std::string> vertex_files;
 	std::unordered_map<std::string, std::string> fragment_files;
 
-	FileManager::GetShaderFiles("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\shaders", vertex_files, fragment_files);
+	FileManager::GetShaderFiles(p_window->project_dir + "\\assets\\shaders", vertex_files, fragment_files);
 
 	for (
 		auto vertex_file = vertex_files.begin(), fragment_file = fragment_files.begin();

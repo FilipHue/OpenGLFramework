@@ -88,6 +88,7 @@ public:
 
 public:
 	glm::ivec2 resolution;
+	std::string project_dir;
 
 private:
 	window_properties* p_properties;
