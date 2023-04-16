@@ -9,6 +9,7 @@ public:
 	double lightMoveSpeed;
 
 	glm::mat4 model_matrix;
+	LightProperties* light;
 
 private:
 	void Init() override;

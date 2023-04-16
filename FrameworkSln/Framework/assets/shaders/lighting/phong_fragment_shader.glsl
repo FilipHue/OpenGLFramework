@@ -14,12 +14,20 @@ struct Material {
 
 struct Light {
 	vec3 position;
+	vec3 direction;
 	vec3 colour;
 
 	vec3 Ka;
 	vec3 Kd;
 	vec3 Ksp;
 	float Ksh;
+
+	float Kc;
+	float Kl;
+	float Kq;
+
+	float in_cutoff_angle;
+	float out_cutoff_angle;
 };	
 	
 uniform vec3 objectColour;
@@ -43,11 +51,7 @@ void main()
 	vec3 reflectDirection = reflect(-lightDirection, normal);
 	vec3 specular = pow(max(dot(viewDirection, reflectDirection), 0.0), material.Ksh) * material.Ksp * light.colour;
 
-	// attenuation factor
-	float d = distance(light.position, fragPosition); 
-	float attenuationFactor = 1 / (1 + 0.14 * d + 0.07 * d * d);
-
 	// result
-	vec3 finalLight = (ambient + attenuationFactor * (specular + diffuse)) * objectColour;
+	vec3 finalLight = (ambient + specular + diffuse) * objectColour;
 	fragColour = vec4(finalLight, 1.0f);
 }

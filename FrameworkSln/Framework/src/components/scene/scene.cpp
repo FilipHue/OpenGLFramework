@@ -36,11 +36,20 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, const
 		glm::vec3 view_position = p_scene_camera->GetCameraPosition();
 
 		shader->SetVec3("light.position", light_props->position);
+		shader->SetVec3("light.direction", light_props->direction);
 		shader->SetVec3("light.colour", light_props->colour);
+
 		shader->SetVec3("light.Ka", light_props->Ka);
 		shader->SetVec3("light.Kd", light_props->Kd);
 		shader->SetVec3("light.Ksp", light_props->Ksp);
 		shader->SetFloat("light.Ksh", light_props->Ksh);
+
+		shader->SetFloat("light.Kc", light_props->Kc);
+		shader->SetFloat("light.Kl", light_props->Kl);
+		shader->SetFloat("light.Kq", light_props->Kq);
+
+		shader->SetFloat("light.in_cutoff_angle", light_props->in_cutoff_angle);
+		shader->SetFloat("light.out_cutoff_angle", light_props->out_cutoff_angle);
 
 		shader->SetVec3("objectColour", object_colour);
 		shader->SetVec3("viewPosition", view_position);

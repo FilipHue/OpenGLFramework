@@ -15,12 +15,20 @@ struct Material {
 
 struct Light {
 	vec3 position;
+	vec3 direction;
 	vec3 colour;
 
 	vec3 Ka;
 	vec3 Kd;
 	vec3 Ksp;
 	float Ksh;
+
+	float Kc;
+	float Kl;
+	float Kq;
+
+	float in_cutoff_angle;
+	float out_cutoff_angle;
 };	
 
 uniform vec3 viewPosition;
@@ -43,11 +51,7 @@ void main()
 	vec3 reflectDirection	= reflect(-lightDirection, normal);
 	vec3 specular			= light.Ksp * pow(max(dot(viewDirection, reflectDirection), 0.0), material.Ksh) * texture(material.Ksp, texCoords).rgb;
 
-	// attenuation factor
-	float d					= distance(light.position, fragPosition); 
-	float attenuationFactor = 1 / (1 + 0.14 * d + 0.07 * d * d);
-
 	// result
-	vec3 finalLight			= (ambient + attenuationFactor * (specular + diffuse));
+	vec3 finalLight			= (ambient + specular + diffuse);
 	fragColour				= vec4(finalLight, 1.0f);
 }

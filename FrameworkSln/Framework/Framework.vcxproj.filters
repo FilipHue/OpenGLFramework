@@ -81,6 +81,15 @@
     <ClCompile Include="demos\demo2_lighting\demo_phong_texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="demos\demo2_lighting\demo_directional_light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demos\demo2_lighting\demo_point_light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demos\demo2_lighting\demo_spotlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\core\window\window.h">
@@ -200,6 +209,15 @@
     <ClInclude Include="demos\demo2_lighting\demo_phong_texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="demos\demo2_lighting\demo_directional_light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="demos\demo2_lighting\demo_point_light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="demos\demo2_lighting\demo_spotlight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\shaders\simple\simple_fragment_shader.glsl" />
@@ -215,6 +233,12 @@
     <None Include="assets\shaders\lighting\phongt_fragment_shader.glsl" />
     <None Include="assets\shaders\lighting\phongt_vertex_shader.glsl" />
     <None Include="Doxyfile" />
+    <None Include="assets\shaders\lighting\directional_vertex_shader.glsl" />
+    <None Include="assets\shaders\lighting\directional_fragment_shader.glsl" />
+    <None Include="assets\shaders\lighting\point_fragment_shader.glsl" />
+    <None Include="assets\shaders\lighting\point_vertex_shader.glsl" />
+    <None Include="assets\shaders\lighting\spotlight_fragment_shader.glsl" />
+    <None Include="assets\shaders\lighting\spotlight_vertex_shader.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\container.png">

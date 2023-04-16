@@ -154,6 +154,9 @@
     <ClCompile Include="demos\demo1_transformations\demo_transformation.cpp" />
     <ClCompile Include="demos\demo2_lighting\demo_phong.cpp" />
     <ClCompile Include="demos\demo2_lighting\demo_phong_texture.cpp" />
+    <ClCompile Include="demos\demo2_lighting\demo_directional_light.cpp" />
+    <ClCompile Include="demos\demo2_lighting\demo_point_light.cpp" />
+    <ClCompile Include="demos\demo2_lighting\demo_spotlight.cpp" />
     <ClCompile Include="src\managers\file\file_manager.cpp" />
     <ClCompile Include="src\components\camera\camera_input.cpp" />
     <ClCompile Include="src\components\camera\camera.cpp" />
@@ -179,6 +182,9 @@
     <ClInclude Include="demos\demo1_transformations\demo_transformation.h" />
     <ClInclude Include="demos\demo2_lighting\demo_phong.h" />
     <ClInclude Include="demos\demo2_lighting\demo_phong_texture.h" />
+    <ClInclude Include="demos\demo2_lighting\demo_directional_light.h" />
+    <ClInclude Include="demos\demo2_lighting\demo_point_light.h" />
+    <ClInclude Include="demos\demo2_lighting\demo_spotlight.h" />
     <ClInclude Include="src\managers\file\file_manager.h" />
     <ClInclude Include="src\components\camera\camera_input.h" />
     <ClInclude Include="src\components\camera\camera.h" />
@@ -218,10 +224,16 @@
   <ItemGroup>
     <None Include="assets\shaders\grid\grid_fragment_shader.glsl" />
     <None Include="assets\shaders\grid\grid_vertex_shader.glsl" />
+    <None Include="assets\shaders\lighting\directional_fragment_shader.glsl" />
+    <None Include="assets\shaders\lighting\directional_vertex_shader.glsl" />
     <None Include="assets\shaders\lighting\phongt_fragment_shader.glsl" />
     <None Include="assets\shaders\lighting\phongt_vertex_shader.glsl" />
     <None Include="assets\shaders\lighting\phong_fragment_shader.glsl" />
     <None Include="assets\shaders\lighting\phong_vertex_shader.glsl" />
+    <None Include="assets\shaders\lighting\point_fragment_shader.glsl" />
+    <None Include="assets\shaders\lighting\point_vertex_shader.glsl" />
+    <None Include="assets\shaders\lighting\spotlight_fragment_shader.glsl" />
+    <None Include="assets\shaders\lighting\spotlight_vertex_shader.glsl" />
     <None Include="assets\shaders\simple\simple_fragment_shader.glsl" />
     <None Include="assets\shaders\simple\simple_vertex_shader.glsl" />
     <None Include="assets\shaders\test\test_fragment_shader.glsl" />

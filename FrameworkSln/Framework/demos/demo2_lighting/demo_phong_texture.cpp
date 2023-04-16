@@ -19,9 +19,16 @@ void DemoPhongTexture::Init()
 	lightY = 0.5f;
 	lightZ = 0.0f;
 
-	model_matrix = glm::mat4(1);
+	light = new LightProperties{
+		glm::vec3(lightX, lightY, lightZ),
+		glm::vec3(0.0f, 0.0f, 0.0f),
+		glm::vec3(1.0f, 1.0f, 0.8f),
 
-	shaders["PhongtShader"]->SetInt("material.Kd", 0);
+		glm::vec3(0.1f, 0.1f, 0.1f),
+		glm::vec3(0.5f, 0.5f, 0.5f)
+	};
+
+	model_matrix = glm::mat4(1);
 }
 
 void DemoPhongTexture::StartFrame()
@@ -34,12 +41,7 @@ void DemoPhongTexture::StartFrame()
 
 void DemoPhongTexture::Update(double delta_time)
 {
-	LightProperties* light = new LightProperties{
-		glm::vec3(lightX, lightY, lightZ),
-		glm::vec3(1.0f, 1.0f, 0.8f),
-		glm::vec3(0.1f, 0.1f, 0.1f),
-		glm::vec3(0.5f, 0.5f, 0.5f)
-	};
+	light->position = glm::vec3(lightX, lightY, lightZ);
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-3.5, 0.0, -0.5));

@@ -8,8 +8,8 @@ public:
 	Demo();
 
 public:
-	double lightX, lightY, lightZ;
-	double lightMoveSpeed;
+	std::vector<glm::vec3> cube_positions;
+	LightProperties* light;
 
 private:
 	void Init() override;
