@@ -39,30 +39,30 @@ uniform Light light;
 void main() 
 {
 	// ambient
-	vec3 ambient			= light.Ka * texture(material.Kd, texCoords).rgb;
+	vec3 ambient				= light.Ka * texture(material.Kd, texCoords).rgb;
 
 	// diffuse
-	vec3 normal				= normalize(fragNormal);
-	vec3 lightDirection		= normalize(light.position - fragPosition);
-	vec3 diffuse			= light.Kd * max(dot(normal, lightDirection), 0.0) * texture(material.Kd, texCoords).rgb;
+	vec3 normal					= normalize(fragNormal);
+	vec3 lightDirection			= normalize(light.position - fragPosition);
+	vec3 diffuse				= light.Kd * max(dot(normal, lightDirection), 0.0) * texture(material.Kd, texCoords).rgb;
 
 	// specular
-	vec3 viewDirection		= normalize(viewPosition - fragPosition);
-	vec3 reflectDirection	= reflect(-lightDirection, normal);
-	vec3 specular			= light.Ksp * pow(max(dot(viewDirection, reflectDirection), 0.0), material.Ksh) * texture(material.Ksp, texCoords).rgb;
+	vec3 viewDirection			= normalize(viewPosition - fragPosition);
+	vec3 reflectDirection		= reflect(-lightDirection, normal);
+	vec3 specular				= light.Ksp * pow(max(dot(viewDirection, reflectDirection), 0.0), material.Ksh) * texture(material.Ksp, texCoords).rgb;
 
 	// spotlight
-	float theta				= dot(lightDirection, normalize(-light.direction));
-	float epsilon			= (light.in_cutoff_angle - light.out_cutoff_angle);
-	float intensity			= clamp((theta - light.out_cutoff_angle) / epsilon, 0.0, 1.0);
-	diffuse					*= intensity;
-	specular				*= intensity;
+	float theta					= dot(lightDirection, normalize(-light.direction));
+	float epsilon				= (light.in_cutoff_angle - light.out_cutoff_angle);
+	float intensity				= clamp((theta - light.out_cutoff_angle) / epsilon, 0.0, 1.0);
+	diffuse						*= intensity;
+	specular					*= intensity;
 
 	// attenuation factor
-	float d					= distance(light.position, fragPosition); 
-	float attenuationFactor = 1.0 / (light.Kc + light.Kl * d + light.Kq * d * d);
+	float d						= distance(light.position, fragPosition); 
+	float attenuationFactor		= 1.0 / (light.Kc + light.Kl * d + light.Kq * d * d);
 
 	// result
-	vec3 finalLight			= ambient + attenuationFactor * (specular + diffuse);
-	fragColour				= vec4(finalLight, 1.0f);
+	vec3 finalLight				= ambient + attenuationFactor * (specular + diffuse);
+	fragColour					= vec4(finalLight, 1.0f);
 }

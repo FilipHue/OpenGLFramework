@@ -20,7 +20,7 @@ void DemoSpotlight::Init()
     p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container.png")).c_str(), "container");
     p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container_specular.png")).c_str(), "container_sp");
 
-    light = new LightProperties{
+    light = new Spotlight{
         p_scene_camera->GetCameraPosition(),
         p_scene_camera->GetCameraForward(),
         glm::vec3(1.0f, 1.0f, 0.8f),
@@ -35,7 +35,9 @@ void DemoSpotlight::Init()
         0.032f,
 
         glm::cos(glm::radians(12.5f)),
-        glm::cos(glm::radians(17.5f))
+        glm::cos(glm::radians(17.5f)),
+
+        "light"
     };
 
     cube_positions = {

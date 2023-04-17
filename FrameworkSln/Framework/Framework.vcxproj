@@ -157,6 +157,11 @@
     <ClCompile Include="demos\demo2_lighting\demo_directional_light.cpp" />
     <ClCompile Include="demos\demo2_lighting\demo_point_light.cpp" />
     <ClCompile Include="demos\demo2_lighting\demo_spotlight.cpp" />
+    <ClCompile Include="demos\demo2_lighting\demo_all_lights.cpp" />
+    <ClCompile Include="src\components\lights\spotlight.cpp" />
+    <ClCompile Include="src\components\lights\point_light.cpp" />
+    <ClCompile Include="src\components\lights\directional_light.cpp" />
+    <ClCompile Include="src\components\lights\light.cpp" />
     <ClCompile Include="src\managers\file\file_manager.cpp" />
     <ClCompile Include="src\components\camera\camera_input.cpp" />
     <ClCompile Include="src\components\camera\camera.cpp" />
@@ -185,6 +190,11 @@
     <ClInclude Include="demos\demo2_lighting\demo_directional_light.h" />
     <ClInclude Include="demos\demo2_lighting\demo_point_light.h" />
     <ClInclude Include="demos\demo2_lighting\demo_spotlight.h" />
+    <ClInclude Include="demos\demo2_lighting\demo_all_lights.h" />
+    <ClInclude Include="src\components\lights\spotlight.h" />
+    <ClInclude Include="src\components\lights\point_light.h" />
+    <ClInclude Include="src\components\lights\directional_light.h" />
+    <ClInclude Include="src\components\lights\light.h" />
     <ClInclude Include="src\managers\file\file_manager.h" />
     <ClInclude Include="src\components\camera\camera_input.h" />
     <ClInclude Include="src\components\camera\camera.h" />
@@ -224,6 +234,8 @@
   <ItemGroup>
     <None Include="assets\shaders\grid\grid_fragment_shader.glsl" />
     <None Include="assets\shaders\grid\grid_vertex_shader.glsl" />
+    <None Include="assets\shaders\lighting\allLights_fragment_shader.glsl" />
+    <None Include="assets\shaders\lighting\allLights_vertex_shader.glsl" />
     <None Include="assets\shaders\lighting\directional_fragment_shader.glsl" />
     <None Include="assets\shaders\lighting\directional_vertex_shader.glsl" />
     <None Include="assets\shaders\lighting\phongt_fragment_shader.glsl" />
@@ -244,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\container.png" />
+    <Image Include="assets\textures\container_specular.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -39,7 +39,7 @@ uniform Light light;
 void main() 
 {
 	// ambient
-	vec3 ambient = light.Ka * texture(material.Kd, texCoords).rgb;
+	vec3 ambient			= light.Ka * texture(material.Kd, texCoords).rgb;
 
 	// diffuse
 	vec3 normal				= normalize(fragNormal);

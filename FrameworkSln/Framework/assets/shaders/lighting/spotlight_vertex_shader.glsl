@@ -15,9 +15,9 @@ out vec2 texCoords;
 
 void main()
 {
-	fragPosition = vec3(modelMatrix * vec4(position, 1.0f));
-	fragNormal = mat3(transpose(inverse(modelMatrix))) * normal;
-	texCoords = textureCoords;
+	fragPosition	= vec3(modelMatrix * vec4(position, 1.0f));
+	fragNormal		= mat3(transpose(inverse(modelMatrix))) * normal;
+	texCoords		= textureCoords;
 
-	gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1.0f);
+	gl_Position		= projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1.0f);
 }

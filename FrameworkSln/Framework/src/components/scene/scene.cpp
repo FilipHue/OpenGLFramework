@@ -14,42 +14,28 @@ void Scene::CreateMesh(const char* name, std::vector<Vertex>& vertices, std::vec
 	meshes[name] = new Mesh(name, VAO, vertices, indices, material);
 }
 
-void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* texture_name, LightProperties* light_props)
+void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* texture_name, Light* light)
 {
 	glm::mat4 model_matrix(1);
 	model_matrix = glm::translate(model_matrix, position);
 
-	RenderMesh(mesh, shader, model_matrix, texture_name, light_props);
+	RenderMesh(mesh, shader, model_matrix, texture_name, light);
 }
 
-void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, const char* texture_name, LightProperties* light_props)
+void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, const char* texture_name, Light* light)
 {
 	if (!mesh || !shader || (!p_texture_manager->GetTexture2D(texture_name) && texture_name)) {
 		RENDER_ERROR("Mesh, shader or texture missing");
 		return;
 	}
 
-	SendToShader(mesh, shader, model_matrix, light_props == NULL ? 0 : 1);
+	SendToShader(mesh, shader, model_matrix, light == NULL ? 0 : 1);
 
-	if (light_props) {
+	if (light) {
 		glm::vec3 object_colour = glm::vec3(GREY.red, GREY.green, GREY.blue);
 		glm::vec3 view_position = p_scene_camera->GetCameraPosition();
 
-		shader->SetVec3("light.position", light_props->position);
-		shader->SetVec3("light.direction", light_props->direction);
-		shader->SetVec3("light.colour", light_props->colour);
-
-		shader->SetVec3("light.Ka", light_props->Ka);
-		shader->SetVec3("light.Kd", light_props->Kd);
-		shader->SetVec3("light.Ksp", light_props->Ksp);
-		shader->SetFloat("light.Ksh", light_props->Ksh);
-
-		shader->SetFloat("light.Kc", light_props->Kc);
-		shader->SetFloat("light.Kl", light_props->Kl);
-		shader->SetFloat("light.Kq", light_props->Kq);
-
-		shader->SetFloat("light.in_cutoff_angle", light_props->in_cutoff_angle);
-		shader->SetFloat("light.out_cutoff_angle", light_props->out_cutoff_angle);
+		light->SendToShader(shader);
 
 		shader->SetVec3("objectColour", object_colour);
 		shader->SetVec3("viewPosition", view_position);

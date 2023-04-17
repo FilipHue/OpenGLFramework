@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../src/components/scene/scene.h"
+#include "../../src/components/lights/directional_light.h"
 
 class DemoDirectionLight : public Scene
 {
@@ -8,7 +9,7 @@ public:
 	DemoDirectionLight();
 
 public:
-	LightProperties* light;
+	DirectionalLight* light;
 	std::vector<glm::vec3> cube_positions;
 
 private:

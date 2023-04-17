@@ -20,13 +20,17 @@ void DemoDirectionLight::Init()
     p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container.png")).c_str(), "container");
     p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container_specular.png")).c_str(), "container_sp");
 
-    light = new LightProperties{
+    light = new DirectionalLight{
         glm::vec3(0.0f, 0.0f, 0.0f),
         glm::vec3(-0.2f, -1.0f, -0.3f),
         glm::vec3(1.0f, 1.0f, 0.8f),
 
         glm::vec3(0.1f, 0.1f, 0.1f),
-        glm::vec3(0.5f, 0.5f, 0.5f)
+        glm::vec3(0.5f, 0.5f, 0.5f),
+        glm::vec3(1.0f, 1.0f, 1.0f),
+        32.0f,
+
+        "light"
     };
 
     cube_positions = {

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../src/components/scene/scene.h"
+#include "../../src/components/lights/point_light.h"
 
 class DemoPointLight : public Scene
 {
@@ -11,7 +12,7 @@ public:
 	double lightX, lightY, lightZ;
 	double lightMoveSpeed;
 
-	LightProperties* light;
+	PointLight* light;
 	std::vector<glm::vec3> cube_positions;
 
 private:

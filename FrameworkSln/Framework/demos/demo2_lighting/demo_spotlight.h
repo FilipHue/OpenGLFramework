@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../src/components/scene/scene.h"
+#include "../../src/components/lights/spotlight.h"
 
 class DemoSpotlight : public Scene
 {
@@ -9,7 +10,7 @@ public:
 
 public:
 	std::vector<glm::vec3> cube_positions;
-	LightProperties* light;
+	Spotlight* light;
 
 private:
 	void Init() override;

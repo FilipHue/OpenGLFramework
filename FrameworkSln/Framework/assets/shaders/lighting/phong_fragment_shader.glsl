@@ -39,19 +39,19 @@ uniform Light light;
 void main() 
 {
 	// ambient
-	vec3 ambient = light.Ka * light.colour * material.Ka;
+	vec3 ambient			= light.Ka * light.colour * material.Ka;
 
 	// diffuse
-	vec3 normal = normalize(fragNormal);
-	vec3 lightDirection = normalize(light.position - fragPosition);
-	vec3 diffuse = max(dot(normal, lightDirection), 0.0) * light.colour * light.Kd * material.Kd;
+	vec3 normal				= normalize(fragNormal);
+	vec3 lightDirection		= normalize(light.position - fragPosition);
+	vec3 diffuse			= max(dot(normal, lightDirection), 0.0) * light.colour * light.Kd * material.Kd;
 
 	// specular
-	vec3 viewDirection = normalize(viewPosition - fragPosition);
-	vec3 reflectDirection = reflect(-lightDirection, normal);
-	vec3 specular = pow(max(dot(viewDirection, reflectDirection), 0.0), material.Ksh) * material.Ksp * light.colour;
+	vec3 viewDirection		= normalize(viewPosition - fragPosition);
+	vec3 reflectDirection	= reflect(-lightDirection, normal);
+	vec3 specular			= pow(max(dot(viewDirection, reflectDirection), 0.0), material.Ksh) * material.Ksp * light.colour;
 
 	// result
-	vec3 finalLight = (ambient + specular + diffuse) * objectColour;
-	fragColour = vec4(finalLight, 1.0f);
+	vec3 finalLight			= (ambient + specular + diffuse) * objectColour;
+	fragColour				= vec4(finalLight, 1.0f);
 }

@@ -21,9 +21,8 @@ void DemoPointLight::Init()
     p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container.png")).c_str(), "container");
     p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container_specular.png")).c_str(), "container_sp");
 
-    light = new LightProperties{
+    light = new PointLight{
         glm::vec3(lightX, lightY, lightZ),
-        glm::vec3(0.0f, 0.0f, 0.0f),
         glm::vec3(1.0f, 1.0f, 0.8f),
 
         glm::vec3(0.2f, 0.2f, 0.2f),
@@ -33,7 +32,9 @@ void DemoPointLight::Init()
 
         1.0f,
         0.09f,
-        0.032f
+        0.032f, 
+
+        "light"
     };
 
     lightX = 0.0f;

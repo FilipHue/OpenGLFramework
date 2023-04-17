@@ -19,13 +19,16 @@ void DemoPhongTexture::Init()
 	lightY = 0.5f;
 	lightZ = 0.0f;
 
-	light = new LightProperties{
+	light = new Light{
 		glm::vec3(lightX, lightY, lightZ),
-		glm::vec3(0.0f, 0.0f, 0.0f),
 		glm::vec3(1.0f, 1.0f, 0.8f),
 
 		glm::vec3(0.1f, 0.1f, 0.1f),
-		glm::vec3(0.5f, 0.5f, 0.5f)
+		glm::vec3(0.5f, 0.5f, 0.5f),
+		glm::vec3(1.0f, 1.0f, 1.0f),
+		32.0f,
+
+		"light"
 	};
 
 	model_matrix = glm::mat4(1);

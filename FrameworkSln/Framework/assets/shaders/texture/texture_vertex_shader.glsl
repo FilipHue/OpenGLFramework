@@ -13,7 +13,7 @@ out vec2 textCoord;
 
 void main()
 {
-    gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(aPos, 1.0);
-    outColour = aColour;
-    textCoord = aTextCoord;
+    gl_Position     = projectionMatrix * viewMatrix * modelMatrix * vec4(aPos, 1.0);
+    outColour       = aColour;
+    textCoord       = aTextCoord;
 }
