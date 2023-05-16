@@ -29,6 +29,9 @@ public:
 	TextureManger* p_texture_manager;
 	ShapeManager* p_shape_manager;
 
+	bool depth_test;
+	bool depth_mask;
+
 protected:
 	Scene();
 
@@ -36,6 +39,13 @@ protected:
 
 	void RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, std::vector<std::string> texture_names = {}, std::vector<Light*> light_props = {});
 	void RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, std::vector<std::string> texture_names = {}, std::vector<Light*> light_props = {});
+
+	void EnableDepthTest();
+	void DisableDepthTest();
+	void EnableDepthMask();
+	void DisableDepthMask();
+
+	void UseDepthFunction(GLenum function);
 
 protected:
 	Window* p_window;

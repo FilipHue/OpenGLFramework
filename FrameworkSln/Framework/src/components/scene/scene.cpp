@@ -70,18 +70,62 @@ void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, std::
 	glBindVertexArray(0);
 }
 
+void Scene::EnableDepthTest()
+{	
+	if (depth_test == false) {
+		glEnable(GL_DEPTH_TEST);
+		depth_test = true;
+	}
+}
+
+void Scene::DisableDepthTest()
+{
+	if (depth_test == true) {
+		glDisable(GL_DEPTH_TEST);
+		depth_test = false;
+	}
+}
+
+void Scene::EnableDepthMask()
+{
+	if (depth_mask == false) {
+		glDepthMask(GL_TRUE);
+		depth_mask = true;
+	}
+}
+
+void Scene::DisableDepthMask()
+{
+	if (depth_mask == true) {
+		glDepthMask(GL_FALSE);
+		depth_mask = false;
+	}
+}
+
+void Scene::UseDepthFunction(GLenum function)
+{
+	if (depth_test == false) {
+		RENDER_WARN("Depth testing is disabled");
+		return;
+	}
+
+	glDepthFunc(function);
+}
+
 void Scene::Init()
 {
 	p_window = Engine::GetWindow();
 
 	p_scene_camera = new Camera();
-	//sceneCamera->SetOrtho(0.0f, (float)p_window->resolution.x, 0.0f, (float)p_window->resolution.y, 0.01f, 400.0f);
 	p_scene_camera->SetPerspective(p_scene_camera->GetCameraZoom(), (float)p_window->resolution.x / p_window->resolution.y, 0.1f, 200.0f);
 	p_camera_input = new CameraInput(p_scene_camera);
 	p_scene_input = new SceneInput(this);
 
 	p_shape_manager = new ShapeManager(this);
 	p_texture_manager = new TextureManger();
+
+	depth_test = true;
+	depth_mask = true;
 
 	std::unordered_map<std::string, std::string> vertex_files;
 	std::unordered_map<std::string, std::string> fragment_files;

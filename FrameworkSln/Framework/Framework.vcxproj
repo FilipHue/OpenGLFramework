@@ -158,6 +158,7 @@
     <ClCompile Include="demos\demo2_lighting\demo_point_light.cpp" />
     <ClCompile Include="demos\demo2_lighting\demo_spotlight.cpp" />
     <ClCompile Include="demos\demo2_lighting\demo_all_lights.cpp" />
+    <ClCompile Include="demos\demo3_advanced\demo_depth_test.cpp" />
     <ClCompile Include="src\components\lights\spotlight.cpp" />
     <ClCompile Include="src\components\lights\point_light.cpp" />
     <ClCompile Include="src\components\lights\directional_light.cpp" />
@@ -191,6 +192,7 @@
     <ClInclude Include="demos\demo2_lighting\demo_point_light.h" />
     <ClInclude Include="demos\demo2_lighting\demo_spotlight.h" />
     <ClInclude Include="demos\demo2_lighting\demo_all_lights.h" />
+    <ClInclude Include="demos\demo3_advanced\demo_depth_test.h" />
     <ClInclude Include="src\components\lights\spotlight.h" />
     <ClInclude Include="src\components\lights\point_light.h" />
     <ClInclude Include="src\components\lights\directional_light.h" />
@@ -232,6 +234,8 @@
     <ClInclude Include="src\world.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\shaders\advanced\depth_fragment_shader.glsl" />
+    <None Include="assets\shaders\advanced\depth_vertex_shader.glsl" />
     <None Include="assets\shaders\grid\grid_fragment_shader.glsl" />
     <None Include="assets\shaders\grid\grid_vertex_shader.glsl" />
     <None Include="assets\shaders\lighting\allLights_fragment_shader.glsl" />
@@ -257,6 +261,8 @@
   <ItemGroup>
     <Image Include="assets\textures\container.png" />
     <Image Include="assets\textures\container_specular.png" />
+    <Image Include="assets\textures\marble.jpg" />
+    <Image Include="assets\textures\metal.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

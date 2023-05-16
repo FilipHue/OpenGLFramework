@@ -105,6 +105,9 @@
     <ClCompile Include="src\components\lights\spotlight.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="demos\demo3_advanced\demo_depth_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\core\window\window.h">
@@ -248,6 +251,9 @@
     <ClInclude Include="src\components\lights\spotlight.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="demos\demo3_advanced\demo_depth_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\shaders\simple\simple_fragment_shader.glsl" />
@@ -271,12 +277,20 @@
     <None Include="assets\shaders\lighting\spotlight_vertex_shader.glsl" />
     <None Include="assets\shaders\lighting\allLights_fragment_shader.glsl" />
     <None Include="assets\shaders\lighting\allLights_vertex_shader.glsl" />
+    <None Include="assets\shaders\advanced\depth_fragment_shader.glsl" />
+    <None Include="assets\shaders\advanced\depth_vertex_shader.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\container.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\textures\container_specular.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\textures\metal.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\textures\marble.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
