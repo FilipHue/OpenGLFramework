@@ -31,6 +31,7 @@ public:
 
 	bool depth_test;
 	bool depth_mask;
+	bool stencil_test;
 
 protected:
 	Scene();
@@ -42,10 +43,16 @@ protected:
 
 	void EnableDepthTest();
 	void DisableDepthTest();
+	void UseDepthFunction(GLenum function);
+
 	void EnableDepthMask();
 	void DisableDepthMask();
 
-	void UseDepthFunction(GLenum function);
+	void EnableStencilTest();
+	void DisableStencilTest();
+	void SetStencilMask(GLuint mask);
+	void UseStencilFunction(GLenum fuction, GLint reference, GLuint mask);
+	void UseStencilOption(GLenum stencil_fail, GLenum stencil_pass_depth_fail, GLenum both_pass);
 
 protected:
 	Window* p_window;

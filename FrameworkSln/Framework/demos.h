@@ -10,3 +10,4 @@
 #include "demos/demo2_lighting/demo_all_lights.h"
 
 #include "demos/demo3_advanced/demo_depth_test.h"
+#include "demos/demo3_advanced/demo_stencil_test.h"

@@ -81,6 +81,11 @@ void DemoDepthTest::Update(double delta_time)
         RenderMesh(meshes[cube_name.c_str()], shaders["TextureShader"], model_matrix, { "container" }, {});
     }*/
 
+    /*
+    * Use TextureShader to render the objects as usual
+    * Use DepthShader to visualise the depth buffer. See the fragment shader for more information
+    */
+
     glm::mat4 model_matrix = glm::mat4(1.0f);
     model_matrix = glm::translate(model_matrix, glm::vec3(-1.0f, 0.0f, -1.0f));
     RenderMesh(meshes["Cube11"], shaders["DepthShader"], model_matrix, { "marble" }, {});

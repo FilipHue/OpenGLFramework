@@ -102,6 +102,52 @@ void Scene::DisableDepthMask()
 	}
 }
 
+void Scene::EnableStencilTest()
+{
+	if (stencil_test == false) {
+		glEnable(GL_STENCIL_TEST);
+		stencil_test = true;
+	}
+}
+
+void Scene::DisableStencilTest()
+{
+	if (stencil_test == true) {
+		glDisable(GL_STENCIL_TEST);
+		stencil_test = false;
+	}
+}
+
+void Scene::SetStencilMask(GLuint mask)
+{
+	if (stencil_test == false) {
+		RENDER_WARN("Stencil test is disabled");
+		return;
+	}
+
+	glStencilMask(mask);
+}
+
+void Scene::UseStencilFunction(GLenum function, GLint reference, GLuint mask)
+{
+	if (stencil_test == false) {
+		RENDER_WARN("Stencil test is disabled");
+		return;
+	}
+
+	glStencilFunc(function, reference, mask);
+}
+
+void Scene::UseStencilOption(GLenum stencil_fail, GLenum stencil_pass_depth_fail, GLenum both_pass)
+{
+	if (stencil_test == false) {
+		RENDER_WARN("Stencil test is disabled");
+		return;
+	}
+
+	glStencilOp(stencil_fail, stencil_pass_depth_fail, both_pass);
+}
+
 void Scene::UseDepthFunction(GLenum function)
 {
 	if (depth_test == false) {
