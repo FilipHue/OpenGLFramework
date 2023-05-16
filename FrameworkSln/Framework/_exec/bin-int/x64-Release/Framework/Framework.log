@@ -1,8 +1,0 @@
-﻿  glad.c
-  main.cpp
-  window.cpp
-  Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 249 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  Framework.vcxproj -> D:\OPGLFW_V2.0\FrameworkSln\Framework\bin\x64-Release\Framework\Framework.exe

@@ -49,37 +49,37 @@ void DemoPhong::Update(double delta_time)
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-3.5, 0.0, -0.5));
-	RenderMesh(meshes["Cube1"], shaders["PhongShader"], model_matrix, NULL, light);
+	RenderMesh(meshes["Cube1"], shaders["PhongShader"], model_matrix, {}, {light});
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(2.5, 0.0, -0.5));
-	RenderMesh(meshes["Cube2"], shaders["PhongShader"], model_matrix, NULL, light);
+	RenderMesh(meshes["Cube2"], shaders["PhongShader"], model_matrix, {}, {light});
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-0.5, 2.5, -0.5));
-	RenderMesh(meshes["Cube3"], shaders["PhongShader"], model_matrix, NULL, light);
+	RenderMesh(meshes["Cube3"], shaders["PhongShader"], model_matrix, {}, {light});
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-0.5, 0.0, -3.5));
 	model_matrix = glm::rotate(model_matrix, glm::radians(45.0f), glm::vec3(1, 0, 0));
 	model_matrix = glm::translate(model_matrix, glm::vec3(0.0, -0.5, -0.5));
-	RenderMesh(meshes["Cube4"], shaders["PhongShader"], model_matrix, NULL, light);
+	RenderMesh(meshes["Cube4"], shaders["PhongShader"], model_matrix, {}, {light});
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-3.5, 0.0, -3.5));
 	model_matrix = glm::rotate(model_matrix, glm::radians(45.0f), glm::vec3(1, 1, 1));
 	model_matrix = glm::translate(model_matrix, glm::vec3(-0.5, -0.5, -0.5));
-	RenderMesh(meshes["Cube5"], shaders["PhongShader"], model_matrix, NULL, light);
+	RenderMesh(meshes["Cube5"], shaders["PhongShader"], model_matrix, {}, {light});
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(3.5, 0.0, -3.5));
 	model_matrix = glm::rotate(model_matrix, glm::radians(45.0f), glm::vec3(1, -1, -1));
 	model_matrix = glm::translate(model_matrix, glm::vec3(-0.5, -0.5, -0.5));
-	RenderMesh(meshes["Cube6"], shaders["PhongShader"], model_matrix, NULL, light);
+	RenderMesh(meshes["Cube6"], shaders["PhongShader"], model_matrix, {}, {light});
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-5, -3.0, -5));
-	RenderMesh(meshes["Cube7"], shaders["PhongShader"], model_matrix, NULL, light);
+	RenderMesh(meshes["Cube7"], shaders["PhongShader"], model_matrix, {}, {light});
 
 	RenderMesh(meshes["Light"], shaders["SimpleShader"], glm::vec3(lightX, lightY, lightZ));
 }

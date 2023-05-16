@@ -34,8 +34,8 @@ protected:
 
 	void CreateMesh(const char* name, std::vector<Vertex>& vertices, std::vector<unsigned int>& indices, Material* material);
 
-	void RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* texture_name = NULL, Light* light_props = NULL);
-	void RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, const char* texture_name = NULL, Light* light_props = NULL);
+	void RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, std::vector<std::string> texture_names = {}, std::vector<Light*> light_props = {});
+	void RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, std::vector<std::string> texture_names = {}, std::vector<Light*> light_props = {});
 
 protected:
 	Window* p_window;

@@ -18,8 +18,8 @@ void DemoPointLight::Init()
     p_shape_manager->CreateCube("Cube10", 1.0, 1.0, 1.0);
     p_shape_manager->CreateCube("Light", 0.1, 0.1, 0.1);
 
-    p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container.png")).c_str(), "container");
-    p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container_specular.png")).c_str(), "container_sp");
+    p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container.png")).c_str(), "container", "diffuse");
+    p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container_specular.png")).c_str(), "container_sp", "specular");
 
     light = new PointLight{
         glm::vec3(lightX, lightY, lightZ),
@@ -78,9 +78,9 @@ void DemoPointLight::Update(double delta_time)
         model_matrix = glm::translate(model_matrix, cube_positions[i]);
         model_matrix = glm::rotate(model_matrix, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
 
-        RenderMesh(meshes[cube_name.c_str()], shaders["PointShader"], model_matrix, "container", light);
+        RenderMesh(meshes[cube_name.c_str()], shaders["PointShader"], model_matrix, { "container" }, { light });
     }
-    RenderMesh(meshes["Light"], shaders["SimpleShader"], glm::vec3(lightX, lightY, lightZ), NULL, NULL);
+    RenderMesh(meshes["Light"], shaders["SimpleShader"], glm::vec3(lightX, lightY, lightZ), {}, {});
 }
 
 void DemoPointLight::EndFrame()

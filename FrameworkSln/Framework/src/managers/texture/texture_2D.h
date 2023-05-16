@@ -15,7 +15,7 @@ private:
 	 * @brief				Method for initializing the texture and binding it
 	 * @param file_path		The path to the texture file
 	*/
-	void Init(const char* file_path);
+	void Init(std::string file_path);
 	/**
 	 * @brief				Method for intializing the texture from the given texture data
 	 * @param width			The width of the texture

@@ -1,7 +1,0 @@
-﻿  main.cpp
-  directional_light.cpp
-  light.cpp
-  point_light.cpp
-  spotlight.cpp
-  Generating Code...
-  Framework.vcxproj -> D:\Diverse\OpenGLFramework\FrameworkSln\Framework\_exec\bin\x64-Debug\Framework\Framework.exe

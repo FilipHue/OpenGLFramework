@@ -8,8 +8,8 @@ in vec2 texCoords;
 
 struct Material {
 	vec3 Ka;
-	sampler2D Kd;
-	sampler2D Ksp;
+	sampler2D Kd0;
+	sampler2D Ksp0;
 	float Ksh;
 };
 
@@ -39,17 +39,17 @@ uniform Light light;
 void main() 
 {
 	// ambient
-	vec3 ambient			= light.Ka * texture(material.Kd, texCoords).rgb;
+	vec3 ambient			= light.Ka * texture(material.Kd0, texCoords).rgb;
 
 	// diffuse
 	vec3 normal				= normalize(fragNormal);
 	vec3 lightDirection		= normalize(-light.direction);
-	vec3 diffuse			= light.Kd * max(dot(normal, lightDirection), 0.0) * texture(material.Kd, texCoords).rgb;
+	vec3 diffuse			= light.Kd * max(dot(normal, lightDirection), 0.0) * texture(material.Kd0, texCoords).rgb;
 
 	// specular
 	vec3 viewDirection		= normalize(viewPosition - fragPosition);
 	vec3 reflectDirection	= reflect(-lightDirection, normal);
-	vec3 specular			= light.Ksp * pow(max(dot(viewDirection, reflectDirection), 0.0), material.Ksh) * texture(material.Ksp, texCoords).rgb;
+	vec3 specular			= light.Ksp * pow(max(dot(viewDirection, reflectDirection), 0.0), material.Ksh) * texture(material.Ksp0, texCoords).rgb;
 
 	// result
 	vec3 finalLight			= ambient + specular + diffuse;

@@ -1,6 +1,8 @@
 #include "texture_manager.h"
 
-void TextureManger::LoadTexture2D(const char* filePath, const char* name)
+#include <iostream>
+
+void TextureManger::LoadTexture2D(std::string filePath, std::string name, std::string type)
 {
 	Texture2D* texture2D;
 
@@ -8,11 +10,17 @@ void TextureManger::LoadTexture2D(const char* filePath, const char* name)
 	texture2D->Init(filePath);
 
 	textures_2D[name] = texture2D;
+	textures_type_2D[name] = type;
 }
 
-Texture2D* TextureManger::GetTexture2D(const char* name)
+Texture2D* TextureManger::GetTexture2D(std::string name)
 {
 	return textures_2D[name];
+}
+
+std::string TextureManger::GetTexture2DType(std::string name)
+{
+	return textures_type_2D[name];
 }
 
 GLuint TextureManger::GetPixelFormat(unsigned int channels)

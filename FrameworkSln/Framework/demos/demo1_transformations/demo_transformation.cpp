@@ -12,7 +12,7 @@ void DemoTransformation::Init()
 	p_shape_manager->CreateCube("Cube4", 1.0f, 1.0f, 1.0f);
 	p_shape_manager->CreateCube("Cube5", 1.0f, 1.0f, 1.0f);
 
-	p_texture_manager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\textures\\container.png", "container");
+	p_texture_manager->LoadTexture2D("D:\\Diverse\\OpenGLFramework\\FrameworkSln\\Framework\\assets\\textures\\container.png", "container", "diffuse");
 
 	c1_pos_x = 0.0f;
 	c1_pos_y = 0.0f;

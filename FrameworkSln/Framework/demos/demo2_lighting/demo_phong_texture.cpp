@@ -11,8 +11,8 @@ void DemoPhongTexture::Init()
 	p_shape_manager->CreateCube("Cube7", 10, 1, 10);
 	p_shape_manager->CreateCube("Light", 0.1f, 0.1f, 0.1f);
 
-	p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container.png")).c_str(), "container");
-	p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container_specular.png")).c_str(), "container_sp");
+	p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container.png")).c_str(), "container", "diffuse");
+	p_texture_manager->LoadTexture2D((p_window->project_dir + std::string("\\assets\\textures\\container_specular.png")).c_str(), "container_sp", "specular");
 
 	lightMoveSpeed = 2.0f;
 	lightX = 0.0f;
@@ -48,37 +48,37 @@ void DemoPhongTexture::Update(double delta_time)
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-3.5, 0.0, -0.5));
-	RenderMesh(meshes["Cube1"], shaders["PhongtShader"], model_matrix, "container", light);
+	RenderMesh(meshes["Cube1"], shaders["PhongtShader"], model_matrix, { "container" }, { light });
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(2.5, 0.0, -0.5));
-	RenderMesh(meshes["Cube2"], shaders["PhongtShader"], model_matrix, "container", light);
+	RenderMesh(meshes["Cube2"], shaders["PhongtShader"], model_matrix, { "container" }, { light });
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-0.5, 2.5, -0.5));
-	RenderMesh(meshes["Cube3"], shaders["PhongtShader"], model_matrix, "container", light);
+	RenderMesh(meshes["Cube3"], shaders["PhongtShader"], model_matrix, { "container" }, { light });
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-0.5, 0.0, -3.5));
 	model_matrix = glm::rotate(model_matrix, glm::radians(45.0f), glm::vec3(1, 0, 0));
 	model_matrix = glm::translate(model_matrix, glm::vec3(0.0, -0.5, -0.5));
-	RenderMesh(meshes["Cube4"], shaders["PhongtShader"], model_matrix, "container", light);
+	RenderMesh(meshes["Cube4"], shaders["PhongtShader"], model_matrix, { "container" }, { light });
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-3.5, 0.0, -3.5));
 	model_matrix = glm::rotate(model_matrix, glm::radians(45.0f), glm::vec3(1, 1, 1));
 	model_matrix = glm::translate(model_matrix, glm::vec3(-0.5, -0.5, -0.5));
-	RenderMesh(meshes["Cube5"], shaders["PhongtShader"], model_matrix, "container", light);
+	RenderMesh(meshes["Cube5"], shaders["PhongtShader"], model_matrix, { "container" }, { light });
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(3.5, 0.0, -3.5));
 	model_matrix = glm::rotate(model_matrix, glm::radians(45.0f), glm::vec3(1, -1, -1));
 	model_matrix = glm::translate(model_matrix, glm::vec3(-0.5, -0.5, -0.5));
-	RenderMesh(meshes["Cube6"], shaders["PhongtShader"], model_matrix, "container", light);
+	RenderMesh(meshes["Cube6"], shaders["PhongtShader"], model_matrix, { "container" }, { light });
 
 	model_matrix = glm::mat4(1);
 	model_matrix = glm::translate(model_matrix, glm::vec3(-5, -3.0, -5));
-	RenderMesh(meshes["Cube7"], shaders["PhongtShader"], model_matrix, "container", light);
+	RenderMesh(meshes["Cube7"], shaders["PhongtShader"], model_matrix, { "container" }, { light });
 
 	RenderMesh(meshes["Light"], shaders["SimpleShader"], glm::vec3(lightX, lightY, lightZ));
 }

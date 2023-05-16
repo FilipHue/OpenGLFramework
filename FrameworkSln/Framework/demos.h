@@ -6,3 +6,4 @@
 #include "demos/demo2_lighting/demo_directional_light.h"
 #include "demos/demo2_lighting/demo_point_light.h"
 #include "demos/demo2_lighting/demo_spotlight.h"
+#include "demos/demo2_lighting/demo_all_lights.h"

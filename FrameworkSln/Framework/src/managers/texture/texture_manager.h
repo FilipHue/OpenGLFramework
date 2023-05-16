@@ -17,8 +17,9 @@ public:
 	 * @param file_path		The path to the texture file
 	 * @param name			The name of the texture with which is identified (given by the caller: crate.jpg -> crate)
 	*/
-	void LoadTexture2D(const char* file_path, const char* name);
-	Texture2D* GetTexture2D(const char* name);
+	void LoadTexture2D(std::string file_path, std::string name, std::string type);
+	Texture2D* GetTexture2D(std::string name);
+	std::string GetTexture2DType(std::string name);
 
 private:
 	/**
@@ -37,7 +38,8 @@ private:
 	static GLuint GetInternalFormat(unsigned int channels);
 
 private:
-	std::unordered_map<const char*, Texture2D*> textures_2D;
+	std::unordered_map<std::string, Texture2D*> textures_2D;
+	std::unordered_map<std::string, std::string> textures_type_2D;
 
 	static constexpr GLuint pixel_format[5] = { 0, GL_RED, GL_RG, GL_RGB, GL_RGBA };
 	static constexpr GLuint internal_format[4][5] = {

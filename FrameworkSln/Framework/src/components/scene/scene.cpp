@@ -14,37 +14,57 @@ void Scene::CreateMesh(const char* name, std::vector<Vertex>& vertices, std::vec
 	meshes[name] = new Mesh(name, VAO, vertices, indices, material);
 }
 
-void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, const char* texture_name, Light* light)
+void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::vec3 position, std::vector<std::string> texture_names, std::vector<Light*> lights)
 {
 	glm::mat4 model_matrix(1);
 	model_matrix = glm::translate(model_matrix, position);
 
-	RenderMesh(mesh, shader, model_matrix, texture_name, light);
+	RenderMesh(mesh, shader, model_matrix, texture_names, lights);
 }
 
-void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, const char* texture_name, Light* light)
+void Scene::RenderMesh(Mesh* mesh, Shader* shader, glm::mat4 model_matrix, std::vector<std::string> texture_names, std::vector<Light*> lights)
 {
-	if (!mesh || !shader || (!p_texture_manager->GetTexture2D(texture_name) && texture_name)) {
-		RENDER_ERROR("Mesh, shader or texture missing");
+	if (!mesh || !shader) {
+		RENDER_ERROR("Mesh or shader missing");
 		return;
 	}
 
-	SendToShader(mesh, shader, model_matrix, light == NULL ? 0 : 1);
+	SendToShader(mesh, shader, model_matrix, lights.empty() ? 0 : 1);
 
-	if (light) {
+	if (!lights.empty()) {
 		glm::vec3 object_colour = glm::vec3(GREY.red, GREY.green, GREY.blue);
 		glm::vec3 view_position = p_scene_camera->GetCameraPosition();
 
-		light->SendToShader(shader);
+		for (auto light : lights) {
+			light->SendToShader(shader);
+		}
 
 		shader->SetVec3("objectColour", object_colour);
 		shader->SetVec3("viewPosition", view_position);
 	}
 
-	glBindVertexArray(mesh->GetVAO());
-	if (texture_name) {
-		glBindTexture(GL_TEXTURE_2D, p_texture_manager->GetTexture2D(texture_name)->GetTextureID());
+	if (!texture_names.empty()) {
+		unsigned int diffuse_count = 0;
+		unsigned int specular_count = 0;
+
+		for (int i = 0; i < texture_names.size(); i++) {
+			std::string texture_location = "";
+			glActiveTexture(GL_TEXTURE0 + i);
+			if (p_texture_manager->GetTexture2DType(texture_names[i]) == "diffuse") {
+				texture_location = texture_location + "Kd" + std::to_string(diffuse_count);
+				diffuse_count++;
+			}
+			else if (p_texture_manager->GetTexture2DType(texture_names[i]) == "specular") {
+				texture_location = texture_location + "Ksp" + std::to_string(specular_count);
+				specular_count++;
+			}
+			shader->SetInt(("material." + texture_location).c_str(), i);
+
+			glBindTexture(GL_TEXTURE_2D, p_texture_manager->GetTexture2D(texture_names[i])->GetTextureID());
+		}
 	}
+
+	glBindVertexArray(mesh->GetVAO());
 	glDrawElementsBaseVertex(GL_TRIANGLES, mesh->GetIndices().size(),
 		GL_UNSIGNED_INT, (const void*)(sizeof(unsigned int) * mesh->GetIndices()[0]), 0);
 	glBindVertexArray(0);

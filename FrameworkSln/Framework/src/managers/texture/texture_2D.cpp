@@ -14,9 +14,9 @@ Texture2D::Texture2D()
 	image_data = nullptr;
 }
 
-void Texture2D::Init(const char* file_path)
+void Texture2D::Init(std::string file_path)
 {
-	image_data = stbi_load(file_path, &width, &height, &channels, 0);
+	image_data = stbi_load(file_path.c_str(), &width, &height, &channels, 0);
 	if (image_data == NULL) {
 		TEXTURE_WARN("Error at initializing texture: {}", file_path);
 		return;

@@ -9,6 +9,7 @@ public:
 	Demo();
 
 public:
+	std::vector<std::string> textures;
 	std::vector<glm::vec3> cube_positions;
 	Spotlight* light;
 

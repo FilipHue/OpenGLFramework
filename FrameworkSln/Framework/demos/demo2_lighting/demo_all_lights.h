@@ -1,11 +1,23 @@
 #pragma once
 
 #include "../../src/components/scene/scene.h"
+#include "../../src/components/lights/directional_light.h"
+#include "../../src/components/lights/point_light.h"
+#include "../../src/components/lights/spotlight.h"
 
 class DemoAllLights : public Scene
 {
 public:
 	DemoAllLights();
+
+public:
+	DirectionalLight* light;
+	std::vector<PointLight*> point_lights;
+	Spotlight* spotlight;
+	std::vector<Light*> lights;
+
+	std::vector<glm::vec3> cube_positions;
+	std::vector<glm::vec3> point_light_positions;
 
 private:
 	void Init() override;
