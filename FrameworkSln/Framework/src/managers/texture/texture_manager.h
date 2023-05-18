@@ -15,11 +15,21 @@ public:
 	/**
 	 * @brief				Method for loading a 2D texture from a file
 	 * @param file_path		The path to the texture file
-	 * @param name			The name of the texture with which is identified (given by the caller: crate.jpg -> crate)
+	 * @param name			The name of the texture with which is identified (given by the caller: crate.jpg -> crate) 
+	 * @param wrap_s		The function for the texture wrap mode on the horizontal axis (s-axis)
+	 * @param wrap_t		The function for the texture wrap mode on the vertical axis (t-axis)
+	 * @param min_filter	The function for texture minification filter
+	 * @param mag_filter	The function for texture magnification filter
 	*/
-	void LoadTexture2D(std::string file_path, std::string name, std::string type);
+	void LoadTexture2D(std::string file_path, std::string name, std::string type, GLenum wrap_s = GL_REPEAT, GLenum wrap_t = GL_REPEAT, GLenum min_filter = GL_LINEAR, GLenum mag_filter = GL_LINEAR);
 	Texture2D* GetTexture2D(std::string name);
 	std::string GetTexture2DType(std::string name);
+
+	void EnableBlending();
+	void DisableBlending();
+
+	void UseBlendFunction(GLenum source_factor, GLenum dest_factor);
+	void UseChannelBlendFunction(GLenum r_factor, GLenum g_factor, GLenum b_factor, GLenum a_factor);
 
 private:
 	/**
@@ -48,5 +58,7 @@ private:
 		{ 0, GL_R16F, GL_RG16F, GL_RGB16F, GL_RGBA16F },
 		{ 0, GL_R32F, GL_RG32F, GL_RGB32F, GL_RGBA32F }
 	};
+
+	bool blend;
 };
 

@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
 	window_properties* wp = new window_properties{ "OpenGL Framework", project_directory, 1280, 720};
 
 	Engine::Init(wp);
-	World* test = new DemoStencilTest();
+	World* test = new DemoBlending();
 
 	test->Init();
 	test->Run();

@@ -111,6 +111,9 @@
     <ClCompile Include="demos\demo3_advanced\demo_stencil_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="demos\demo3_advanced\demo_blending.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\core\window\window.h">
@@ -260,6 +263,9 @@
     <ClInclude Include="demos\demo3_advanced\demo_stencil_test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="demos\demo3_advanced\demo_blending.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\shaders\simple\simple_fragment_shader.glsl" />
@@ -289,6 +295,8 @@
     <None Include="assets\shaders\advanced\singleColour_vertex_shader.glsl" />
     <None Include="assets\shaders\advanced\stencil_fragment_shader.glsl" />
     <None Include="assets\shaders\advanced\stencil_vertex_shader.glsl" />
+    <None Include="assets\shaders\advanced\blend_fragment_shader.glsl" />
+    <None Include="assets\shaders\advanced\blend_vertex_shader.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\container.png">
