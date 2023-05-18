@@ -161,6 +161,7 @@
     <ClCompile Include="demos\demo3_advanced\demo_depth_test.cpp" />
     <ClCompile Include="demos\demo3_advanced\demo_stencil_test.cpp" />
     <ClCompile Include="demos\demo3_advanced\demo_blending.cpp" />
+    <ClCompile Include="demos\demo3_advanced\demo_framebuffer.cpp" />
     <ClCompile Include="src\components\lights\spotlight.cpp" />
     <ClCompile Include="src\components\lights\point_light.cpp" />
     <ClCompile Include="src\components\lights\directional_light.cpp" />
@@ -197,6 +198,7 @@
     <ClInclude Include="demos\demo3_advanced\demo_depth_test.h" />
     <ClInclude Include="demos\demo3_advanced\demo_stencil_test.h" />
     <ClInclude Include="demos\demo3_advanced\demo_blending.h" />
+    <ClInclude Include="demos\demo3_advanced\demo_framebuffer.h" />
     <ClInclude Include="src\components\lights\spotlight.h" />
     <ClInclude Include="src\components\lights\point_light.h" />
     <ClInclude Include="src\components\lights\directional_light.h" />
@@ -242,6 +244,8 @@
     <None Include="assets\shaders\advanced\blend_vertex_shader.glsl" />
     <None Include="assets\shaders\advanced\depth_fragment_shader.glsl" />
     <None Include="assets\shaders\advanced\depth_vertex_shader.glsl" />
+    <None Include="assets\shaders\advanced\framebuffer_fragment_shader.glsl" />
+    <None Include="assets\shaders\advanced\framebuffer_vertex_shader.glsl" />
     <None Include="assets\shaders\advanced\singleColour_fragment_shader.glsl" />
     <None Include="assets\shaders\advanced\singleColour_vertex_shader.glsl" />
     <None Include="assets\shaders\advanced\stencil_fragment_shader.glsl" />
@@ -271,8 +275,10 @@
   <ItemGroup>
     <Image Include="assets\textures\container.png" />
     <Image Include="assets\textures\container_specular.png" />
+    <Image Include="assets\textures\grass.png" />
     <Image Include="assets\textures\marble.jpg" />
     <Image Include="assets\textures\metal.png" />
+    <Image Include="assets\textures\transparent_window.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -12,3 +12,4 @@
 #include "demos/demo3_advanced/demo_depth_test.h"
 #include "demos/demo3_advanced/demo_stencil_test.h"
 #include "demos/demo3_advanced/demo_blending.h"
+#include "demos/demo3_advanced/demo_framebuffer.h"

@@ -114,6 +114,9 @@
     <ClCompile Include="demos\demo3_advanced\demo_blending.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="demos\demo3_advanced\demo_framebuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\core\window\window.h">
@@ -266,6 +269,9 @@
     <ClInclude Include="demos\demo3_advanced\demo_blending.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="demos\demo3_advanced\demo_framebuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\shaders\simple\simple_fragment_shader.glsl" />
@@ -297,6 +303,8 @@
     <None Include="assets\shaders\advanced\stencil_vertex_shader.glsl" />
     <None Include="assets\shaders\advanced\blend_fragment_shader.glsl" />
     <None Include="assets\shaders\advanced\blend_vertex_shader.glsl" />
+    <None Include="assets\shaders\advanced\framebuffer_fragment_shader.glsl" />
+    <None Include="assets\shaders\advanced\framebuffer_vertex_shader.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\container.png">
@@ -309,6 +317,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\textures\marble.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\textures\transparent_window.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\textures\grass.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
